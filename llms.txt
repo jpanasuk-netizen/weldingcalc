@@ -1,0 +1,14 @@
+# WeldingCalc
+
+Free welding thickness and amperage calculator: TIG amps by material and thickness, MIG wire size and settings, stick rod selection, and machine duty-cycle runtime math. Published rule-of-thumb charts (rod diameter ≈ half base-metal thickness, ~1 A per 0.001" mild steel), computed — no signup.
+
+## Pages
+- / — welding thickness & amperage calculator (TIG, MIG, stick, duty cycle)
+- /quarter-inch-steel.html — what size welder for 1/4 inch steel
+- /mig-or-tig-sheet-metal.html — MIG or TIG for 16–20 ga sheet metal
+- /best-beginner-welder.html — best beginner welder by thickness
+
+## Sister sites (calculator network)
+- https://jpanasuk-netizen.github.io/generatorsizer/ — generator size calculator
+- https://jpanasuk-netizen.github.io/solarsizer/ — off-grid solar size calculator
+- https://jpanasuk-netizen.github.io/battery-bank-sizer/ — battery bank sizer

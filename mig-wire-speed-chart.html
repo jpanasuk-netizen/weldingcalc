@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MIG Wire Speed Chart by Thickness & Amperage — ipm Settings Table (2026)</title>
+<meta name="description" content="MIG wire speed chart: inches-per-minute settings for 0.023, 0.030, 0.035, and 0.045 wire by material thickness and target amperage, with paired voltage ranges.">
+<link rel="canonical" href="https://jpanasuk-netizen.github.io/weldingthickness/mig-wire-speed-chart.html">
+<meta name="robots" content="index,follow">
+<meta property="og:title" content="MIG Wire Speed Chart — ipm by Thickness and Amps">
+<meta property="og:description" content="Stop guessing dial settings: wire speed in ipm for every common wire diameter and material thickness, with the voltage to pair with it.">
+<meta property="og:url" content="https://jpanasuk-netizen.github.io/weldingthickness/mig-wire-speed-chart.html">
+<link rel="stylesheet" href="assets/styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What wire speed should I use for 1/8 steel with 0.035 wire?",
+      "acceptedAnswer": { "@type": "Answer", "text": "About 190–230 ipm with 0.035\" (0.9 mm) ER70S-6 wire, paired with 18–19 V, puts roughly 100–120 A into 1/8\" mild steel for short-circuit transfer. Increase wire speed until the bead ties in flat; if the arc drips or snuffs, back off 10 ipm." }
+    },
+    {
+      "@type": "Question",
+      "name": "Does higher wire speed mean higher amperage?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes — wire speed is the amperage dial on a MIG machine. Burn-off at the tip must equal wire feed, so pushing more ipm pulls more amps. Voltage sets arc length and bead profile; wire speed sets heat and deposition." }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header class="site-head">
+  <a class="brand" href="index.html">WeldingThickness</a>
+  <nav aria-label="Site"><a href="index.html">Calculator</a></nav>
+</header>
+<main>
+<h1>MIG wire speed chart (ipm)</h1>
+<p class="sub">Starting points for ER70S-6 mild steel with 75/25 gas, short-circuit and low-globular transfer.</p>
+
+<div class="tbl-wrap">
+<table>
+  <thead><tr><th>Material</th><th>Wire</th><th class="num">WFS (ipm)</th><th class="num">Voltage</th><th class="num">≈ Amps</th></tr></thead>
+  <tbody>
+    <tr><td>24 ga (0.023")</td><td>0.023"</td><td class="num">90–120</td><td class="num">13–14.5</td><td class="num">30–45</td></tr>
+    <tr><td>18 ga (0.045")</td><td>0.023"</td><td class="num">150–200</td><td class="num">14.5–15.5</td><td class="num">55–70</td></tr>
+    <tr><td>16 ga (0.062")</td><td>0.030"</td><td class="num">190–240</td><td class="num">15.5–17</td><td class="num">70–90</td></tr>
+    <tr><td>1/8" (0.125")</td><td>0.035"</td><td class="num">190–230</td><td class="num">18–19</td><td class="num">100–120</td></tr>
+    <tr><td>3/16" (0.187")</td><td>0.035"</td><td class="num">260–320</td><td class="num">19.5–21</td><td class="num">130–160</td></tr>
+    <tr><td>1/4" (0.250")</td><td>0.045"</td><td class="num">220–280</td><td class="num">21–23</td><td class="num">160–200</td></tr>
+    <tr><td>3/8"+ (multi-pass)</td><td>0.045"</td><td class="num">300–380</td><td class="num">24–28</td><td class="num">200–260</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h2>How to dial it in</h2>
+<p>Set voltage for the thickness first, then raise wire speed until the arc sounds like frying bacon. Popping and spatter means too much wire for the voltage; a hissing, stubbing arc means too little. Every machine reads a little differently — treat the table as the first coupon, not the last.</p>
+<p class="note">Flux-core (E71T-11) runs 10–15% slower WFS at the same amperage and no gas. Aluminum MIG needs 0.030/0.035 wire, 100% argon, and a spool gun at 1.5–2× these speeds.</p>
+
+<!-- AFFILIATE SLOT -->
+<div class="affil">
+  <span class="tag">Wire we run</span>
+  <p class="small">ER70S-6 spool recommendations coming after affiliate approval.</p>
+</div>
+
+<footer>
+  <a href="index.html">WeldingThickness calculator</a> ·
+  <a href="https://jpanasuk-netizen.github.io/generatorsizer/">GeneratorSizer</a> ·
+  <a href="https://jpanasuk-netizen.github.io/battery-bank-sizer/">Battery Bank Sizer</a>
+</footer>
+</main>
+</body>
+</html>

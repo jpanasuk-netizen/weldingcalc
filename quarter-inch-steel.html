@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What Size Welder for 1/4 Inch Steel? (2026) — 140A vs 200A, Honestly</title>
+<meta name="description" content="Can a 140 amp welder handle 1/4 inch steel? Yes, single-pass with caveats — here's the honest math, the machine classes that actually work, and the joints that change the answer.">
+<link rel="canonical" href="https://jpanasuk-netizen.github.io/weldingcalc/quarter-inch-steel.html">
+<meta property="og:url" content="https://jpanasuk-netizen.github.io/weldingcalc/quarter-inch-steel.html">
+<link rel="stylesheet" href="assets/styles.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can a 140 amp welder weld 1/4 inch steel?","acceptedAnswer":{"@type":"Answer","text":"Single-pass, yes — 1/8\" E6011/E7018 rod at 90–140 A burns into 1/4\" plate fine for non-structural work. But the deposited bead is undersized relative to the joint, so full-strength welds on 1/4\" want 180–220 A and multiple passes with a 240 V machine."}},{"@type":"Question","name":"What welder is best for 1/4 inch steel?","acceptedAnswer":{"@type":"Answer","text":"A 200–220 A stick or MIG machine on 240 V. At that class you run 1/8\"–5/32\" rod in the middle of its amperage window without pegging duty cycle, and 1/4\" fillets become single-or-double-pass routine work."}}]}
+</script>
+</head>
+<body>
+<header class="site-head">
+  <a class="brand" href="index.html">WeldingCalc</a>
+  <nav aria-label="Site">
+    <a href="index.html#calc">Calculator</a>
+    <a href="quarter-inch-steel.html">1/4" steel welder</a>
+    <a href="mig-or-tig-sheet-metal.html">Sheet metal: MIG vs TIG</a>
+    <a href="best-beginner-welder.html">Beginner welder size</a>
+  </nav>
+</header>
+<main>
+<h1>What size welder for 1/4 inch steel?</h1>
+<p class="sub">The honest answer: 140 amps does it once, 200 amps does it all day. Here's the difference.</p>
+
+<h2>Short answer</h2>
+<p>For non-structural 1/4" steel — brackets, trailer tie-downs, gate hardware — a <strong>140 A machine with 1/8" stick rod (90–140 A) or .035 flux-core</strong> will make a weld that holds, if you bevel the joint and don't rush. For structural 1/4" — hitch receivers, engine mounts, load-bearing tabs — you want a <strong>200–220 A machine on 240 V</strong>, because a proper 1/4" fillet needs a bead profile that a 140 A machine can only build in multiple slow passes.</p>
+
+<h2>The math behind it</h2>
+<p>Rule of thumb: stick rod diameter ≈ half the base-metal thickness, so 1/4" (250 mils) takes a 1/8" rod. E6011 in 1/8" runs at 75–125 A; E7018 at 90–140 A. Both fit inside a 140 A machine's output — which is exactly why "can my 140 A welder do 1/4 inch?" is technically yes. The catch is duty cycle: 1/8" 7018 at 125–140 A pegs most 140 A machines at 100% output, so they thermal-cycle and cut out every few minutes. Check what that actually means with the <a href="index.html#calc">duty cycle calculator</a>.</p>
+
+<h2>Machine classes, compared</h2>
+<div class="tbl-wrap">
+<table>
+<tr><th>Class</th><th>Example output</th><th>1/4" steel verdict</th></tr>
+<tr><td>120 V flux-core, 90–140 A</td><td>.030–.035 FC wire, 60% duty at 90 A</td><td>Single-pass non-structural, slow. Preheat helps.</td></tr>
+<tr><td>140 A MIG/stick, 120 V</td><td>1/8" 7018 at the ceiling of its range</td><td>Works, thermally limited. Bevel + multi-pass for structure.</td></tr>
+<tr><td>200–220 A, 240 V</td><td>5/32" 7018 at 140–180 A mid-window</td><td>Correct tool. Single- or double-pass fillets, comfortable duty cycle.</td></tr>
+<tr><td>250 A+ shop machine</td><td>1/4" + heavier plate, preheat routines</td><td>Overkill unless 3/8"+ shows up regularly.</td></tr>
+</table>
+</div>
+
+<h2>Joints change the answer</h2>
+<p>A 1/4" <em>outside corner</em> needs less penetration than a 1/4" <em>butt joint</em>. Beveling a butt joint to a knife edge turns one impossible-penetration weld into two easy-penetration passes. If you own a 140 A machine, grinding the bevel is the cheapest 40 amps you'll ever buy.</p>
+
+<h2>The generator footnote</h2>
+<p>Running that 200 A machine on a job site without shore power? A stick welder is one of the nastiest loads a portable generator sees — constant surge cycling. Size the generator properly at <a href="https://jpanasuk-netizen.github.io/generatorsizer/" rel="noopener">GeneratorSizer</a> before you buy, not after the breaker trips.</p>
+
+<p><a href="index.html">← Back to the welding thickness calculator</a></p>
+</main>
+<footer>WeldingCalc · <a href="index.html">welding thickness calculator</a> · <a href="mig-or-tig-sheet-metal.html">MIG or TIG for sheet metal</a> · <a href="best-beginner-welder.html">beginner welder size</a> · pages may contain affiliate links</footer>
+<script src="assets/app.js"></script>
+</body>
+</html>
