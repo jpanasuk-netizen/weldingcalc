@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://jpanasuk-netizen.github.io/weldingcalc/sitemap.xml
+Sitemap: https://welding-calculator.com/sitemap.xml
