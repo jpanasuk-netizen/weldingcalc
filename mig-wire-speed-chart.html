@@ -34,6 +34,21 @@
       "@type": "Question",
       "name": "Does higher wire speed mean higher amperage?",
       "acceptedAnswer": { "@type": "Answer", "text": "Yes — wire speed is the amperage dial on a MIG machine. Burn-off at the tip must equal wire feed, so pushing more ipm pulls more amps. Voltage sets arc length and bead profile; wire speed sets heat and deposition." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the formula for MIG wire speed in ipm?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A common machine-setting approximation is wire speed (ipm) ≈ amperage × k, where k is about 3.5 for 0.023\" wire, 2.0 for 0.030\", and 1.6 for 0.035\" wire — the same coefficients our MIG calculator uses. For 0.045\" wire in spray transfer, published charts put the factor closer to 1.2–1.4. Treat the result as a starting window and tune on scrap." }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens if MIG wire speed is too slow?",
+      "acceptedAnswer": { "@type": "Answer", "text": "The wire burns back to the contact tip and stubs, the arc hisses instead of crackles, and the bead sits tall, narrow, and cold with poor fusion at the toes. Too fast and the wire drips into the puddle, pops, and throws spatter. Fix speed by ear first, then by bead shape." }
+    },
+    {
+      "@type": "Question",
+      "name": "Does wire speed change with gas type?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Modestly. For the same amperage, C25 (75/25 argon/CO2) short-circuit settings hold for straight CO2 with a 1–2 V bump and slightly slower wire feed to keep the arc from getting too fluid. Flux-core (E71T-11) runs about 10–15% slower ipm at the same amperage and needs no gas at all." }
     }
   ]
 }
@@ -48,6 +63,9 @@
 <h1>MIG wire speed chart (ipm)</h1>
 <p class="sub">Starting points for ER70S-6 mild steel with 75/25 gas, short-circuit and low-globular transfer.</p>
 
+<p>Wire speed — wire feed speed, or WFS — is the single most misused dial on a MIG machine. Beginners treat voltage as the heat control and leave the wire speed wherever the machine was last set, which is exactly backwards: on a constant-voltage MIG power source, <strong>wire speed is the amperage control</strong>. The machine self-balances so that the wire burns off at the tip at the same rate the feeder pushes it. Feed faster and the arc pulls more amps to melt the extra wire; feed slower and amperage drops. Voltage, meanwhile, sets arc length and bead profile. Get that relationship straight and every chart below starts to make sense.</p>
+
+<h2>Wire speed chart by wire diameter and thickness</h2>
 <div class="tbl-wrap">
 <table>
   <thead><tr><th>Material</th><th>Wire</th><th class="num">WFS (ipm)</th><th class="num">Voltage</th><th class="num">≈ Amps</th></tr></thead>
@@ -63,9 +81,28 @@
 </table>
 </div>
 
-<h2>How to dial it in</h2>
-<p>Set voltage for the thickness first, then raise wire speed until the arc sounds like frying bacon. Popping and spatter means too much wire for the voltage; a hissing, stubbing arc means too little. Every machine reads a little differently — treat the table as the first coupon, not the last.</p>
-<p class="note">Flux-core (E71T-11) runs 10–15% slower WFS at the same amperage and no gas. Aluminum MIG needs 0.030/0.035 wire, 100% argon, and a spool gun at 1.5–2× these speeds.</p>
+<p>The wire-diameter choice comes first, because the same thickness can be welded with more than one wire size. A common machine-maker rule: 0.023" wire for material under 3/32", 0.030" through 3/16", and 0.035" above that. 0.045" wire is really a spray-transfer and heavy-fabrication size — it needs the amps that 1/4" and thicker plate demand, and it will not run a stable short-circuit arc on thin sheet no matter where you set the feeder. Our <a href="index.html">MIG calculator</a> applies exactly these wire-size rules when it picks a diameter for your thickness.</p>
+
+<h2>The ipm formula behind the chart</h2>
+<p>Every row above can be reproduced with a simple published approximation: <strong>wire speed (ipm) ≈ amperage × k</strong>, where k depends on wire diameter — about <strong>3.5 for 0.023" wire, 2.0 for 0.030", and 1.6 for 0.035"</strong>. Those are the same coefficients our calculator uses. For 0.045" wire, published manufacturer charts put the factor closer to 1.2–1.4 in the spray range, which is why we show 0.045 settings as a chart row rather than a calculator output. Check the arithmetic against the table: 0.035" wire at 110 A gives 110 × 1.6 ≈ 176 ipm, and the tuned window of 190–230 ipm sits just above — the formula lands you in the neighborhood, the test bead lands you on the number.</p>
+
+<h2>Why wire speed matters more than you think</h2>
+<p>Wire speed controls three things at once: <strong>heat input</strong> (via amperage), <strong>deposition rate</strong> (how much filler lands per minute), and <strong>bead profile</strong>. Run it low and you get a tall, ropey, cold lap bead with fusion problems at the toes — the weld looks fine and fails in bending. Run it high for the voltage and the wire dips into the puddle, pops, and spatters. Because voltage and wire speed are paired, the practical tuning method is always the same: set voltage for the thickness, then trim wire speed until the arc sounds like frying bacon — a steady crackle, not hissing (too slow) and not popping (too fast).</p>
+
+<p>Gas type shifts the picture slightly. With C25 (75% argon / 25% CO2), short-circuit settings are the industry default. Straight CO2 runs hotter and more globular, so bump voltage 1–2 V and drop wire speed a touch for the same puddle. Flux-core (E71T-11) is self-shielded and runs about 10–15% slower wire speed at the same amperage with the polarity considerations your machine manual specifies. Aluminum MIG is its own world: 0.030"/0.035" 4043 or 5356, 100% argon, a spool gun, and wire speeds roughly 1.5–2× the steel numbers because aluminum wire is soft and feeds fast.</p>
+
+<h2>Common wire speed mistakes</h2>
+<ul>
+  <li><strong>Chasing the dial number instead of the sound.</strong> Machine calibrations differ; a "200" on one feeder is not 200 on another. Tune by arc sound and bead shape, using the chart only as the first coupon.</li>
+  <li><strong>Turning up wire speed to fix a cold weld without touching voltage.</strong> Past the pairing window you get spatter and drippy toes, not more heat. Raise voltage and speed together in small steps.</li>
+  <li><strong>Running 0.045" wire on thin material.</strong> It cannot short-circuit stably at the low amps thin sheet needs; stubbing and erratic arcs follow. Drop to 0.023" or 0.030".</li>
+  <li><strong>Ignoring stick-out.</strong> Longer stick-out (past ~3/8") drops effective amperage and changes the burn-off balance, so a speed that was correct at 1/4" stick-out runs cold at 3/4". Keep stick-out consistent.</li>
+  <li><strong>Feeding through a worn contact tip.</strong> A worn tip adds drag and micro-slips; the machine reads the set speed but the arc stutters. Replace tips cheap and often — and match the tip size exactly to the wire.</li>
+  <li><strong>Forgetting that wire speed equals deposition cost.</strong> If you're burning a lot of wire on production or repeat jobs, run the <a href="weld-cost-calculator.html">weld cost calculator</a> to see what your ipm setting actually costs per joint in wire and gas.</li>
+</ul>
+
+<h2>Watch your duty cycle at high wire speeds</h2>
+<p>The top rows of the chart — 0.045" wire at 200–260 A — will trip the thermal protector on hobby-class machines faster than any other setting. Before planning a long multi-pass session in that range, check what your machine can actually sustain with the <a href="duty-cycle-calculator.html">duty cycle calculator</a>; a 150 A machine rated at 30% gives you about three minutes of welding out of every ten at those settings.</p>
 
 <!-- AFFILIATE SLOT -->
 <div class="affil">
@@ -73,8 +110,24 @@
   <p class="small">ER70S-6 spool recommendations coming after affiliate approval.</p>
 </div>
 
+<h2>FAQ</h2>
+<h3>What wire speed should I use for 1/8 steel with 0.035 wire?</h3>
+<p>About 190–230 ipm with 0.035" (0.9 mm) ER70S-6 wire, paired with 18–19 V, puts roughly 100–120 A into 1/8" mild steel for short-circuit transfer. Increase wire speed until the bead ties in flat; if the arc drips or snuffs, back off 10 ipm.</p>
+<h3>Does higher wire speed mean higher amperage?</h3>
+<p>Yes — wire speed is the amperage dial on a MIG machine. Burn-off at the tip must equal wire feed, so pushing more ipm pulls more amps. Voltage sets arc length and bead profile; wire speed sets heat and deposition.</p>
+<h3>What is the formula for MIG wire speed in ipm?</h3>
+<p>A common machine-setting approximation is wire speed (ipm) ≈ amperage × k, where k is about 3.5 for 0.023" wire, 2.0 for 0.030", and 1.6 for 0.035" wire — the same coefficients our MIG calculator uses. For 0.045" wire in spray transfer, published charts put the factor closer to 1.2–1.4. Treat the result as a starting window and tune on scrap.</p>
+<h3>What happens if MIG wire speed is too slow?</h3>
+<p>The wire burns back to the contact tip and stubs, the arc hisses instead of crackles, and the bead sits tall, narrow, and cold with poor fusion at the toes. Too fast and the wire drips into the puddle, pops, and throws spatter. Fix speed by ear first, then by bead shape.</p>
+<h3>Does wire speed change with gas type?</h3>
+<p>Modestly. For the same amperage, C25 (75/25 argon/CO2) short-circuit settings hold for straight CO2 with a 1–2 V bump and slightly slower wire feed to keep the arc from getting too fluid. Flux-core (E71T-11) runs about 10–15% slower ipm at the same amperage and needs no gas at all.</p>
+
 <footer>
-  <a href="index.html">WeldingCalc calculator</a></footer>
+  <a href="index.html">WeldingCalc calculator</a> ·
+  <a href="weld-cost-calculator.html">Weld cost calculator</a> ·
+  <a href="duty-cycle-calculator.html">Duty cycle calculator</a> ·
+  <a href="mig-or-tig-sheet-metal.html">MIG vs TIG for sheet metal</a>
+</footer>
 </main>
 </body>
 </html>

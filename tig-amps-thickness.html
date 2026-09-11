@@ -34,6 +34,21 @@
       "@type": "Question",
       "name": "What size tungsten for what amperage?",
       "acceptedAnswer": { "@type": "Answer", "text": "1/16\" lanthanated covers roughly 30–100 A DCEN, 3/32\" covers 90–180 A, and 1/8\" covers 150–250 A. On AC for aluminum, tungsten runs hotter — step up one size (a 3/32\" for jobs a 1/16\" would do on steel) and ball the tip slightly with balanced AC." }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I use AC or DC for TIG?",
+      "acceptedAnswer": { "@type": "Answer", "text": "DCEN (DC electrode negative) for steel, stainless, and most other metals — the workpiece gets the heat and the tungsten stays sharp. AC only for aluminum and magnesium, where the electrode-positive half-cycle breaks up the tenacious oxide layer. Some inverters offer AC balance and frequency controls to tune that cleaning action." }
+    },
+    {
+      "@type": "Question",
+      "name": "What filler rod do I use for TIG?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Match the rod family to the base metal: ER70S-2 or ER70S-6 for mild steel, ER308L for 304 stainless (316L for 316), and 4043 as the general-purpose aluminum rod — switch to 5356 for higher strength or anodized-color match. Filler diameter is usually the same as or one size up from the tungsten." }
+    },
+    {
+      "@type": "Question",
+      "name": "How many amps for 1/8 inch aluminum TIG?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Roughly 160–200 A on AC for a single-pass butt joint, per the ~1.5 A per 0.001\" aluminum factor. Preheat to 200–250°F helps smaller machines get there, and a 3/32\"–1/8\" zirconiated or lanthanated tungsten in a #7 cup with argon keeps the arc stable at those settings." }
     }
   ]
 }
@@ -48,6 +63,9 @@
 <h1>TIG amps by material thickness</h1>
 <p class="sub">Start points by material and thickness — the pedal does the rest.</p>
 
+<p>Unlike MIG, where the machine holds voltage constant and wire speed sets the amps, a TIG torch delivers exactly the amperage you ask for. That makes amperage the first — and most argued-about — setting on every TIG job. Set it too low and you never establish a puddle; set it too high and you undercut, warp thin sheet, or drop a hole through it. The chart below gives starting windows for the three materials most shops actually weld, then explains the famous rule of thumb behind them and exactly where it fails.</p>
+
+<h2>TIG amperage chart: steel, stainless, aluminum</h2>
 <div class="tbl-wrap">
 <table>
   <thead><tr><th>Thickness</th><th class="num">Steel (DCEN)</th><th class="num">Stainless</th><th class="num">Aluminum (AC)</th><th>Tungsten</th><th>Filler</th></tr></thead>
@@ -62,11 +80,24 @@
 </table>
 </div>
 
-<h2>Where the 1 A / 0.001" rule breaks</h2>
-<p><strong>Aluminum:</strong> oxide layer eats heat on AC — run ~1.5× and use a #7 or larger cup with argon. <strong>Thin stainless:</strong> heat discolors and warps fast; stay at the bottom of the range and back the pedal off mid-bead. <strong>Over 1/4":</strong> preheat to 200–300°F or no rule survives the puddle.</p>
+<p>These windows assume argon shielding, a properly ground tungsten, and a joint you'd actually weld in one or two passes. Thin material needs less absolute amperage but tighter control, which is why a machine with a good foot pedal or torch-mounted amperage control matters more than raw output below 100 A. Our <a href="index.html">main calculator</a> applies these same rules — enter a thickness and it returns the amp window, tungsten size, and filler diameter together.</p>
 
-<h2>AC balance for aluminum</h2>
-<p>Modern inverters: start at 65–70% electrode negative, 100–120 Hz frequency for a tight arc on 0.062–0.125". Cleaning action too wide means too much electrode positive and a balling tungsten.</p>
+<h2>The 1-amp-per-0.001-inch rule</h2>
+<p>The most durable rule of thumb in TIG: <strong>1 amp for every 0.001" of mild steel thickness</strong>. 0.062" steel wants about 60 A; 1/8" (0.125") wants about 125 A. It holds reasonably well for steel and stainless from roughly 0.030" to 0.125" — beyond that range, joint design, heat sinking, and travel speed start to dominate. It is a starting point, not a setting: the real technique is to pedal up to the high end of the range to establish the puddle quickly, then back off 20–30% to travel. Riding a constant 125 A the whole bead is how thin corners get blown out.</p>
+<p>Where it breaks, deliberately: <strong>aluminum</strong> dumps heat into the part and fights an oxide crust, so it needs roughly <strong>1.5 A per 0.001"</strong> on AC — the calculator applies that factor automatically. <strong>Thin stainless</strong> is the opposite: it holds heat, discolors, and warps fast, so stay at the bottom of the range or below and let the pedal do the restraint. And past <strong>1/4"</strong> no simple rule survives — preheat to 200–300°F or the puddle freezes at the edges before fusion happens.</p>
+
+<h2>AC vs DC: which for which metal</h2>
+<p><strong>DCEN (DC electrode negative)</strong> is the default for everything except aluminum and magnesium: steel, stainless, titanium, copper alloys, chromoly. About 70–80% of the arc heat lands on the workpiece, the tungsten stays cool and holds a sharp grind, and the bead is narrow and penetrating. <strong>AC exists for one reason: the oxide layer.</strong> Aluminum's oxide melts at over 3,600°F while the metal under it melts near 1,200°F — DCEN can't break it. The electrode-positive half of each AC cycle blasts the oxide off (cleaning action) while the electrode-negative half does the heating.</p>
+<p>Modern inverter machines let you tune that balance. Start at <strong>65–70% electrode negative</strong> with AC frequency at 100–120 Hz for a tight, focused arc on 0.062–0.125" material. If you see a wide sooty cleaning band and a balling tungsten, you're running too much electrode positive — shift the balance toward EN. Higher frequency narrows the arc cone and is handy on inside corners; lower frequency gives a wider, softer puddle for outside fillets.</p>
+
+<h2>Filler selection by material</h2>
+<p>Filler follows the base metal's family, not its thickness. <strong>Mild steel:</strong> ER70S-2 or ER70S-6 — the same wire chemistry MIG uses, in rod form; S-2 tolerates slightly dirtier surface metal. <strong>Stainless:</strong> ER308L for 304 base metal, ER316L for 316; always match or slightly over-alloy the filler to keep corrosion resistance. <strong>Aluminum:</strong> 4043 is the general-purpose, crack-resistant default; move to 5356 when you need higher as-welded strength or a color match after anodizing. Sizing is simple — filler diameter about equal to or one size larger than the tungsten, which is what the table above pairs up. On thin sheet, filler one size down from the tungsten keeps you from dumping cold rod into a small puddle.</p>
+
+<h2>Tungsten sizing and prep</h2>
+<p>1/16" lanthanated covers roughly 30–100 A DCEN, 3/32" covers 90–180 A, and 1/8" covers 150–250 A. Oversizing the tungsten is the classic beginner error — a too-big tungsten gives a wandering, hard-to-start arc at low amps. On AC for aluminum, tungsten runs hotter: step up one size from what the steel amperage would suggest and let the tip form a slight ball. Grind DCEN tungstens longitudinally (lines running away from the tip), never circumferentially — cross-grinding makes the arc wander. Use a dedicated grinding wheel for tungsten; thoriated dust is not something to share with your bench grinder.</p>
+
+<h2>Long beads and duty cycle</h2>
+<p>TIG amps tax a machine differently than MIG — a 200 A aluminum bead on 1/4" plate will run a 180 A-class machine right up against its thermal limit. If you're planning production-length runs near the top of the chart, check the machine's real continuous capability with the <a href="duty-cycle-calculator.html">duty cycle calculator</a> before you commit to a fabrication schedule. And if you're costing out a TIG production job, the <a href="weld-cost-calculator.html">weld cost calculator</a> handles filler, gas, and labor per joint.</p>
 
 <!-- AFFILIATE SLOT -->
 <div class="affil">
@@ -74,9 +105,24 @@
   <p class="small">Tungsten, cups, and filler recommendations coming after affiliate approval.</p>
 </div>
 
+<h2>FAQ</h2>
+<h3>Is 1 amp per 0.001 inch a good rule for TIG?</h3>
+<p>It's a fair starting point for steel and stainless in the 0.030"–0.125" range (30–125 A), with foot pedal control doing the real work: start high to establish the puddle, back off to travel. It underestimates aluminum, which needs roughly 1.5 A per 0.001" on AC, and overestimates thin stainless, which warms fast and needs restraint.</p>
+<h3>What size tungsten for what amperage?</h3>
+<p>1/16" lanthanated covers roughly 30–100 A DCEN, 3/32" covers 90–180 A, and 1/8" covers 150–250 A. On AC for aluminum, tungsten runs hotter — step up one size (a 3/32" for jobs a 1/16" would do on steel) and ball the tip slightly with balanced AC.</p>
+<h3>Do I use AC or DC for TIG?</h3>
+<p>DCEN (DC electrode negative) for steel, stainless, and most other metals — the workpiece gets the heat and the tungsten stays sharp. AC only for aluminum and magnesium, where the electrode-positive half-cycle breaks up the tenacious oxide layer. Some inverters offer AC balance and frequency controls to tune that cleaning action.</p>
+<h3>What filler rod do I use for TIG?</h3>
+<p>Match the rod family to the base metal: ER70S-2 or ER70S-6 for mild steel, ER308L for 304 stainless (316L for 316), and 4043 as the general-purpose aluminum rod — switch to 5356 for higher strength or anodized-color match. Filler diameter is usually the same as or one size up from the tungsten.</p>
+<h3>How many amps for 1/8 inch aluminum TIG?</h3>
+<p>Roughly 160–200 A on AC for a single-pass butt joint, per the ~1.5 A per 0.001" aluminum factor. Preheat to 200–250°F helps smaller machines get there, and a 3/32"–1/8" zirconiated or lanthanated tungsten in a #7 cup with argon keeps the arc stable at those settings.</p>
+
 <footer>
   <a href="index.html">WeldingCalc calculator</a> ·
-  <a href="mig-wire-speed-chart.html">MIG wire speed chart</a></footer>
+  <a href="mig-wire-speed-chart.html">MIG wire speed chart</a> ·
+  <a href="weld-cost-calculator.html">Weld cost calculator</a> ·
+  <a href="duty-cycle-calculator.html">Duty cycle calculator</a>
+</footer>
 </main>
 </body>
 </html>
