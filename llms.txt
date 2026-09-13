@@ -9,6 +9,6 @@ Free welding thickness and amperage calculator: TIG amps by material and thickne
 - /best-beginner-welder.html — best beginner welder by thickness
 
 ## Sister sites (calculator network)
-- https://jpanasuk-netizen.github.io/generatorsizer/ — generator size calculator
-- https://jpanasuk-netizen.github.io/solarsizer/ — off-grid solar size calculator
-- https://jpanasuk-netizen.github.io/battery-bank-sizer/ — battery bank sizer
+- https://generator-sizer.com/ — generator size calculator
+- https://solar-sizer.com/ — off-grid solar size calculator
+- https://battery-bank-sizer.com/ — battery bank sizer
