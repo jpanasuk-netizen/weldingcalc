@@ -28,6 +28,7 @@ function tigAmps(){
   var lo = Math.round(mid * 0.8), hi = Math.round(mid * 1.2);
   var tung = mils >= 156 ? "3/32\" (2.4 mm)" : mils >= 94 ? "3/32\" (2.4 mm)" : "1/16\" (1.6 mm)";
   var box = el("tigResult"); box.hidden = false;
+  if (window.updateMatchedCTA) window.updateMatchedCTA(hi, 'tig');
   box.innerHTML = '<div class="big">'+lo+'–'+hi+' <span class="unit">amps ('+TIG_FACTORS[mat].label+', '+fmt(mils)+' mils)</span></div>'+
     '<div class="grid2">'+
       '<div class="stat"><b>'+fmt(mid)+'</b><span>Rule-of-thumb midpoint (1 A per mil'+(k===1.5?' × 1.5':k===0.9?' × 0.9':'')+')'+
@@ -54,6 +55,7 @@ function migSettings(){
   var wfs = Math.round(amps * k);
   var cfh = gas === "flux" ? "20–25" : "20–25";
   var box = el("migResult"); box.hidden = false;
+  if (window.updateMatchedCTA) window.updateMatchedCTA(amps, 'mig');
   box.innerHTML = '<div class="big">'+wire+'" <span class="unit">wire · '+amps+'–'+Math.round(amps*1.15)+' amps</span></div>'+
     '<div class="grid2">'+
       '<div class="stat"><b>'+wfs+'–'+Math.round(wfs*1.1)+' ipm</b><span>Wire speed starting window</span></div>'+
@@ -81,6 +83,7 @@ function stickRod(){
   var rodType = cond === "rusty" ? "6011" : "7018";
   var a = STICK_AMPS[rod][rodType === "6011" ? "sixty10" : "seventy18"];
   var box = el("stkResult"); box.hidden = false;
+  if (window.updateMatchedCTA) window.updateMatchedCTA(a[1], 'stick');
   box.innerHTML = '<div class="big">'+rodLabel+' <span class="unit">E'+(rodType==="6011"?"6011":"7018")+' rod · '+a[0]+'–'+a[1]+' A</span></div>'+
     '<div class="grid2">'+
       '<div class="stat"><b>DCEP</b><span>Polarity ('+(rodType==="6011"?"or DCEN/AC — 6011 runs all":"7018 is DCEP only")+'</span></div>'+
@@ -104,6 +107,7 @@ function dutyCycle(){
   var duty = Math.min(100, rD * Math.pow(rA / aA, 2));
   var onMin = duty / 100 * 10;
   var box = el("dcResult"); box.hidden = false;
+  if (window.updateMatchedCTA) window.updateMatchedCTA(aA, 'duty');
   var verdict = duty >= 60 ? "Plenty — you can work continuously in practice."
               : duty >= 25 ? "Fine for tack-and-fabricate work; rest between beads."
               : "Light duty — plan on long cool-downs or step up machine size.";
