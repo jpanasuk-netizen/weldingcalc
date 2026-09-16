@@ -12,3 +12,10 @@ Free welding thickness and amperage calculator: TIG amps by material and thickne
 - https://generator-sizer.com/ — generator size calculator
 - https://solar-sizer.com/ — off-grid solar size calculator
 - https://battery-bank-sizer.com/ — battery bank sizer
+
+## Topic map
+- [WeldingCalc topic map](https://welding-calculator.com/topics.html): Welder settings calculator for hobbyists running MIG/TIG/stick.
+- **Thickness → amps:** [Thickness & amperage calculator](https://welding-calculator.com/), [Settings card](https://welding-calculator.com/magnet.html), [TIG amps by thickness](https://welding-calculator.com/tig-amps-thickness.html), [Welder for 1/4 inch steel](https://welding-calculator.com/quarter-inch-steel.html)
+- **Process choice:** [MIG or TIG for sheet](https://welding-calculator.com/mig-or-tig-sheet-metal.html), [MIG wire speed](https://welding-calculator.com/mig-wire-speed-chart.html)
+- **Buying a machine:** [Beginner welder size](https://welding-calculator.com/best-beginner-welder.html)
+- **Runtime & the shop:** [Duty cycle](https://welding-calculator.com/duty-cycle-calculator.html), [Weld cost](https://welding-calculator.com/weld-cost-calculator.html), [Shop Packs](https://shoppacks.net/)
