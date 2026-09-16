@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free MIG/TIG/Stick Settings Card — Amps by Thickness</title>
+<meta name="description" content="Printable shop-wall card: TIG amps, stick rod, and machine class by mild-steel thickness. Test bead still wins.">
+<link rel="canonical" href="https://welding-calculator.com/magnet.html">
+<meta name="robots" content="index,follow">
+<meta property="og:title" content="FREE: Welder settings card">
+<meta property="og:description" content="Printable shop-wall card: TIG amps, stick rod, and machine class by mild-steel thickness. Test bead still wins.">
+<meta property="og:url" content="https://welding-calculator.com/magnet.html">
+<meta property="og:type" content="article">
+<style>
+:root{--bg:#0b0d10;--card:#15181d;--line:#262b33;--fg:#e7e5e4;--muted:#8a929c;--acc:#f59e0b;--paper:#fff8e7}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--fg);font-family:Georgia,"Times New Roman",serif;line-height:1.5}
+.wrap{max-width:820px;margin:0 auto;padding:24px 18px 72px}
+.thumb{background:#111;border:3px solid var(--acc);border-radius:8px;padding:28px 22px;margin:0 0 28px;position:relative}
+.thumb .kicker{font-family:Verdana,sans-serif;font-size:12px;letter-spacing:2px;font-weight:700;color:var(--acc);text-transform:uppercase}
+.thumb h1{font-size:clamp(28px,5vw,48px);line-height:1.05;margin:10px 0 8px;letter-spacing:-.5px}
+.thumb .big{font-family:Verdana,sans-serif;font-size:clamp(42px,8vw,72px);color:var(--acc);font-weight:800;line-height:1}
+.thumb p{color:#d6d3d1;font-size:18px;max-width:36em}
+.badge{display:inline-block;background:var(--acc);color:#111;font-family:Verdana,sans-serif;font-weight:800;font-size:12px;padding:4px 10px;border-radius:3px;letter-spacing:1px}
+nav{margin:0 0 18px;font-family:Verdana,sans-serif;font-size:13px}
+nav a{color:var(--acc)}
+h2{font-size:24px;margin:28px 0 10px}
+p,li{font-size:17px}
+.muted{color:var(--muted);font-size:14px}
+table{width:100%;border-collapse:collapse;margin:12px 0 20px;font-family:Verdana,sans-serif;font-size:14px}
+th,td{border-bottom:1px solid var(--line);padding:8px 6px;text-align:left}
+th{color:var(--acc);font-size:12px;letter-spacing:.4px}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums}
+.sheet{background:var(--card);border-left:4px solid var(--acc);padding:16px 18px;border-radius:4px;margin:16px 0}
+.cta{display:inline-block;background:var(--acc);color:#111;font-family:Verdana,sans-serif;font-weight:800;text-decoration:none;padding:14px 18px;border-radius:6px;margin:8px 8px 8px 0}
+.cta.ghost{background:transparent;color:var(--acc);border:2px solid var(--acc)}
+.kw{font-family:Verdana,sans-serif;background:#111;border:1px dashed var(--acc);padding:12px 14px;margin:18px 0;font-size:15px}
+.print{position:fixed;right:16px;bottom:16px;z-index:9}
+footer{margin-top:40px;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+@media print{
+  body{background:#fff;color:#111}
+  .thumb{border-color:#111;color:#111}
+  .thumb .big,.thumb .kicker,th,a,.cta{color:#111 !important}
+  .print,.kw,nav,.noprint{display:none !important}
+  .sheet{border-color:#111}
+  table,th,td{border-color:#ccc}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav><a href="https://welding-calculator.com/">WeldingCalc</a> · printable cheat sheet</nav>
+<div class="thumb">
+  <span class="badge">FREE · PRINT THIS</span>
+  <div class="kicker">Hobby / farm shop · one page</div>
+  <div class="big">1 A / mil</div>
+  <h1>Tape this above the welder. Then still run a test bead.</h1>
+  <p>TIG on mild steel is about 1 amp per 0.001 inch. 1/8" starts near 125 A. Aluminum wants ~1.5× because it dumps heat. None of this replaces scrap.</p>
+</div>
+<p>Stick: rod diameter ≈ half the base-metal thickness, then use the amperage window for that rod. MIG: 0.023" under 3/32", 0.030" through 3/16", 0.035" above. Duty cycle scales with the square of the amperage ratio — that's why turning the machine up cooks it faster than you think.</p>
+<div class="sheet">
+  <strong>Use it in 10 minutes.</strong> Measure thickness. Pick process. Set the window. Burn scrap until the bead looks like the last one that held.
+</div>
+<h2>Thickness → power class (mild steel)</h2>
+<table>
+<tr><th>Steel thickness</th><th class="n">TIG amps</th><th class="n">Stick rod</th><th class="n">Machine class</th></tr>
+<tr><td>1/16" (62 mils)</td><td class="n">50–75</td><td class="n">1/16" E6011 @ 35–60</td><td class="n">120 V hobby</td></tr>
+<tr><td>1/8" (125 mils)</td><td class="n">100–150</td><td class="n">1/8" E6011 @ 75–125</td><td class="n">120 V ok, 240 V comfortable</td></tr>
+<tr><td>3/16" (188 mils)</td><td class="n">150–225</td><td class="n">5/32" E6011 @ 110–165</td><td class="n">240 V</td></tr>
+<tr><td>1/4" (250 mils)</td><td class="n">200–300</td><td class="n">1/8" @ 90–140, multi-pass</td><td class="n">240 V, 180–220 A</td></tr>
+<tr><td>3/8"+ (375+)</td><td class="n">300+</td><td class="n">Multi-pass, preheat</td><td class="n">Shop machine</td></tr>
+</table>
+<p class="muted">Amp windows from published Lincoln / Miller / ESAB charts, same as welding-calculator.com. Rod-diameter rule: never smaller than 1/16".</p>
+<p>1/4" steel is the line between a 140 A hobby MIG and a real shop machine. If that's your job, don't buy the 120 V unit because the box said 'welds 1/4 inch' in tiny asterisks.</p>
+<p class="noprint">Need the quote forms and follow-up texts so the shop actually gets paid? That's the Welding Shop Operating Pack on <a href="https://shoppacks.net/">shoppacks.net</a> — $49.</p>
+<div class="kw noprint"><strong>Comment keyword:</strong> AMPS — that's the word we ask for on X/LinkedIn. We DM this page.</div>
+<p class="noprint">
+  <a class="cta" href="https://welding-calculator.com/">Run the welding calculator →</a>
+  <a class="cta ghost" href="#" onclick="window.print();return false;">Print / Save PDF</a>
+</p>
+<footer>
+WeldingCalc · numbers from published manufacturer / extension / DOE figures already on the calculator · not a substitute for a licensed pro or a test bead / Manual J / door-sticker check.
+</footer>
+</div>
+<a class="cta print noprint" href="#" onclick="window.print();return false;">Print</a>
+</body>
+</html>
