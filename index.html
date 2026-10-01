@@ -41,7 +41,7 @@
     {
       "@type": "Question",
       "name": "How many amps do I need to weld 1/8 inch steel?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Roughly 100–125 amps. The published rule of thumb for mild steel TIG is about 1 amp per 0.001 inch of thickness, so 1/8 inch (125 mils) starts near 125 A. For MIG with 0.030 wire, that's about 230–250 A class work on a 220 V machine, or 6011/7018 stick at 75–140 A. Always confirm the exact setting on scrap first." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Roughly 100–125 amps. The published rule of thumb for mild steel TIG is about 1 amp per 0.001 inch of thickness, so 1/8 inch (125 mils) starts near 125 A. For stick, a 1/8\" E6011 runs about 75–125 A (see the quick-reference table). Always confirm the exact setting on scrap first." }
     },
     {
       "@type": "Question",
@@ -195,10 +195,21 @@ document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getE
 </section>
 
 <!-- ============ CONTENT ============ -->
-<h2>How these rules work</h2>
+<aside id="key-takeaways" class="card" aria-label="Key takeaways" style="margin:1.5rem 0">
+<h2 style="margin-top:0">Key takeaways</h2>
+<ul>
+<li><strong>TIG:</strong> about 1 amp per 0.001" of mild steel, so 1/8" steel starts near 125 A; aluminum wants about 1.5× that.</li>
+<li><strong>Stick:</strong> pick a rod diameter of about half the base-metal thickness, then use that rod's amperage window.</li>
+<li><strong>Duty cycle</strong> is rated over a 10-minute window and scales with the square of the amperage ratio.</li>
+<li><strong>1/4" steel</strong> is the line between hobby and shop machines: full-strength multi-pass welds want 180–220 A.</li>
+<li>Always confirm the exact setting on scrap first.</li>
+</ul>
+</aside>
+<h2>How does this welding calculator work?</h2>
 <p>Welding sizing is built on three published approximations that machine makers have taught for decades. <strong>TIG:</strong> about 1 amp per 0.001 inch of mild steel — 1/8" steel starts near 125 A, aluminum wants ~1.5× that because it dumps heat fast. <strong>Stick:</strong> rod diameter ≈ half the base-metal thickness, then look up the amperage window for that rod size and type. <strong>MIG:</strong> wire size follows thickness (0.023" under 3/32", 0.030" through 3/16", 0.035" above), and wire speed scales with amps. None of these replace a test bead — every real shop tunes on scrap first.</p>
 
-<h2>Quick reference: thickness → power class</h2>
+<p class="small" id="methodology-note"><strong>Methodology &amp; disclosure:</strong> the calculator applies the published rules of thumb on this page in your browser. It is a planning estimate, not a measured result — confirm every setting on scrap first. Amazon links on this site are affiliate links; they do not change the math.</p>
+<h2>What amps and machine class does each steel thickness need?</h2>
 <div class="tbl-wrap">
 <table>
 <tr><th>Steel thickness</th><th class="num">TIG amps</th><th class="num">Stick rod</th><th>Machine class</th></tr>
@@ -210,6 +221,18 @@ document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getE
 </table>
 </div>
 <p class="small">Amp windows from published electrode and machine-manufacturer charts (Lincoln, Miller, ESAB). Rod-diameter rule: electrode diameter ≈ half the base-metal thickness, never smaller than 1/16".</p>
+
+<section id="faq-answers" aria-label="Common questions, answered">
+<h2>Common questions, answered</h2>
+<h3>How many amps do I need to weld 1/8 inch steel?</h3>
+<p>Roughly 100–125 amps. The published rule of thumb for mild steel TIG is about 1 amp per 0.001 inch of thickness, so 1/8 inch (125 mils) starts near 125 A. For stick, a 1/8" E6011 runs about 75–125 A (see the quick-reference table). Always confirm the exact setting on scrap first.</p>
+<h3>What size stick rod for 1/4 inch steel?</h3>
+<p>The rule is a rod diameter about half the base-metal thickness: 1/4 inch (0.250") takes a 1/8" rod. Run E6011 at 75–125 A if the metal is rusty or painted; run E7018 at 90–140 A on clean steel for a stronger, cleaner deposit. A 120 V 140 A machine can burn 1/8" rod, but a 240 V machine makes 1/4 inch comfortable.</p>
+<h3>What does duty cycle actually mean on a welder?</h3>
+<p>Duty cycle is rated over a 10-minute window: a 140 A machine at 30% duty can weld 3 minutes per 10 at full output, then must cool. Duty cycle scales with the square of the amperage ratio — welding at half the rated amps roughly quadruples the effective duty cycle; welding above rated output collapses it quickly.</p>
+<h3>Can a 140 amp welder weld 1/4 inch steel?</h3>
+<p>Yes, single-pass with stick or flux-core if you bevel the joint and don't rush. Full-strength multi-pass welds on 1/4 inch want 180–220 A. For structural work on 1/4 inch and up, a 200 A-class machine is the honest answer; a 140 A machine is a maintenance-class tool.</p>
+</section>
 
 <h2>Guides</h2>
 <div class="card"><h3><a href="quarter-inch-steel.html">What size welder for 1/4 inch steel?</a></h3><p>The most-searched buyer question, answered honestly: what 140 A machines can and can't do, and why 1/4" is the line between hobby and shop machines.</p></div>
