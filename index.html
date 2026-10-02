@@ -69,20 +69,15 @@
 {
   "sources": [
     {
-      "title": "AWS D1.1 Welding Code",
-      "url": "https://www.aws.org/code",
-      "date": "2026-09-17"
-    },
-    {
-      "title": "Lincoln Electric Handbook",
-      "url": "https://www.lincolnelectric.com/support/welding-handbook.html",
-      "date": "2026-09-17"
+      "title": "Miller Electric, MIG Welding: Setting the Correct Parameters",
+      "url": "https://www.millerwelds.com/en-US/resources/knowledge-hub/mig-welding/how-to/mig-welding-setting-the-correct-parameters",
+      "date": "2026-10-02"
     }
   ]
 }
 </script>
 <script>
-document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getElementById('sources-data').textContent);var s=document.createElement('div');s.className='sources-section';s.innerHTML='<h2 id="sources-heading">Sources & Standards</h2><p>All calculations verified against:</p><ul>'+d.sources.map(x=>'<li><a href="'+x.url+'" target="_blank">'+x.title+'</a></li>').join('')+'</ul><p><button id="cite-toggle">Show Copyable Citations</button></p><div id="cite-output" style="display:none"></div>';var t=document.querySelector('nav')||document.querySelector('footer')||document.body;t.parentNode.insertBefore(s,t);var o=s.querySelector('#cite-toggle'),c=s.querySelector('#cite-output');o.onclick=()=>{c.textContent=d.sources.map(x=>x.title+'. '+x.url+'. Accessed '+x.date).join('\n\n');c.style.display='block';o.style.display='none'};});
+document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getElementById('sources-data').textContent);var s=document.createElement('div');s.className='sources-section';s.innerHTML='<h2 id="sources-heading">Sources & Standards</h2><p>Solid-wire MIG starting points on this site follow the Miller page below: 1 amp per .001 inch of steel, and the wire-speed multipliers.</p><ul>'+d.sources.map(x=>'<li><a href="'+x.url+'" target="_blank">'+x.title+'</a></li>').join('')+'</ul><p><button id="cite-toggle">Show Copyable Citations</button></p><div id="cite-output" style="display:none"></div>';var t=document.querySelector('nav')||document.querySelector('footer')||document.body;t.parentNode.insertBefore(s,t);var o=s.querySelector('#cite-toggle'),c=s.querySelector('#cite-output');o.onclick=()=>{c.textContent=d.sources.map(x=>x.title+'. '+x.url+'. Accessed '+x.date).join('\n\n');c.style.display='block';o.style.display='none'};});
 </script>
 <meta name="llms.txt" content="https://welding-calculator.com/sources.json">
 </head>
@@ -232,6 +227,30 @@ document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getE
 <p>Duty cycle is rated over a 10-minute window: a 140 A machine at 30% duty can weld 3 minutes per 10 at full output, then must cool. Duty cycle scales with the square of the amperage ratio — welding at half the rated amps roughly quadruples the effective duty cycle; welding above rated output collapses it quickly.</p>
 <h3>Can a 140 amp welder weld 1/4 inch steel?</h3>
 <p>Yes, single-pass with stick or flux-core if you bevel the joint and don't rush. Full-strength multi-pass welds on 1/4 inch want 180–220 A. For structural work on 1/4 inch and up, a 200 A-class machine is the honest answer; a 140 A machine is a maintenance-class tool.</p>
+</section>
+
+<section id="common-questions" aria-label="Common questions">
+<h2>Common questions</h2>
+<p>Each question below is a full page, with the published figure and the source it comes from.</p>
+<h3>By thickness</h3>
+<ul>
+<li><a href="what-size-welder-for-18-gauge-sheet-metal.html">What size welder do I need for 18 gauge sheet metal?</a></li>
+<li><a href="what-size-welder-for-16-gauge-steel.html">What size welder do I need for 16 gauge steel?</a></li>
+<li><a href="what-size-welder-for-10-gauge-steel.html">What size welder do I need for 10 gauge steel?</a></li>
+<li><a href="what-size-welder-for-1-8-inch-steel.html">What size welder do I need for 1/8 inch steel?</a></li>
+<li><a href="what-size-welder-for-3-16-inch-steel.html">What size welder do I need for 3/16 inch steel?</a></li>
+<li><a href="what-size-welder-for-3-8-inch-steel.html">What size welder do I need for 3/8 inch steel?</a></li>
+<li><a href="what-size-welder-for-1-2-inch-steel.html">What size welder do I need for 1/2 inch steel?</a></li>
+</ul>
+<h3>By job</h3>
+<ul>
+<li><a href="what-size-welder-for-aluminum.html">What size welder do I need for aluminum?</a></li>
+<li><a href="what-size-welder-for-auto-body-panels.html">What size welder do I need for auto body panels?</a></li>
+<li><a href="what-size-welder-for-beginner-home-garage.html">What size welder do I need for a beginner home garage?</a></li>
+<li><a href="what-size-welder-for-120v-outlet.html">What size welder can I run on a 120V outlet?</a></li>
+<li><a href="what-size-welder-for-farm-repair.html">What size welder do I need for farm repair?</a></li>
+<li><a href="what-size-welder-for-trailer-hitch-repair.html">What size welder do I need for trailer hitch repair?</a></li>
+</ul>
 </section>
 
 <h2>Guides</h2>
