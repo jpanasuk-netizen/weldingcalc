@@ -19,3 +19,18 @@ Free welding thickness and amperage calculator: TIG amps by material and thickne
 - **Process choice:** [MIG or TIG for sheet](https://welding-calculator.com/mig-or-tig-sheet-metal.html), [MIG wire speed](https://welding-calculator.com/mig-wire-speed-chart.html)
 - **Buying a machine:** [Beginner welder size](https://welding-calculator.com/best-beginner-welder.html)
 - **Runtime & the shop:** [Duty cycle](https://welding-calculator.com/duty-cycle-calculator.html), [Weld cost](https://welding-calculator.com/weld-cost-calculator.html), [Shop Packs](https://shoppacks.net/)
+
+## Questions
+- /what-size-welder-for-1-8-inch-steel.html — 125 A for 1/8 inch steel
+- /what-size-welder-for-3-16-inch-steel.html — about 190 A for 3/16 inch steel
+- /what-size-welder-for-3-8-inch-steel.html — 375 A single-pass math for 3/8 inch steel
+- /what-size-welder-for-1-2-inch-steel.html — 300+ A chart row for 1/2 inch steel
+- /what-size-welder-for-10-gauge-steel.html — 135 A for 10 gauge (.135 in)
+- /what-size-welder-for-16-gauge-steel.html — 60 A for 16 gauge (.060 in)
+- /what-size-welder-for-18-gauge-sheet-metal.html — 48 A rule and roughly 70 A for 18 gauge
+- /what-size-welder-for-auto-body-panels.html — .023 wire, 30–130 A, for auto body panels
+- /what-size-welder-for-aluminum.html — 18 gauge to 3/8 inch aluminum with a spool gun
+- /what-size-welder-for-trailer-hitch-repair.html — 200–250 A MIG or 175–250 A stick for trailer hitches
+- /what-size-welder-for-farm-repair.html — 130–150 A light farm repair, 200–250 A heavy
+- /what-size-welder-for-120v-outlet.html — 90 A at 20% or 115 A at 20% on a 120 V outlet
+- /what-size-welder-for-beginner-home-garage.html — 25–140 A or 30–230 A for a beginner home garage
