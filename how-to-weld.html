@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Weld: Measure, Pick a Process, Then Read Duty Cycle</title>
+<meta name="description" content="For 125 mils of clean steel, this site’s stick tab returns a 1/16 inch E7018 at 40–80 A and still labels the thickness as a 240 V job. A 25–140 A range includes those amps.">
+<link rel="canonical" href="https://welding-calculator.com/how-to-weld.html">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="shortcut icon" href="assets/favicon.ico">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://welding-calculator.com/how-to-weld.html">
+<meta property="og:title" content="How to Weld: Measure, Pick a Process, Then Read Duty Cycle">
+<meta property="og:description" content="For 125 mils of clean steel, this site’s stick tab returns a 1/16 inch E7018 at 40–80 A and still labels the thickness as a 240 V job. A 25–140 A range includes those amps.">
+<meta property="og:image" content="https://welding-calculator.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How to Weld: Measure, Pick a Process, Then Read Duty Cycle">
+<meta name="twitter:description" content="For 125 mils of clean steel, this site’s stick tab returns a 1/16 inch E7018 at 40–80 A and still labels the thickness as a 240 V job. A 25–140 A range includes those amps.">
+<meta name="twitter:image" content="https://welding-calculator.com/assets/og-image.png">
+<link rel="stylesheet" href="assets/styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What does the stick tab return for 1/8 inch of clean steel?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Enter 125 mils and clean metal. Half of 125 is 62.5, which the function rounds to 63 and then treats as a 1/16 inch rod because 63 is at or under 66. Clean metal selects E7018, whose 1/16 inch window in the function is 40–80 amps. The same function labels 125 mils as a 240 volt machine because the thickness, not the rod amps, crosses 125."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is 20 percent duty cycle in minutes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The farm guide treats duty cycle as minutes out of 10. Twenty percent is 2 minutes of welding and 8 minutes of cooling, at the amperage printed with that percentage. The Handler 140 spec sheet prints 90 amps at 20 percent."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does the duty-cycle tab do at 80 amps on that 90 amp, 20 percent rating?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It computes 20 times (90 divided by 80) squared, which is about 25 percent: 2.5 minutes of welding and 7.5 minutes of cooling in a 10-minute period. That is the calculator’s square rule, not a second line on the Handler sheet."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How to Weld",
+  "description": "For 125 mils of clean steel, this site’s stick tab returns a 1/16 inch E7018 at 40–80 A and still labels the thickness as a 240 V job. A 25–140 A range includes those amps.",
+  "datePublished": "2026-10-03",
+  "dateModified": "2026-10-03",
+  "author": {"@type": "Organization", "name": "Welding Calculator", "url": "https://welding-calculator.com"},
+  "publisher": {"@type": "Organization", "name": "Welding Calculator", "url": "https://welding-calculator.com"},
+  "mainEntityOfPage": "https://welding-calculator.com/how-to-weld.html"
+}
+</script>
+</head>
+<body>
+<header class="site-head">
+  <a class="brand" href="index.html">WeldingCalc</a>
+  <nav aria-label="Site">
+    <a href="index.html#calc">Calculator</a>
+    <a href="quarter-inch-steel.html">1/4&quot; steel welder</a>
+    <a href="mig-or-tig-sheet-metal.html">Sheet metal: MIG vs TIG</a>
+    <a href="best-beginner-welder.html">Beginner welder size</a>
+  </nav>
+</header>
+<main>
+<p class="small"><a href="index.html">Home</a> · <a href="topics.html">Topics</a> · First bead</p>
+<h1>How to Weld</h1>
+<p class="small">Published October 3, 2026 · <a href="/about.html">Built by Jeremy Panasuk</a></p>
+<p>A first weld is a sequence, not a machine slogan. Measure the metal. Decide whether it is clean. Pick stick, MIG, or TIG. Read the amp window that choice produces. Then read the duty cycle at those amps, which is minutes out of ten, not the biggest number on the box. Machine shopping for a home garage is already on <a href="what-size-welder-for-beginner-home-garage.html">what size welder for a beginner home garage</a> and <a href="best-beginner-welder.html">beginner welder size</a>. This page walks one stick path through the calculator so the sequence is visible.</p>
+
+<h2>Start with thickness and condition</h2>
+<p>The stick tab wants thickness in mils, thousandths of an inch, and a condition: clean, or rusty, painted, or dirty. One-eighth inch is 125 mils. Lincoln describes E7018 as the low-hydrogen electrode used when quality matters, and E6011 as the electrode for rusty, dirty, less-than-new metal and for repair work. The calculator encodes that split as the condition menu. Clean selects 7018. Rusty selects 6011. If you do not know which the joint is, look at it before you open the tab. <a href="how-to-clean-metal-before-welding.html">Cleaning</a> is a separate step, and coated metal is a fume problem, not a menu choice. See <a href="how-to-weld-galvanized-steel-safely.html">galvanized steel</a> before you strike an arc on a zinc coating.</p>
+
+<h2>Worked example: 125 mils, clean, stick</h2>
+<p>On the <a href="index.html#calc">stick tab</a>, enter 125 and choose clean. The function takes half of 125, which is 62.5, rounds it to 63, and refuses to go below 62. A result of 63 is at or under 66, so the rod diameter it prints is 1/16 inch, not 1/8 inch. Clean metal selects E7018. The 1/16 inch E7018 window stored in the function is 40–80 amps. Polarity text for 7018 says DCEP only. The power-class line says “240 V machine,” because that line keys off thickness: 125 mils is the cutoff. It does not look at the 40–80 amp window it just printed.</p>
+<p>That split is the useful part. A 1/16 inch rod at 40–80 amps is a small arc. The 240 volt label is the thickness rule firing, not a statement that 80 amps requires a 240 volt circuit. The Handler 140 spec sheet lists a welding range of 25–140 amps. Forty through 80 sits inside that range. The sheet is a MIG machine rated 90 amps at 20 percent duty cycle, so it is not itself a stick procedure. It is evidence that a published range can cover the calculator’s amps while the calculator’s own power-class sentence is talking about something else.</p>
+
+<h2>Then run duty cycle at the amps you will actually hold</h2>
+<p>The farm guide treats duty cycle as minutes out of a 10-minute period. Twenty percent is 2 minutes welding and 8 minutes cooling, at the amperage printed beside that percentage. The Handler 140 prints 90 amps at 20 percent. At that nameplate point you do not need the square rule: 20 percent of 10 minutes is 2.0 minutes on and 8.0 minutes off.</p>
+<p>The duty-cycle tab applies a square rule when the amps you type are not the rated amps. Use the top of the calculator’s window, 80 amps, against the published 90 amp, 20 percent pair. The function does 20 × (90 ÷ 80) squared. Ninety divided by 80 is 1.125. Squared, that is 1.265625. Times 20 is 25.3125, which the display rounds to 25 percent. Weld time is 2.5 minutes of the 10. Cool-down is 7.5 minutes. Inputs, in order: rated amps 90, rated duty 20, actual amps 80.</p>
+<p>So the first-bead story for this joint is not “buy a 240 volt welder because the tab said so.” It is: 1/16 inch E7018, 40–80 amps, and a machine whose published range includes that window, with about 2.5 minutes of arc in 10 at the top of the window if the nameplate you typed was 90 amps at 20 percent. Confirm the bead on scrap. Lincoln’s note on low-hydrogen rods is to drag a short arc and not to whip it. A long arc is how 7018 picks up porosity.</p>
+
+<h2>A common mistake</h2>
+<p>The mistake is reading only the power-class line. “240 V machine” at 125 mils will send a beginner shopping for a bigger welder while the rod the same click selected is a 1/16 inch electrode at 40–80 amps. The other direction is just as wrong: ignoring duty cycle and welding the top of a range as if the percentage printed next to 90 amps still applied at 140. For this example the top of the rod window is 80, not 140, and the duty tab moves 20 percent to about 25 percent. Run the numbers for the amps you will hold, not for the number in the product name.</p>
+
+<h2>Limits</h2>
+<p>This is a planning path for a practice bead on mild steel you can throw away. It is not a code weld, a structural sign-off, or a credential. Pay, training, and what BLS actually says about licensing are on <a href="how-to-get-into-welding.html">how to get into welding</a>. Getting a calculator window right does not produce any of that. If the joint has to hold a trailer, a guardrail, or a pressure part, use a qualified procedure. If the metal is rusty, change the condition input before you trust the 7018 window. If it is galvanized, stop and read the fume page first.</p>
+<p class="amz"><a class="btn-amz" href="https://www.amazon.com/s?k=E7018+welding+rods+1%2F16&amp;tag=generatorsi0d-20" rel="sponsored nofollow noopener" target="_blank">1/16 inch E7018 rods</a></p>
+<nav class="related" aria-label="Related"><h2>Related</h2><ul>
+<li><a href="index.html#calc">Welding thickness calculator</a></li>
+<li><a href="how-to-choose-a-stick-welder.html">How to choose a stick welder</a></li>
+<li><a href="duty-cycle-calculator.html">Duty cycle calculator</a></li>
+<li><a href="what-size-welder-for-beginner-home-garage.html">Beginner home garage welder size</a></li>
+</ul></nav>
+<section class="faq"><h2>Frequently asked questions</h2>
+<details><summary>What does the stick tab return for 1/8 inch of clean steel?</summary><p>Enter 125 mils and clean metal. Half of 125 is 62.5, which the function rounds to 63 and then treats as a 1/16 inch rod because 63 is at or under 66. Clean metal selects E7018, whose 1/16 inch window in the function is 40–80 amps. The same function labels 125 mils as a 240 volt machine because the thickness, not the rod amps, crosses 125.</p></details>
+<details><summary>What is 20 percent duty cycle in minutes?</summary><p>The farm guide treats duty cycle as minutes out of 10. Twenty percent is 2 minutes of welding and 8 minutes of cooling, at the amperage printed with that percentage. The Handler 140 spec sheet prints 90 amps at 20 percent.</p></details>
+<details><summary>What does the duty-cycle tab do at 80 amps on that 90 amp, 20 percent rating?</summary><p>It computes 20 times (90 divided by 80) squared, which is about 25 percent: 2.5 minutes of welding and 7.5 minutes of cooling in a 10-minute period. That is the calculator’s square rule, not a second line on the Handler sheet.</p></details>
+</section>
+<div class="affil">
+  <span class="tag">Affiliate</span>
+  <p class="small">Affiliate disclosure: as an Amazon Associate, we earn from qualifying purchases — at no cost to you.</p>
+</div>
+<p>Compiled with AI assistance from the sources below. Spot an error? Email <a href="mailto:jpanasuk@gmail.com">jpanasuk@gmail.com</a>.</p>
+<h2>Sources</h2>
+<ul>
+<li>Lincoln Electric, “AWS Classifications.” <a href="https://www.lincolnelectric.com/en/welding-and-cutting-resource-center/process-and-theory/aws-classifications" rel="noopener" target="_blank">https://www.lincolnelectric.com/en/welding-and-cutting-resource-center/process-and-theory/aws-classifications</a>. Accessed October 3, 2026.</li>
+<li>Lincoln Electric, stick electrode welding guide (technique notes for EXX18 electrodes). <a href="https://harrisweldingsupplies.com/content/catalogs/lincoln-stick-electrode-welding-guide.pdf" rel="noopener" target="_blank">https://harrisweldingsupplies.com/content/catalogs/lincoln-stick-electrode-welding-guide.pdf</a>. Accessed October 3, 2026.</li>
+<li>Hobart Handler 140 spec sheet (Sept 2022), distributor-hosted copy. <a href="https://www.weldingsuppliesfromioc.com/cdn/shop/files/Hobart_Handler_140_spec.pdf" rel="noopener" target="_blank">https://www.weldingsuppliesfromioc.com/cdn/shop/files/Hobart_Handler_140_spec.pdf</a>. Accessed October 3, 2026.</li>
+<li>Miller Electric, “Welding on the Farm: Selecting a Welding Unit for the Farm or Ranch,” hosted by Ohio State University Marion. <a href="https://marion.osu.edu/sites/marion/files/imce/Welding%20on%20the%20Farm.pdf" rel="noopener" target="_blank">https://marion.osu.edu/sites/marion/files/imce/Welding%20on%20the%20Farm.pdf</a>. Accessed October 3, 2026.</li>
+</ul>
+</main>
+<footer>Built by Jeremy Panasuk · <a href="/about.html">About &amp; how this was made</a> · <a href="/privacy.html">Privacy</a> · <a href="/contact.html">Contact</a> · pages may contain affiliate links</footer>
+<script src="assets/app.js"></script>
+</body>
+</html>

@@ -8,6 +8,16 @@ Free welding thickness and amperage calculator: TIG amps by material and thickne
 - /mig-or-tig-sheet-metal.html — MIG or TIG for 16–20 ga sheet metal
 - /best-beginner-welder.html — best beginner welder by thickness
 
+## Guides
+- /how-to-weld-aluminum.html — Miller 6061 starts versus this calculator’s aluminum band
+- /what-is-arc-welding.html — OSHA fusion types, then one thickness in three processes
+- /how-to-weld.html — measure, rod window, then duty cycle
+- /how-to-get-into-welding.html — BLS education, pay, and outlook
+- /how-to-clean-metal-before-welding.html — coatings off, then 7018 versus 6011
+- /how-to-weld-carbon-steel.html — Miller’s 125 A example versus this MIG tab
+- /how-to-choose-a-stick-welder.html — 90–140 A versus the 175–250 A stick class
+- /how-to-weld-galvanized-steel-safely.html — zinc-fume controls before any amp
+
 ## Sister sites (calculator network)
 - https://generator-sizer.com/ — generator size calculator
 - https://solar-sizer.com/ — off-grid solar size calculator
