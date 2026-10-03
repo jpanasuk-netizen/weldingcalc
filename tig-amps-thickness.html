@@ -28,7 +28,7 @@
     {
       "@type": "Question",
       "name": "Is 1 amp per 0.001 inch a good rule for TIG?",
-      "acceptedAnswer": { "@type": "Answer", "text": "It's a fair starting point for steel and stainless in the 0.030\"–0.125\" range (30–125 A), with foot pedal control doing the real work: start high to establish the puddle, back off to travel. It underestimates aluminum, which needs roughly 1.5 A per 0.001\" on AC, and overestimates thin stainless, which warms fast and needs restraint." }
+      "acceptedAnswer": { "@type": "Answer", "text": "It's a fair starting point for steel and stainless in the 0.030\"–0.125\" range (30–125 A), with foot pedal control doing the real work: start high to establish the puddle, back off to travel. It is not the aluminum rule. Miller's GTAW guidelines, section 8-3, start 1/8 inch 6061 at 90–120 A for a butt joint. Thin stainless still warms fast and needs restraint." }
     },
     {
       "@type": "Question",
@@ -48,7 +48,7 @@
     {
       "@type": "Question",
       "name": "How many amps for 1/8 inch aluminum TIG?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Roughly 160–200 A on AC for a single-pass butt joint, per the ~1.5 A per 0.001\" aluminum factor. Preheat to 200–250°F helps smaller machines get there, and a 3/32\"–1/8\" zirconiated or lanthanated tungsten in a #7 cup with argon keeps the arc stable at those settings." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Miller's GTAW guidelines, section 8-3, list 90–120 A for a 1/8 inch 6061 butt joint, with 1/8 inch 5356 filler, 3/32 inch 2% ceriated tungsten, and argon at 15–20 CFH. The same table lists a T-joint at 100–125 A, a lap at 90–110 A, and a corner at 80–90 A. The calculator returns the butt row at 125 mils." }
     }
   ]
 }
@@ -81,29 +81,29 @@ document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getE
 
 <p>Unlike MIG, where the machine holds voltage constant and wire speed sets the amps, a TIG torch delivers exactly the amperage you ask for. That makes amperage the first — and most argued-about — setting on every TIG job. Set it too low and you never establish a puddle; set it too high and you undercut, warp thin sheet, or drop a hole through it. The chart below gives starting windows for the three materials most shops actually weld, then explains the famous rule of thumb behind them and exactly where it fails.</p>
 
-<div class="answer-box"><strong>Quick answer:</strong> Start at roughly 1 amp per 0.001&quot; of steel or stainless thickness (about 1.5× on AC for aluminum), then let the foot pedal do the real work. Use the chart below for your thickness.</div>
+<div class="answer-box"><strong>Quick answer:</strong> Start at roughly 1 amp per 0.001&quot; of steel or stainless thickness. For 1/8&quot; aluminum, use Miller’s 6061 butt start of 90–120 A, not a 1.5× factor. The foot pedal still does the real work.</div>
 
 <h2>TIG amperage chart: steel, stainless, aluminum</h2>
 <div class="tbl-wrap">
 <table>
   <thead><tr><th>Thickness</th><th class="num">Steel (DCEN)</th><th class="num">Stainless</th><th class="num">Aluminum (AC)</th><th>Tungsten</th><th>Filler</th></tr></thead>
   <tbody>
-    <tr><td>0.030" (sheet)</td><td class="num">25–35 A</td><td class="num">20–30 A</td><td class="num">40–60 A</td><td>1/16"</td><td>1/16"</td></tr>
-    <tr><td>0.062" (16 ga)</td><td class="num">55–70 A</td><td class="num">45–60 A</td><td class="num">80–110 A</td><td>1/16"</td><td>1/16"</td></tr>
-    <tr><td>0.093" (13 ga)</td><td class="num">85–100 A</td><td class="num">70–85 A</td><td class="num">120–150 A</td><td>3/32"</td><td>3/32"</td></tr>
-    <tr><td>0.125" (1/8")</td><td class="num">115–135 A</td><td class="num">95–115 A</td><td class="num">160–200 A</td><td>3/32"</td><td>3/32"</td></tr>
-    <tr><td>0.187" (3/16")</td><td class="num">160–190 A</td><td class="num">140–170 A</td><td class="num">220–260 A</td><td>1/8"</td><td>1/8"</td></tr>
-    <tr><td>0.250" (1/4")</td><td class="num">200–240 A</td><td class="num">180–220 A</td><td class="num">280+ A</td><td>1/8"</td><td>1/8"</td></tr>
+    <tr><td>0.030" (sheet)</td><td class="num">25–35 A</td><td class="num">20–30 A</td><td class="num">—</td><td>1/16"</td><td>1/16"</td></tr>
+    <tr><td>0.062" (16 ga)</td><td class="num">55–70 A</td><td class="num">45–60 A</td><td class="num">—</td><td>1/16"</td><td>1/16"</td></tr>
+    <tr><td>0.093" (13 ga)</td><td class="num">85–100 A</td><td class="num">70–85 A</td><td class="num">—</td><td>3/32"</td><td>3/32"</td></tr>
+    <tr><td>0.125" (1/8")</td><td class="num">115–135 A</td><td class="num">95–115 A</td><td class="num">90–120 A butt</td><td>3/32"</td><td>3/32"</td></tr>
+    <tr><td>0.187" (3/16")</td><td class="num">160–190 A</td><td class="num">140–170 A</td><td class="num">—</td><td>1/8"</td><td>1/8"</td></tr>
+    <tr><td>0.250" (1/4")</td><td class="num">200–240 A</td><td class="num">180–220 A</td><td class="num">—</td><td>1/8"</td><td>1/8"</td></tr>
   </tbody>
 </table>
 </div>
 
-<p>These windows assume argon shielding, a properly ground tungsten, and a joint you'd actually weld in one or two passes. Thin material needs less absolute amperage but tighter control, which is why a machine with a good foot pedal or torch-mounted amperage control matters more than raw output below 100 A. Our <a href="index.html">main calculator</a> applies these same rules — enter a thickness and it returns the amp window, tungsten size, and filler diameter together.</p>
+<p>Steel and stainless windows assume argon shielding, a properly ground tungsten, and a joint you'd actually weld in one or two passes. The aluminum column is Miller’s section 8-3, which publishes inverter starts for 1/8" 6061 only: a butt joint at 90–120 A, a T-joint at 100–125 A, a lap at 90–110 A, and a corner at 80–90 A, with 1/8" 5356 filler and 3/32" 2% ceriated tungsten. Dashes are thicknesses that table does not give. The shared tungsten and filler columns are the steel pairing; they are not the 5356 diameter on the aluminum row. Thin material needs less absolute amperage but tighter control, which is why a machine with a good foot pedal or torch-mounted amperage control matters more than raw output below 100 A. Our <a href="index.html">main calculator</a> uses the same split: steel and stainless stay on the 1-amp-per-mil rule, and 125 mils of aluminum returns the 90–120 A butt start.</p>
 
 <h2>The 1-amp-per-0.001-inch rule</h2>
 <p>The most durable rule of thumb in TIG: <strong>1 amp for every 0.001" of mild steel thickness</strong>. 0.062" steel wants about 60 A; 1/8" (0.125") wants about 125 A. It holds reasonably well for steel and stainless from roughly 0.030" to 0.125" — beyond that range, joint design, heat sinking, and travel speed start to dominate. It is a starting point, not a setting: the real technique is to pedal up to the high end of the range to establish the puddle quickly, then back off 20–30% to travel. Riding a constant 125 A the whole bead is how thin corners get blown out.</p>
-<p>Where it breaks, deliberately: <strong>aluminum</strong> dumps heat into the part and fights an oxide crust, so it needs roughly <strong>1.5 A per 0.001"</strong> on AC — the calculator applies that factor automatically. <strong>Thin stainless</strong> is the opposite: it holds heat, discolors, and warps fast, so stay at the bottom of the range or below and let the pedal do the restraint. And past <strong>1/4"</strong> no simple rule survives — preheat to 200–300°F or the puddle freezes at the edges before fusion happens.</p>
-<p>Published aluminum thickness limits by voltage are on <a href="what-size-welder-for-aluminum.html">what size welder for aluminum</a>. Miller’s joint-by-joint starts for 1/8 inch 6061, set next to this calculator’s aluminum band, are on <a href="how-to-weld-aluminum.html">how to weld aluminum</a>.</p>
+<p>Where it breaks, deliberately: <strong>aluminum</strong> is not 1.5 amps per mil. Miller’s GTAW guidelines, section 8-3, start a 1/8" 6061 butt joint at <strong>90–120 A</strong> on AC, and the calculator prints that row at 125 mils. It does not invent a window for other aluminum thicknesses. <strong>Thin stainless</strong> is the opposite of a hotter rule: it holds heat, discolors, and warps fast, so stay at the bottom of the range or below and let the pedal do the restraint. And past <strong>1/4"</strong> no simple rule survives — preheat to 200–300°F or the puddle freezes at the edges before fusion happens.</p>
+<p>Published aluminum thickness limits by voltage are on <a href="what-size-welder-for-aluminum.html">what size welder for aluminum</a>. The joint-by-joint 6061 starts, which the calculator now uses, are on <a href="how-to-weld-aluminum.html">how to weld aluminum</a>. Source: <a href="https://www.millerwelds.com/-/media/miller-electric/import/guides/file/guidelines-for-gas-tunsten-arc-welding-gtaw.pdf" rel="noopener" target="_blank">Miller GTAW guidelines</a>.</p>
 
 <h2>AC vs DC: which for which metal</h2>
 <p><strong>DCEN (DC electrode negative)</strong> is the default for everything except aluminum and magnesium: steel, stainless, titanium, copper alloys, chromoly. About 70–80% of the arc heat lands on the workpiece, the tungsten stays cool and holds a sharp grind, and the bead is narrow and penetrating. <strong>AC exists for one reason: the oxide layer.</strong> Aluminum's oxide melts at over 3,600°F while the metal under it melts near 1,200°F — DCEN can't break it. The electrode-positive half of each AC cycle blasts the oxide off (cleaning action) while the electrode-negative half does the heating.</p>
@@ -116,7 +116,7 @@ document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getE
 <p>1/16" lanthanated covers roughly 30–100 A DCEN, 3/32" covers 90–180 A, and 1/8" covers 150–250 A. Oversizing the tungsten is the classic beginner error — a too-big tungsten gives a wandering, hard-to-start arc at low amps. On AC for aluminum, tungsten runs hotter: step up one size from what the steel amperage would suggest and let the tip form a slight ball. Grind DCEN tungstens longitudinally (lines running away from the tip), never circumferentially — cross-grinding makes the arc wander. Use a dedicated grinding wheel for tungsten; thoriated dust is not something to share with your bench grinder.</p>
 
 <h2>Long beads and duty cycle</h2>
-<p>TIG amps tax a machine differently than MIG — a 200 A aluminum bead on 1/4" plate will run a 180 A-class machine right up against its thermal limit. If you're planning production-length runs near the top of the chart, check the machine's real continuous capability with the <a href="duty-cycle-calculator.html">duty cycle calculator</a> before you commit to a fabrication schedule. And if you're costing out a TIG production job, the <a href="weld-cost-calculator.html">weld cost calculator</a> handles filler, gas, and labor per joint.</p>
+<p>TIG amps tax a machine differently than MIG. A long bead near the top of a machine’s rating will run it up against its thermal limit. If you're planning production-length runs near the top of the chart, check the machine's real continuous capability with the <a href="duty-cycle-calculator.html">duty cycle calculator</a> before you commit to a fabrication schedule. And if you're costing out a TIG production job, the <a href="weld-cost-calculator.html">weld cost calculator</a> handles filler, gas, and labor per joint.</p>
 
 <div class="affil">
   <span class="tag">Torch setup</span>
@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getE
 
 <h2>FAQ</h2>
 <h3>Is 1 amp per 0.001 inch a good rule for TIG?</h3>
-<p>It's a fair starting point for steel and stainless in the 0.030"–0.125" range (30–125 A), with foot pedal control doing the real work: start high to establish the puddle, back off to travel. It underestimates aluminum, which needs roughly 1.5 A per 0.001" on AC, and overestimates thin stainless, which warms fast and needs restraint.</p>
+<p>It's a fair starting point for steel and stainless in the 0.030"–0.125" range (30–125 A), with foot pedal control doing the real work: start high to establish the puddle, back off to travel. It is not the aluminum rule. Miller's GTAW guidelines, section 8-3, start 1/8 inch 6061 at 90–120 A for a butt joint. Thin stainless still warms fast and needs restraint.</p>
 <h3>What size tungsten for what amperage?</h3>
 <p>1/16" lanthanated covers roughly 30–100 A DCEN, 3/32" covers 90–180 A, and 1/8" covers 150–250 A. On AC for aluminum, tungsten runs hotter — step up one size (a 3/32" for jobs a 1/16" would do on steel) and ball the tip slightly with balanced AC.</p>
 <h3>Do I use AC or DC for TIG?</h3>
@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getE
 <h3>What filler rod do I use for TIG?</h3>
 <p>Match the rod family to the base metal: ER70S-2 or ER70S-6 for mild steel, ER308L for 304 stainless (316L for 316), and 4043 as the general-purpose aluminum rod — switch to 5356 for higher strength or anodized-color match. Filler diameter is usually the same as or one size up from the tungsten.</p>
 <h3>How many amps for 1/8 inch aluminum TIG?</h3>
-<p>Roughly 160–200 A on AC for a single-pass butt joint, per the ~1.5 A per 0.001" aluminum factor. Preheat to 200–250°F helps smaller machines get there, and a 3/32"–1/8" zirconiated or lanthanated tungsten in a #7 cup with argon keeps the arc stable at those settings.</p>
+<p>Miller's GTAW guidelines, section 8-3, list 90–120 A for a 1/8 inch 6061 butt joint, with 1/8 inch 5356 filler, 3/32 inch 2% ceriated tungsten, and argon at 15–20 CFH. The same table lists a T-joint at 100–125 A, a lap at 90–110 A, and a corner at 80–90 A. The calculator returns the butt row at 125 mils.</p>
 
 <footer>Built by Jeremy Panasuk · <a href="/about.html">About &amp; how this was made</a> · <a href="/privacy.html">Privacy</a> · <a href="/contact.html">Contact</a> · pages may contain affiliate links</footer>
 </main>

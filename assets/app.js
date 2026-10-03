@@ -17,27 +17,49 @@ function showTab(key, btn){
 }
 
 /* ---------- 1. TIG amperage ---------- */
-// Published rule: ~1 amp per 0.001" of thickness for mild steel (1/8" ≈ 125 A).
-// Aluminum needs ~1.5× (higher thermal conductivity); stainless slightly less.
-var TIG_FACTORS = { steel:{f:1.0, label:"Mild steel"}, aluminum:{f:1.5, label:"Aluminum"}, stainless:{f:0.9, label:"Stainless"} };
+// Mild steel: ~1 amp per 0.001" (1/8" ≈ 125 A). Stainless: 0.9. Those two factors are unchanged.
+// Aluminum is not a 1.5× multiplier. Miller Electric, "Guidelines for Gas Tungsten Arc
+// Welding (GTAW)," section 8-3, publishes inverter starting parameters for 1/8" (125 mil)
+// 6061 only: butt 90–120 A (65–75% balance, 60–120 Hz), T-joint 100–125 A (70–75%,
+// 100–200 Hz), lap 90–110 A (70–75%, 100–150 Hz), corner 80–90 A (65–70%, 100 Hz).
+// Same row: 1/8" 5356 filler, 3/32" 2% ceriated tungsten, argon 15–20 CFH.
+// https://www.millerwelds.com/-/media/miller-electric/import/guides/file/guidelines-for-gas-tunsten-arc-welding-gtaw.pdf
+var TIG_FACTORS = { steel:{f:1.0, label:"Mild steel"}, stainless:{f:0.9, label:"Stainless"} };
 function tigAmps(){
   var mils = Math.max(1, parseFloat(el("tigThou").value) || 0);   // thickness in 0.001" (1/8" = 125)
   var mat = el("tigMat").value || "steel";
+  var box = el("tigResult"); box.hidden = false;
+  if (mat === "aluminum") {
+    if (mils === 125) {
+      if (window.updateMatchedCTA) window.updateMatchedCTA(120, 'tig');
+      box.innerHTML = '<div class="big">90–120 <span class="unit">amps (6061 butt joint, 125 mils)</span></div>'+
+        '<div class="grid2">'+
+          '<div class="stat"><b>100–125 A</b><span>T-joint start, same 1/8" 6061 row</span></div>'+
+          '<div class="stat"><b>3/32" (2.4 mm)</b><span>2% ceriated tungsten (Miller GTAW §8-3)</span></div>'+
+          '<div class="stat"><b>1/8" 5356</b><span>Filler on that published row</span></div>'+
+          '<div class="stat"><b>AC</b><span>Polarity (butt balance 65–75%)</span></div>'+
+        '</div>'+
+        '<p class="note">Miller GTAW guidelines, section 8-3, for 1/8" 6061 with 1/8" 5356 filler, 3/32" 2% ceriated tungsten, and argon at 15–20 CFH. Butt 90–120 A. T-joint 100–125 A. Lap 90–110 A. Corner 80–90 A. This is that table. It is not a 1.5× steel rule, and section 8-3 does not publish a start for any other thickness.</p>';
+    } else {
+      box.innerHTML = '<div class="big">125 mils only <span class="unit">Miller’s 6061 starts are for 1/8"</span></div>'+
+        '<p class="note">You entered '+fmt(mils)+' mils. Section 8-3 of Miller’s GTAW guidelines publishes inverter starting amps for 1/8" (125 mil) 6061 only: butt 90–120 A, T-joint 100–125 A, lap 90–110 A, corner 80–90 A, with 1/8" 5356 filler and 3/32" 2% ceriated tungsten. This calculator does not scale that row to '+fmt(mils)+' mils.</p>';
+    }
+    return;
+  }
   var k = (TIG_FACTORS[mat] || TIG_FACTORS.steel).f;
   var mid = mils * k;
   var lo = Math.round(mid * 0.8), hi = Math.round(mid * 1.2);
   var tung = mils >= 156 ? "3/32\" (2.4 mm)" : mils >= 94 ? "3/32\" (2.4 mm)" : "1/16\" (1.6 mm)";
-  var box = el("tigResult"); box.hidden = false;
   if (window.updateMatchedCTA) window.updateMatchedCTA(hi, 'tig');
   box.innerHTML = '<div class="big">'+lo+'–'+hi+' <span class="unit">amps ('+TIG_FACTORS[mat].label+', '+fmt(mils)+' mils)</span></div>'+
     '<div class="grid2">'+
-      '<div class="stat"><b>'+fmt(mid)+'</b><span>Rule-of-thumb midpoint (1 A per mil'+(k===1.5?' × 1.5':k===0.9?' × 0.9':'')+')'+
+      '<div class="stat"><b>'+fmt(mid)+'</b><span>Rule-of-thumb midpoint (1 A per mil'+(k===0.9?' × 0.9':'')+')'+
       '</span></div>'+
       '<div class="stat"><b>'+tung+'</b><span>Tungsten to start with (2% lanthanated)</span></div>'+
-      '<div class="stat"><b>'+(mils>=188?'3/32"':mils>=125?'3/32"':'1/16"')+'</b><span>Filler rod diameter (ER70S-2 steel / ER4043 aluminum)</span></div>'+
-      '<div class="stat"><b>'+(mat==="aluminum"?"AC + high freq":"DCEN")+'</b><span>Polarity setting</span></div>'+
+      '<div class="stat"><b>'+(mils>=188?'3/32"':mils>=125?'3/32"':'1/16"')+'</b><span>Filler rod diameter (ER70S-2 steel)</span></div>'+
+      '<div class="stat"><b>DCEN</b><span>Polarity setting</span></div>'+
     '</div>'+
-    '<p class="note">Start at the low end and step up until the puddle wets out at your travel speed. For AC aluminum, balance ~70% electrode-positive and adjust cleaning action on scrap first. Outside corner joints need less; outside fillets with poor fit-up need more.</p>';
+    '<p class="note">Start at the low end and step up until the puddle wets out at your travel speed. Outside corner joints need less; outside fillets with poor fit-up need more.</p>';
 }
 
 /* ---------- 2. MIG wire size + settings ---------- */
@@ -82,13 +104,21 @@ function stickRod(){
   var rodLabel = {"1/16":"1/16\"","3/32":"3/32\"","1/8":"1/8\"","5/32":"5/32\""}[rod];
   var rodType = cond === "rusty" ? "6011" : "7018";
   var a = STICK_AMPS[rod][rodType === "6011" ? "sixty10" : "seventy18"];
+  // Voltage follows the rod window, not plate thickness.
+  // Hobart Handler 140 spec sheet: 115 V, welding range 25–140 A.
+  // https://www.weldingsuppliesfromioc.com/cdn/shop/files/Hobart_Handler_140_spec.pdf
+  // If both ends of the selected window sit inside 25–140 A, that 115 V range
+  // covers the rod ("120 V machine OK"). 5/32" windows run past 140 A
+  // (E6011 110–165, E7018 120–180) and do not. Lincoln's classification notes
+  // say which electrode the metal calls for; they are not a second voltage number.
+  var power = (a[0] >= 25 && a[1] <= 140) ? "120 V machine OK" : "240 V machine";
   var box = el("stkResult"); box.hidden = false;
   if (window.updateMatchedCTA) window.updateMatchedCTA(a[1], 'stick');
   box.innerHTML = '<div class="big">'+rodLabel+' <span class="unit">E'+(rodType==="6011"?"6011":"7018")+' rod · '+a[0]+'–'+a[1]+' A</span></div>'+
     '<div class="grid2">'+
       '<div class="stat"><b>DCEP</b><span>Polarity ('+(rodType==="6011"?"or DCEN/AC — 6011 runs all":"7018 is DCEP only")+'</span></div>'+
       '<div class="stat"><b>'+(mils/1000).toFixed(3)+'"</b><span>Your base-metal thickness</span></div>'+
-      '<div class="stat"><b>'+(mils>=125?"240 V machine":"120 V machine OK")+'</b><span>Power class needed</span></div>'+
+      '<div class="stat"><b>'+power+'</b><span>Power class for this rod window</span></div>'+
       '<div class="stat"><b>'+(rodType==="7018"?"Bake 250 °F if damp":"Keep dry, they forgive")+'</b><span>Electrode care</span></div>'+
     '</div>'+
     '<p class="note">'+(rodType==="6011"
