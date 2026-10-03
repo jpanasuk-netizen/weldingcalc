@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getE
       <label for="tigMat">Material</label>
       <select id="tigMat">
         <option value="steel" selected>Mild steel (1 A per mil)</option>
-        <option value="aluminum">Aluminum (Miller 1/8" 6061 starts)</option>
+        <option value="aluminum">Aluminum (published AC chart rows)</option>
         <option value="stainless">Stainless (×0.9)</option>
       </select>
     </div>
@@ -193,7 +193,7 @@ document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getE
 <aside id="key-takeaways" class="card" aria-label="Key takeaways" style="margin:1.5rem 0">
 <h2 style="margin-top:0">Key takeaways</h2>
 <ul>
-<li><strong>TIG:</strong> about 1 amp per 0.001" of mild steel, so 1/8" steel starts near 125 A. Aluminum at 1/8" uses Miller’s 6061 butt start, 90–120 A, not a 1.5× factor.</li>
+<li><strong>TIG:</strong> about 1 amp per 0.001" of mild steel, so 1/8" steel starts near 125 A. Aluminum at 1/8" uses Miller’s 6061 butt start, 90–120 A. Other aluminum thicknesses use a published Lincoln row, or the nearest published row.</li>
 <li><strong>Stick:</strong> pick a rod diameter of about half the base-metal thickness, then use that rod's amperage window.</li>
 <li><strong>Duty cycle</strong> is rated over a 10-minute window and scales with the square of the amperage ratio.</li>
 <li><strong>1/4" steel</strong> is the line between hobby and shop machines: full-strength multi-pass welds want 180–220 A.</li>
@@ -201,7 +201,7 @@ document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getE
 </ul>
 </aside>
 <h2>How does this welding calculator work?</h2>
-<p>Welding sizing is built on three published approximations that machine makers have taught for decades. <strong>TIG:</strong> about 1 amp per 0.001 inch of mild steel — 1/8" steel starts near 125 A. For 1/8" aluminum the TIG tab uses Miller’s GTAW section 8-3 butt start, 90–120 A, instead of multiplying the steel rule by 1.5. <strong>Stick:</strong> rod diameter ≈ half the base-metal thickness, then look up the amperage window for that rod size and type. <strong>MIG:</strong> wire size follows thickness (0.023" under 3/32", 0.030" through 3/16", 0.035" above), and wire speed scales with amps. None of these replace a test bead — every real shop tunes on scrap first.</p>
+<p>Welding sizing is built on three published approximations that machine makers have taught for decades. <strong>TIG:</strong> about 1 amp per 0.001 inch of mild steel — 1/8" steel starts near 125 A. For 1/8" aluminum the TIG tab uses Miller’s GTAW section 8-3 butt start, 90–120 A, instead of multiplying the steel rule by 1.5. Other aluminum thicknesses use a published Lincoln row, or the nearest published row, with no interpolated amps. <strong>Stick:</strong> rod diameter ≈ half the base-metal thickness, then look up the amperage window for that rod size and type. <strong>MIG:</strong> wire size follows thickness (0.023" under 3/32", 0.030" through 3/16", 0.035" above), and wire speed scales with amps. None of these replace a test bead — every real shop tunes on scrap first.</p>
 
 <p class="small" id="methodology-note"><strong>Methodology &amp; disclosure:</strong> the calculator applies the published rules of thumb on this page in your browser. It is a planning estimate, not a measured result — confirm every setting on scrap first. Amazon links on this site are affiliate links; they do not change the math.</p>
 <h2>What amps and machine class does each steel thickness need?</h2>
@@ -262,7 +262,7 @@ document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getE
 <div class="card"><h3><a href="mig-wire-speed-chart.html">MIG wire speed chart — ipm settings by thickness and amperage</a></h3><p>Stop guessing the dial: ipm windows for 0.023–0.045 wire paired with voltage, by material thickness.</p></div>
 <h3>Process, cleaning, and safety</h3>
 <ul>
-<li><a href="how-to-weld-aluminum.html">How to weld aluminum</a> — the TIG tab uses Miller’s 90–120 A butt start for 1/8 inch 6061.</li>
+<li><a href="how-to-weld-aluminum.html">How to weld aluminum</a> — 1/8 inch stays Miller’s 90–120 A butt start; other thicknesses use a published Lincoln row or the nearest one.</li>
 <li><a href="what-is-arc-welding.html">What is arc welding?</a> — OSHA’s fusion types, then one thickness in three processes.</li>
 <li><a href="how-to-weld.html">How to weld</a> — Measure, pick the rod, then read duty cycle.</li>
 <li><a href="how-to-get-into-welding.html">How to get into welding</a> — BLS education, pay, and outlook only.</li>

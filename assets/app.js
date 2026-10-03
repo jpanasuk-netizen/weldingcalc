@@ -18,31 +18,175 @@ function showTab(key, btn){
 
 /* ---------- 1. TIG amperage ---------- */
 // Mild steel: ~1 amp per 0.001" (1/8" ≈ 125 A). Stainless: 0.9. Those two factors are unchanged.
-// Aluminum is not a 1.5× multiplier. Miller Electric, "Guidelines for Gas Tungsten Arc
-// Welding (GTAW)," section 8-3, publishes inverter starting parameters for 1/8" (125 mil)
-// 6061 only: butt 90–120 A (65–75% balance, 60–120 Hz), T-joint 100–125 A (70–75%,
-// 100–200 Hz), lap 90–110 A (70–75%, 100–150 Hz), corner 80–90 A (65–70%, 100 Hz).
-// Same row: 1/8" 5356 filler, 3/32" 2% ceriated tungsten, argon 15–20 CFH.
-// https://www.millerwelds.com/-/media/miller-electric/import/guides/file/guidelines-for-gas-tunsten-arc-welding-gtaw.pdf
+// Aluminum is a lookup of published AC rows. No scaling and no interpolation.
+// A thickness that is not an exact published mils value shows the nearest published
+// row and is labeled "nearest published row". An equal-distance tie uses the thinner row.
+//
+// Sources (do not blend cells that disagree):
+// 1. Miller Electric, "Guidelines for Gas Tungsten Arc Welding (GTAW)," section 8-3.
+//    Inverter starts for 1/8" (125 mil) 6061 only: butt 90–120 A (65–75% balance,
+//    60–120 Hz), T-joint 100–125 A (70–75%, 100–200 Hz), lap 90–110 A (70–75%,
+//    100–150 Hz), corner 80–90 A (65–70%, 100 Hz). Same row: 1/8" 5356 filler,
+//    3/32" 2% ceriated tungsten, argon 15–20 CFH. This stays the 125-mil row.
+//    Lincoln's 1/8" cells (120–135 A and 125–175 A) are not substituted.
+//    https://www.millerwelds.com/-/media/miller-electric/import/guides/file/guidelines-for-gas-tunsten-arc-welding-gtaw.pdf
+// 2. Lincoln Electric, Square Wave TIG 200 Quick Reference Guide, part L16988,
+//    "TIG Amperage Values," Aluminum (AC). Paired thicknesses share one window:
+//    24 ga 0.024 in = 25–35 A; 16 ga 0.060 in or 1/16 in 0.062 in = 75–85 A;
+//    12 ga 0.105 in or 0.090 in = 85–110 A; 10 ga 0.135 in = 120–135 A
+//    (the chart also pairs 1/8 in on that cell; 125 mils stays on Miller);
+//    3/16 in (4.8 mm) = 165–195 A. This site's helper calls 3/16 in 188 mils,
+//    so 188 is the exact hit for that cell. Shielding on the guide is 100% argon.
+//    Pure tungsten is not recommended. Tungsten tip is blunt.
+//    https://ch-delivery.lincolnelectric.com/api/public/content/582e9857a7324db29d14ceb7d16a8609?v=dfb50bd9
+// 3. The Harris Products Group, a Lincoln Electric Company, Technical Information
+//    Sheet, "4043 Aluminum Welding Wire & Rod," GTAW (AC), hemisphere-tip tungsten.
+//    Used only where L16988 has no row: 1/4 in 220–275 A, 3/8 in 330–380 A,
+//    1/2 in 400–450 A. The sheet's 1/16, 1/8, and 3/16 windows are not blended
+//    with L16988 or with Miller. Parameters vary with joint design and passes.
+//    https://ch-delivery.lincolnelectric.com/api/public/content/a1a7b2fb551c4e55b5bf58575aa21f58?v=e2ecf232
+// ESAB's Aluminum Welding Technical Guide (XA00248621) "Recommended Welding
+// Parameters" page is GMAW, not a GTAW thickness chart, so it is not used here.
 var TIG_FACTORS = { steel:{f:1.0, label:"Mild steel"}, stainless:{f:0.9, label:"Stainless"} };
+var AL_TIG_ROWS = [
+  {
+    hi: 35,
+    amps: "25–35",
+    tungsten: "1/16\" (1.6 mm)",
+    filler: "1/16\" (1.6 mm)",
+    points: [{ mils: 24, name: "24 ga (0.024 in)" }],
+    note: "Lincoln Square Wave TIG 200 quick reference L16988, Aluminum (AC). Suggested tungsten 1/16 in, filler 1/16 in. That guide calls for 100% argon."
+  },
+  {
+    hi: 85,
+    amps: "75–85",
+    tungsten: "3/32\" (2.4 mm)",
+    filler: "1/16\" (1.6 mm)",
+    points: [
+      { mils: 60, name: "16 ga (0.060 in)" },
+      { mils: 62, name: "1/16\" (0.062 in)" }
+    ],
+    note: "Lincoln L16988, Aluminum (AC). 16 ga (0.060 in) and 1/16 in (0.062 in) are one published column, both 75–85 A. Suggested tungsten 3/32 in, filler 1/16 in. That guide calls for 100% argon."
+  },
+  {
+    hi: 110,
+    amps: "85–110",
+    tungsten: "3/32\" (2.4 mm)",
+    filler: "3/32\" (2.4 mm)",
+    points: [
+      { mils: 90, name: "0.090 in (2.3 mm)" },
+      { mils: 105, name: "12 ga (0.105 in)" }
+    ],
+    note: "Lincoln L16988, Aluminum (AC). 0.090 in and 12 ga (0.105 in) are one published column, both 85–110 A. Suggested tungsten 3/32 in, filler 3/32 in. That guide calls for 100% argon."
+  },
+  { miller: true, hi: 120, points: [{ mils: 125, name: "1/8\" 6061 butt (125 mils)" }] },
+  {
+    hi: 135,
+    amps: "120–135",
+    tungsten: "3/32\" (2.4 mm)",
+    filler: "3/32\" (2.4 mm)",
+    points: [{ mils: 135, name: "10 ga (0.135 in)" }],
+    note: "Lincoln L16988, Aluminum (AC), 120–135 A. That chart pairs 10 ga with 1/8 in on this column. This calculator keeps 125 mils on Miller’s 90–120 A butt row, so 10 ga stands alone. Suggested tungsten 3/32 in, filler 3/32 in. That guide calls for 100% argon."
+  },
+  {
+    hi: 195,
+    amps: "165–195",
+    tungsten: "3/32\" (2.4 mm)",
+    filler: "1/8\" (3.2 mm)",
+    points: [{ mils: 188, name: "3/16\" (4.8 mm)" }],
+    note: "Lincoln L16988, Aluminum (AC). The chart prints 3/16 in as 4.8 mm. This site’s 3/16 in marker is 188 mils, so 188 is that cell. Suggested tungsten 3/32 in, filler 1/8 in. That guide calls for 100% argon. The Harris/Lincoln 4043 GTAW sheet lists 170–225 A at 3/16 in; this result does not blend the two."
+  },
+  {
+    hi: 275,
+    amps: "220–275",
+    tungsten: "3/16\"–1/4\" pure or zirconiated",
+    filler: "3/16\"",
+    points: [{ mils: 250, name: "1/4\"" }],
+    note: "Harris/Lincoln 4043 technical information sheet, GTAW (AC): 220–275 A, 15 V ACHF, 3/16–1/4 in pure or zirconiated tungsten, 3/16 in filler, 1/2 in cup, argon 30 CFH. L16988 stops at 3/16 in. The sheet says these are basic guidelines and vary with joint design and the number of passes."
+  },
+  {
+    hi: 380,
+    amps: "330–380",
+    tungsten: "1/4\" pure or zirconiated",
+    filler: "3/16\"–1/4\"",
+    points: [{ mils: 375, name: "3/8\"" }],
+    note: "Harris/Lincoln 4043 technical information sheet, GTAW (AC): 330–380 A, 15 V ACHF, 1/4 in pure or zirconiated tungsten, 3/16–1/4 in filler, 5/8 in cup, argon 35 CFH. Guidelines vary with joint design and the number of passes."
+  },
+  {
+    hi: 450,
+    amps: "400–450",
+    tungsten: "1/4\" pure or zirconiated",
+    filler: "1/4\"",
+    points: [{ mils: 500, name: "1/2\"" }],
+    note: "Harris/Lincoln 4043 technical information sheet, GTAW (AC): 400–450 A, 25 V ACHF, 1/4 in pure or zirconiated tungsten, 1/4 in filler, 5/8 in cup, argon 35 CFH. Guidelines vary with joint design and the number of passes."
+  }
+];
+function pickAluminumTig(mils){
+  var i, j, row, point, best, bestDist;
+  for (i = 0; i < AL_TIG_ROWS.length; i++) {
+    row = AL_TIG_ROWS[i];
+    for (j = 0; j < row.points.length; j++) {
+      point = row.points[j];
+      if (point.mils === mils) return { row: row, point: point, exact: true };
+    }
+  }
+  best = null;
+  bestDist = Infinity;
+  for (i = 0; i < AL_TIG_ROWS.length; i++) {
+    row = AL_TIG_ROWS[i];
+    for (j = 0; j < row.points.length; j++) {
+      point = row.points[j];
+      var dist = Math.abs(mils - point.mils);
+      if (!best || dist < bestDist || (dist === bestDist && point.mils < best.point.mils)) {
+        best = { row: row, point: point, exact: false };
+        bestDist = dist;
+      }
+    }
+  }
+  return best;
+}
+function milsText(n){
+  return (n === Math.round(n)) ? fmt(n) : String(n);
+}
 function tigAmps(){
   var mils = Math.max(1, parseFloat(el("tigThou").value) || 0);   // thickness in 0.001" (1/8" = 125)
   var mat = el("tigMat").value || "steel";
   var box = el("tigResult"); box.hidden = false;
   if (mat === "aluminum") {
-    if (mils === 125) {
-      if (window.updateMatchedCTA) window.updateMatchedCTA(120, 'tig');
-      box.innerHTML = '<div class="big">90–120 <span class="unit">amps (6061 butt joint, 125 mils)</span></div>'+
+    var picked = pickAluminumTig(mils);
+    var row = picked.row;
+    var point = picked.point;
+    if (window.updateMatchedCTA) window.updateMatchedCTA(row.hi, "tig");
+    if (row.miller) {
+      var millerUnit = picked.exact
+        ? "amps (6061 butt joint, 125 mils)"
+        : "amps (nearest published row: 1/8\" 6061 butt, 125 mils)";
+      var millerLead = picked.exact
+        ? "Exact published row for 125 mils."
+        : "You entered " + milsText(mils) + " mils. That thickness is not a published row. The nearest published thickness is 1/8\" 6061 (125 mils). This result is that row. It is not interpolated.";
+      box.innerHTML = '<div class="big">90–120 <span class="unit">'+millerUnit+'</span></div>'+
         '<div class="grid2">'+
           '<div class="stat"><b>100–125 A</b><span>T-joint start, same 1/8" 6061 row</span></div>'+
           '<div class="stat"><b>3/32" (2.4 mm)</b><span>2% ceriated tungsten (Miller GTAW §8-3)</span></div>'+
           '<div class="stat"><b>1/8" 5356</b><span>Filler on that published row</span></div>'+
           '<div class="stat"><b>AC</b><span>Polarity (butt balance 65–75%)</span></div>'+
         '</div>'+
-        '<p class="note">Miller GTAW guidelines, section 8-3, for 1/8" 6061 with 1/8" 5356 filler, 3/32" 2% ceriated tungsten, and argon at 15–20 CFH. Butt 90–120 A. T-joint 100–125 A. Lap 90–110 A. Corner 80–90 A. This is that table. It is not a 1.5× steel rule, and section 8-3 does not publish a start for any other thickness.</p>';
+        '<p class="note">'+millerLead+' Miller GTAW guidelines, section 8-3, for 1/8" 6061 with 1/8" 5356 filler, 3/32" 2% ceriated tungsten, and argon at 15–20 CFH. Butt 90–120 A. T-joint 100–125 A. Lap 90–110 A. Corner 80–90 A. This is that table, not a 1.5× steel rule. Other thicknesses use a published Lincoln row, or the nearest published row.</p>';
     } else {
-      box.innerHTML = '<div class="big">125 mils only <span class="unit">Miller’s 6061 starts are for 1/8"</span></div>'+
-        '<p class="note">You entered '+fmt(mils)+' mils. Section 8-3 of Miller’s GTAW guidelines publishes inverter starting amps for 1/8" (125 mil) 6061 only: butt 90–120 A, T-joint 100–125 A, lap 90–110 A, corner 80–90 A, with 1/8" 5356 filler and 3/32" 2% ceriated tungsten. This calculator does not scale that row to '+fmt(mils)+' mils.</p>';
+      var unit = picked.exact
+        ? "amps (published row: " + point.name + ")"
+        : "amps (nearest published row: " + point.name + ")";
+      var lead = picked.exact
+        ? "Exact published row for " + milsText(mils) + " mils (" + point.name + ")."
+        : "You entered " + milsText(mils) + " mils. That thickness is not a published row. The nearest published thickness is " + point.name + " (" + point.mils + " mils). This result is that row. It is not interpolated.";
+      box.innerHTML = '<div class="big">'+row.amps+' <span class="unit">'+unit+'</span></div>'+
+        '<div class="grid2">'+
+          '<div class="stat"><b>'+row.amps+' A</b><span>Published amperage window</span></div>'+
+          '<div class="stat"><b>'+row.tungsten+'</b><span>Suggested tungsten on that row</span></div>'+
+          '<div class="stat"><b>'+row.filler+'</b><span>Suggested filler on that row</span></div>'+
+          '<div class="stat"><b>AC</b><span>Polarity on that aluminum chart</span></div>'+
+        '</div>'+
+        '<p class="note">'+lead+' '+row.note+'</p>';
     }
     return;
   }

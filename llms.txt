@@ -9,7 +9,7 @@ Free welding thickness and amperage calculator: TIG amps by material and thickne
 - /best-beginner-welder.html — best beginner welder by thickness
 
 ## Guides
-- /how-to-weld-aluminum.html — TIG tab uses Miller’s 90–120 A 6061 butt start at 1/8 inch
+- /how-to-weld-aluminum.html — TIG tab uses Miller’s 90–120 A 6061 butt start at 1/8 inch; other thicknesses use a published Lincoln row or the nearest one
 - /what-is-arc-welding.html — OSHA fusion types, then one thickness in three processes
 - /how-to-weld.html — measure, rod window, then duty cycle
 - /how-to-get-into-welding.html — BLS education, pay, and outlook
