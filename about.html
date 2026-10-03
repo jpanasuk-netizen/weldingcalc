@@ -3,32 +3,45 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About WeldingCalc — Free Welding Calculator</title>
-<meta name="description" content="Who runs WeldingCalc, how the amperage rules of thumb work, and how the free welding calculator is funded.">
+<title>About &amp; how this site is built — WeldingCalc</title>
+<meta name="description" content="Who built WeldingCalc, how the calculators and page text are made, and that the site earns money from Amazon affiliate links.">
 <link rel="canonical" href="https://welding-calculator.com/about.html">
 <meta name="robots" content="index,follow">
-<meta property="og:title" content="About WeldingCalc — Free Welding Calculator">
-<meta property="og:description" content="Who runs WeldingCalc, how the amperage rules of thumb work, and how the free welding calculator is funded.">
+<meta property="og:title" content="About &amp; how this site is built — WeldingCalc">
+<meta property="og:description" content="Who built WeldingCalc, how the calculators and page text are made, and that the site earns money from Amazon affiliate links.">
 <meta property="og:url" content="https://welding-calculator.com/about.html">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://welding-calculator.com/assets/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="About WeldingCalc — Free Welding Calculator">
-<meta name="twitter:description" content="Who runs WeldingCalc, how the amperage rules of thumb work, and how the free welding calculator is funded.">
+<meta name="twitter:title" content="About &amp; how this site is built — WeldingCalc">
+<meta name="twitter:description" content="Who built WeldingCalc, how the calculators and page text are made, and that the site earns money from Amazon affiliate links.">
 <meta name="twitter:image" content="https://welding-calculator.com/assets/og-image.png">
 <link rel="stylesheet" href="assets/styles.css">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WebApplication",
-  "name": "About WeldingCalc — Free Welding Calculator",
+  "@type": "AboutPage",
+  "name": "About & how this site is built",
   "url": "https://welding-calculator.com/about.html",
-  "applicationCategory": "UtilitiesApplication",
-  "operatingSystem": "Any",
-  "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
-  "description": "Who runs WeldingCalc, how the amperage rules of thumb work, and how the free welding calculator is funded."
+  "description": "Who built WeldingCalc, how the calculators and page text are made, and that the site earns money from Amazon affiliate links.",
+  "mainEntity": {
+    "@type": "Organization",
+    "name": "WeldingCalc",
+    "url": "https://welding-calculator.com/",
+    "email": "jpanasuk@gmail.com",
+    "founder": {
+      "@type": "Person",
+      "name": "Jeremy Panasuk",
+      "email": "jpanasuk@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "New Auburn",
+        "addressRegion": "WI"
+      }
+    }
+  }
 }
 </script>
 <script type="application/ld+json">
@@ -69,16 +82,19 @@ document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getE
 </header>
 
 <main>
-<h1>About WeldingCalc</h1>
-<p class="sub">Free, no-signup welding amperage and settings calculators.</p>
-<p>WeldingCalc exists to answer one question quickly: <strong>what settings does this steel actually need?</strong> Enter the metal thickness and the calculator returns TIG amperage, MIG wire size with speed and voltage, the stick rod and its amperage window, or duty-cycle runtime math &mdash; using the published rules of thumb that machine makers and electrode manufacturers have taught for decades, computed instead of memorized.</p>
-<p>The rules behind every answer are the standard ones: about 1 amp per 0.001 inch of mild steel for TIG, electrode diameter &asymp; half the base-metal thickness for stick, and wire size following thickness for MIG. Where real welding departs from the rule &mdash; aluminum conductivity, duty-cycle derating, joint geometry &mdash; we say so and show the range rather than one false-precision number. Our amp windows come from published electrode and machine-manufacturer charts (Lincoln, Miller, ESAB); we don&rsquo;t invent specs, and we keep telling you the same thing the charts do: no calculation replaces a test bead.</p>
-<p>WeldingCalc is built and maintained by an agent-operated web studio: calculation, content drafting, and quality checks are handled by automated agents, and every published page is reviewed and approved by a human before it goes live. That means fast, regularly updated tools with a human accountable for accuracy. If you spot an error, <a href="contact.html">tell us</a> &mdash; corrections go straight to the reviewer.</p>
-<p>The site is free to use, requires no account, and runs no tracking beyond basic ad personalization (see our <a href="privacy.html">privacy policy</a>). It is supported by advertising and, occasionally, contextual affiliate links to relevant equipment; affiliate relationships never influence the settings math.</p>
-<p>WeldingCalc is part of a small family of sibling calculators &mdash; including <a href="https://generator-sizer.com/" rel="noopener">GeneratorSizer</a> for running a welder off a generator and <a href="https://solar-sizer.com/" rel="noopener">SolarSizer</a> for off-grid power &mdash; all built on the same principle: transparent formulas, honest ranges, no signup.</p>
+<h1>About &amp; how this site is built</h1>
+
+<h2>Who</h2>
+<p>Built and owned by Jeremy Panasuk, New Auburn, Wisconsin. Contact: <a href="mailto:jpanasuk@gmail.com">jpanasuk@gmail.com</a>. Jeremy is a data/software person, not a licensed certified welding inspector or welding engineer. These are planning tools, not professional advice.</p>
+
+<h2>How</h2>
+<p>The calculators use published rules of thumb from the sources listed on each page. Page text is drafted with AI agents (Cursor and local models) from those sources. Formulas are checked against the cited sources. If you spot an error, email <a href="mailto:jpanasuk@gmail.com">jpanasuk@gmail.com</a> and it gets fixed.</p>
+
+<h2>Why</h2>
+<p>The site earns money from Amazon affiliate links. That doesn't change the math.</p>
 </main>
 
-<footer>WeldingCalc &middot; <a href="index.html">welding thickness calculator</a> &middot; <a href="about.html">About</a> &middot; <a href="contact.html">Contact</a> &middot; <a href="privacy.html">Privacy</a> &middot; pages may contain affiliate links</footer>
+<footer>Built by Jeremy Panasuk · <a href="/about.html">About &amp; how this was made</a> · <a href="/privacy.html">Privacy</a> · <a href="/contact.html">Contact</a> · pages may contain affiliate links</footer>
 
 
 

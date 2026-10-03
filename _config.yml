@@ -1,0 +1,28 @@
+# GitHub Pages runs Jekyll because this repo has no .nojekyll file.
+# HTML pages have no YAML front matter, so Jekyll copies them as static files
+# and does not run Liquid on {{ }} or {% %} inside them.
+# Repo-internal docs and scripts stay off the published site.
+exclude:
+  - README.md
+  - LAUNCH_CHECKLIST.md
+  - "*.md"
+  - "*.markdown"
+  - "*.yaml"
+  - smoke-test.js
+  - test
+  - tests
+  - spec
+  - vendor
+  - node_modules
+  - Gemfile
+  - Gemfile.lock
+  - package.json
+  - package-lock.json
+include:
+  - CNAME
+  - robots.txt
+  - sitemap.xml
+  - llms.txt
+  - sources.json
+  - ads.txt
+  - d7133a4b94285e7827dec7739baaaeb6.txt

@@ -18,7 +18,7 @@ Free welding thickness and amperage calculator: TIG amps by material and thickne
 - **Thickness → amps:** [Thickness & amperage calculator](https://welding-calculator.com/), [Settings card](https://welding-calculator.com/magnet.html), [TIG amps by thickness](https://welding-calculator.com/tig-amps-thickness.html), [Welder for 1/4 inch steel](https://welding-calculator.com/quarter-inch-steel.html)
 - **Process choice:** [MIG or TIG for sheet](https://welding-calculator.com/mig-or-tig-sheet-metal.html), [MIG wire speed](https://welding-calculator.com/mig-wire-speed-chart.html)
 - **Buying a machine:** [Beginner welder size](https://welding-calculator.com/best-beginner-welder.html)
-- **Runtime & the shop:** [Duty cycle](https://welding-calculator.com/duty-cycle-calculator.html), [Weld cost](https://welding-calculator.com/weld-cost-calculator.html), [Shop Packs](https://shoppacks.net/)
+- **Runtime & the shop:** [Duty cycle](https://welding-calculator.com/duty-cycle-calculator.html), [Weld cost](https://welding-calculator.com/weld-cost-calculator.html)
 
 ## Questions
 - /what-size-welder-for-1-8-inch-steel.html — 125 A for 1/8 inch steel
