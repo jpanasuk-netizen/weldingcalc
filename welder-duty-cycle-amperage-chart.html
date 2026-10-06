@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Welder Duty Cycle &amp; Amperage Chart</title>
+<meta name="description" content="Hobby and farm welder nameplates: process, input voltage, amp range, and rated duty cycle, copied from manufacturer spec sheets. Accessed October 6, 2026.">
+<link rel="canonical" href="https://welding-calculator.com/welder-duty-cycle-amperage-chart.html">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="shortcut icon" href="assets/favicon.ico">
+<meta name="robots" content="index,follow">
+<meta property="og:title" content="Welder Duty Cycle &amp; Amperage Chart">
+<meta property="og:description" content="Hobby and farm welder nameplates: process, input voltage, amp range, and rated duty cycle, copied from manufacturer spec sheets. Accessed October 6, 2026.">
+<meta property="og:url" content="https://welding-calculator.com/welder-duty-cycle-amperage-chart.html">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://welding-calculator.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Welder Duty Cycle &amp; Amperage Chart">
+<meta name="twitter:description" content="Hobby and farm welder nameplates: process, input voltage, amp range, and rated duty cycle, copied from manufacturer spec sheets. Accessed October 6, 2026.">
+<meta name="twitter:image" content="https://welding-calculator.com/assets/og-image.png">
+<link rel="stylesheet" href="assets/styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "Welder Duty Cycle & Amperage Chart",
+  "description": "Hobby and farm welder nameplates: process, input voltage, output amperage range, and rated duty cycle at stated amps, copied from manufacturer spec sheets.",
+  "url": "https://welding-calculator.com/welder-duty-cycle-amperage-chart.html",
+  "creator": {
+    "@type": "Organization",
+    "name": "Welding Calculator",
+    "url": "https://welding-calculator.com"
+  },
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "distribution": {
+    "@type": "DataDownload",
+    "encodingFormat": "text/csv",
+    "contentUrl": "https://welding-calculator.com/welder-duty-cycle-amperage-chart.csv"
+  },
+  "dateModified": "2026-10-06"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Welding Calculator", "item": "https://welding-calculator.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Welder Duty Cycle & Amperage Chart", "item": "https://welding-calculator.com/welder-duty-cycle-amperage-chart.html"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "What does the duty tab print for the Handler 140 nameplate at 100 amps?", "acceptedAnswer": {"@type": "Answer", "text": "Enter 125 mils on the MIG tab. The printed window starts at 100 A. On the duty tab, enter rated amps 90, rated duty 20, and actual amps 100. The duty tab prints 16 percent: 1.6 minutes on and 8.4 minutes off. That is 20 × (90 ÷ 100) squared, which is 16.2, rounded to 16. The Handler 140 sheet rates 90 A at 18.5 VDC, 20% duty cycle. The duty tab does not take the 18.5 V figure."}},
+    {"@type": "Question", "name": "What if a sheet names a process and does not rate it?", "acceptedAnswer": {"@type": "Answer", "text": "That process is not a row. This table does not estimate a duty cycle, and it does not fill a blank with a guess."}}
+  ]
+}
+</script>
+</head>
+<body>
+<header class="site-head">
+  <a class="brand" href="index.html">WeldingCalc</a>
+  <nav aria-label="Site">
+    <a href="topics.html">Topics</a>
+    <a href="index.html">Calculator</a>
+    <a href="duty-cycle-calculator.html">Duty cycle</a>
+  </nav>
+</header>
+<main>
+<h1>Welder Duty Cycle &amp; Amperage Chart</h1>
+<p class="sub">Process, input voltage, output amperage range, and rated duty cycle at the amps the sheet states. Each figure is copied from the linked manufacturer sheet. Accessed October 6, 2026.</p>
+<p>Use the table to see what a machine’s plate actually rates, then use the <a href="index.html#calc">thickness calculator</a> for a setting and the <a href="duty-cycle-calculator.html">duty cycle calculator</a> to apply that plate at the amps you will weld. A second rated line on the same specification row stays in the same cell. Where a sheet prints one current range for an input voltage, that range is repeated on each process row for that voltage. Spacing follows the sheet.</p>
+<p>Enter 125 mils on the MIG tab. The printed window starts at 100 A. On the duty tab, enter rated amps 90, rated duty 20, and actual amps 100. The duty tab prints 16 percent: 1.6 minutes on and 8.4 minutes off. That is 20 × (90 ÷ 100) squared, which is 16.2, rounded to 16. The Handler 140 sheet rates 90 A at 18.5 VDC, 20% duty cycle. The duty tab does not take the 18.5 V figure.</p>
+<p><a href="welder-duty-cycle-amperage-chart.csv">Download CSV</a> of the same rows.</p>
+<div class="tbl-wrap">
+<table id="spec-table">
+<thead>
+<tr>
+<th scope="col">Model</th>
+<th scope="col">Process</th>
+<th scope="col">Input voltage</th>
+<th scope="col">Output amperage range</th>
+<th scope="col">Rated duty cycle at stated amps</th>
+<th scope="col">Source</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>Hobart Handler 140</td><td>Wire feed (MIG gun; solid wire and flux-cored wire)</td><td>115 V</td><td>25–140 A</td><td>90 A at 18.5 VDC, 20% duty cycle</td><td><a href="https://www.weldingsuppliesfromioc.com/cdn/shop/files/Hobart_Handler_140_spec.pdf" rel="noopener" target="_blank">Handler 140 spec sheet</a></td></tr>
+<tr><td>Hobart Handler 190</td><td>MIG (GMAW), flux-cored (FCAW)</td><td>230 V, 60 Hz, single-phase</td><td>25 − 190</td><td>130 A @ 21.5 Volts DC, 30% Duty Cycle</td><td><a href="https://contenthub.itwwelding.com/api/public/content/hobart-welding-products/owners-manual/561916-o260273f_hob.pdf" rel="noopener" target="_blank">Handler 190 owner’s manual</a></td></tr>
+<tr><td>Miller Millermatic 141</td><td>MIG (GMAW), flux-cored (FCAW)</td><td>120 V, 20 A, single-phase, 60 Hz</td><td>30–140 A</td><td>90 A at 18.5 VDC, 20% duty cycle; 40 A at 16 VDC, 100% duty cycle</td><td><a href="https://contenthub.itwwelding.com/api/public/content/miller-electric-mfg-llc/spec-sheet/PIM/d1d7b9-dc12-42.pdf" rel="noopener" target="_blank">Millermatic 141 spec sheet</a></td></tr>
+<tr><td>Miller Millermatic 142</td><td>MIG (GMAW), flux-cored (FCAW)</td><td>120 V, 20 A, single-phase, 50/60 Hz</td><td>30 – 140 A</td><td>100 A at 19 V, 60% duty cycle; 80 A at 18 VDC, 100% duty cycle</td><td><a href="https://contenthub.itwwelding.com/api/public/content/miller-electric-mfg-llc/spec-sheet/PIM/4877d6-dc12-41.pdf" rel="noopener" target="_blank">Millermatic 142 spec sheet</a></td></tr>
+<tr><td>Miller Millermatic 211</td><td>MIG (GMAW), flux-cored (FCAW)</td><td>120 V</td><td>30–130 A</td><td>115 A at 19.8 VDC, 20% duty cycle</td><td><a href="https://contenthub.itwwelding.com/api/public/content/miller-electric-mfg-llc/spec-sheet/PIM/ec445c-dc12-58.pdf" rel="noopener" target="_blank">Millermatic 211 spec sheet</a></td></tr>
+<tr><td>Miller Millermatic 211</td><td>MIG (GMAW), flux-cored (FCAW)</td><td>240 V</td><td>30–230 A</td><td>150 A at 21.5 VDC, 40% duty cycle</td><td><a href="https://contenthub.itwwelding.com/api/public/content/miller-electric-mfg-llc/spec-sheet/PIM/ec445c-dc12-58.pdf" rel="noopener" target="_blank">Millermatic 211 spec sheet</a></td></tr>
+<tr><td>Miller Millermatic 252</td><td>MIG (GMAW), flux-cored (FCAW)</td><td>208/240 V, single-phase, 60 Hz</td><td>30–300 A</td><td>200 A at 24 VDC, 60% duty cycle; 250 A at 26.5 VDC, 40% duty cycle</td><td><a href="https://contenthub.itwwelding.com/api/public/content/miller-electric-mfg-llc/spec-sheet/PIM/9022a4-dc12-49.pdf" rel="noopener" target="_blank">Millermatic 252 spec sheet</a></td></tr>
+<tr><td>Miller Millermatic 252</td><td>MIG (GMAW), flux-cored (FCAW)</td><td>230/460/575 V, single-phase, 60 Hz</td><td>30–300 A</td><td>200 A at 24 VDC, 60% duty cycle; 250 A at 26.5 VDC, 40% duty cycle</td><td><a href="https://contenthub.itwwelding.com/api/public/content/miller-electric-mfg-llc/spec-sheet/PIM/9022a4-dc12-49.pdf" rel="noopener" target="_blank">Millermatic 252 spec sheet</a></td></tr>
+<tr><td>Miller Multimatic 215</td><td>CV: MIG/flux-cored</td><td>120 V</td><td>30–125 A</td><td>110 A at 19.5 V, 60% duty cycle</td><td><a href="https://contenthub.itwwelding.com/api/public/content/miller-electric-mfg-llc/spec-sheet/PIM/5e3805-dc12-59.pdf" rel="noopener" target="_blank">Multimatic 215 spec sheet</a></td></tr>
+<tr><td>Miller Multimatic 215</td><td>CV: MIG/flux-cored</td><td>240 V</td><td>30–230 A</td><td>200 A at 24 V, 20% duty cycle; 150 A at 21.5 V, 40% duty cycle</td><td><a href="https://contenthub.itwwelding.com/api/public/content/miller-electric-mfg-llc/spec-sheet/PIM/5e3805-dc12-59.pdf" rel="noopener" target="_blank">Multimatic 215 spec sheet</a></td></tr>
+<tr><td>Miller Multimatic 215</td><td>CC: TIG</td><td>120 V</td><td>20–150 A</td><td>140 A at 15.6 V, 40% duty cycle</td><td><a href="https://contenthub.itwwelding.com/api/public/content/miller-electric-mfg-llc/spec-sheet/PIM/5e3805-dc12-59.pdf" rel="noopener" target="_blank">Multimatic 215 spec sheet</a></td></tr>
+<tr><td>Miller Multimatic 215</td><td>CC: TIG</td><td>240 V</td><td>20–210 A</td><td>190 A at 17.6 V, 20% duty cycle</td><td><a href="https://contenthub.itwwelding.com/api/public/content/miller-electric-mfg-llc/spec-sheet/PIM/5e3805-dc12-59.pdf" rel="noopener" target="_blank">Multimatic 215 spec sheet</a></td></tr>
+<tr><td>Miller Multimatic 215</td><td>CC: Stick (not recommended for 6010 electrodes)</td><td>120 V</td><td>30–100 A</td><td>90 A at 23.6 V, 40% duty cycle</td><td><a href="https://contenthub.itwwelding.com/api/public/content/miller-electric-mfg-llc/spec-sheet/PIM/5e3805-dc12-59.pdf" rel="noopener" target="_blank">Multimatic 215 spec sheet</a></td></tr>
+<tr><td>Miller Multimatic 215</td><td>CC: Stick (not recommended for 6010 electrodes)</td><td>240 V</td><td>30–200 A</td><td>190 A at 27.6 V, 20% duty cycle</td><td><a href="https://contenthub.itwwelding.com/api/public/content/miller-electric-mfg-llc/spec-sheet/PIM/5e3805-dc12-59.pdf" rel="noopener" target="_blank">Multimatic 215 spec sheet</a></td></tr>
+<tr><td>Miller Multimatic 215 PRO</td><td>CV: MIG/flux-cored</td><td>120 V</td><td>30 – 140 A</td><td>110 A at 19.5 VDC, 60% duty cycle</td><td><a href="https://contenthub.itwwelding.com/api/public/content/miller-electric-mfg-llc/spec-sheet/PIM/4b92ec-dc13-5.pdf" rel="noopener" target="_blank">Multimatic 215 PRO spec sheet</a></td></tr>
+<tr><td>Miller Multimatic 215 PRO</td><td>CV: MIG/flux-cored</td><td>240 V</td><td>30 – 230 A</td><td>160 A at 22 VDC, 60% duty cycle; 215 A at 24.8 VDC, 30% duty cycle</td><td><a href="https://contenthub.itwwelding.com/api/public/content/miller-electric-mfg-llc/spec-sheet/PIM/4b92ec-dc13-5.pdf" rel="noopener" target="_blank">Multimatic 215 PRO spec sheet</a></td></tr>
+<tr><td>Miller Multimatic 215 PRO</td><td>CC: TIG</td><td>120 V</td><td>20 – 150 A</td><td>140 A at 15.6 VDC, 40% duty cycle</td><td><a href="https://contenthub.itwwelding.com/api/public/content/miller-electric-mfg-llc/spec-sheet/PIM/4b92ec-dc13-5.pdf" rel="noopener" target="_blank">Multimatic 215 PRO spec sheet</a></td></tr>
+<tr><td>Miller Multimatic 215 PRO</td><td>CC: TIG</td><td>240 V</td><td>20 – 210 A</td><td>190 A at 17.6 VDC, 20% duty cycle</td><td><a href="https://contenthub.itwwelding.com/api/public/content/miller-electric-mfg-llc/spec-sheet/PIM/4b92ec-dc13-5.pdf" rel="noopener" target="_blank">Multimatic 215 PRO spec sheet</a></td></tr>
+<tr><td>Miller Multimatic 215 PRO</td><td>CC: Stick (not recommended for 6010 electrodes)</td><td>120 V</td><td>30 – 100 A</td><td>95 A at 23.8 VDC, 40% duty cycle</td><td><a href="https://contenthub.itwwelding.com/api/public/content/miller-electric-mfg-llc/spec-sheet/PIM/4b92ec-dc13-5.pdf" rel="noopener" target="_blank">Multimatic 215 PRO spec sheet</a></td></tr>
+<tr><td>Miller Multimatic 215 PRO</td><td>CC: Stick (not recommended for 6010 electrodes)</td><td>240 V</td><td>30 – 200 A</td><td>190 A at 27.6 VDC, 20% duty cycle</td><td><a href="https://contenthub.itwwelding.com/api/public/content/miller-electric-mfg-llc/spec-sheet/PIM/4b92ec-dc13-5.pdf" rel="noopener" target="_blank">Multimatic 215 PRO spec sheet</a></td></tr>
+<tr><td>Lincoln Power MIG 210 MP (K3963-1)</td><td>MIG</td><td>120/1/60</td><td>20-140 Amps DC</td><td>100A/19.0V/40%</td><td><a href="https://www.weldersupply.com/Content/files/ProductPDFs/LincolnElectric/PowerMIG210MPProductInfo.pdf" rel="noopener" target="_blank">Power MIG 210 MP product info, publication E7.50</a></td></tr>
+<tr><td>Lincoln Power MIG 210 MP (K3963-1)</td><td>MIG</td><td>230/1/60</td><td>20-220 Amps DC</td><td>200A/24V/25%</td><td><a href="https://www.weldersupply.com/Content/files/ProductPDFs/LincolnElectric/PowerMIG210MPProductInfo.pdf" rel="noopener" target="_blank">Power MIG 210 MP product info, publication E7.50</a></td></tr>
+<tr><td>Lincoln Square Wave TIG 200 (K5126-1)</td><td>TIG</td><td>120/1/50/60</td><td>10-125A</td><td>125A/25% (sheet note: 120V AC TIG 110A/25%); 100A/40%; 85A/60%</td><td><a href="https://www.weldershelper.com/weldershelper.com/powerware2/spec-sheets/K5126-1.pdf" rel="noopener" target="_blank">Square Wave TIG 200 literature, publication E3.38</a></td></tr>
+<tr><td>Lincoln Square Wave TIG 200 (K5126-1)</td><td>Stick</td><td>120/1/50/60</td><td>10-90A</td><td>75A/20%; 65A/60%</td><td><a href="https://www.weldershelper.com/weldershelper.com/powerware2/spec-sheets/K5126-1.pdf" rel="noopener" target="_blank">Square Wave TIG 200 literature, publication E3.38</a></td></tr>
+<tr><td>Lincoln Square Wave TIG 200 (K5126-1)</td><td>TIG</td><td>230/1/50/60</td><td>10-200A</td><td>200A/25%; 160A/40%; 130A/60%</td><td><a href="https://www.weldershelper.com/weldershelper.com/powerware2/spec-sheets/K5126-1.pdf" rel="noopener" target="_blank">Square Wave TIG 200 literature, publication E3.38</a></td></tr>
+<tr><td>Lincoln Square Wave TIG 200 (K5126-1)</td><td>Stick</td><td>230/1/50/60</td><td>10-170A</td><td>170A/20%; 100A/60%</td><td><a href="https://www.weldershelper.com/weldershelper.com/powerware2/spec-sheets/K5126-1.pdf" rel="noopener" target="_blank">Square Wave TIG 200 literature, publication E3.38</a></td></tr>
+<tr><td>ESAB Rebel EMP 215ic</td><td>MIG (GMAW)</td><td>120 VAC</td><td>5 – 150 A</td><td>130 A/20.5 V (120 V) @ 20% Duty Cycle</td><td><a href="https://econtent.adhq.com/dam/Original/10000/ESAB_558102240_Specification_Sheet.pdf" rel="noopener" target="_blank">Rebel EMP 215ic specification sheet</a></td></tr>
+<tr><td>ESAB Rebel EMP 215ic</td><td>MIG (GMAW)</td><td>208/230 VAC</td><td>5 – 240 A</td><td>205 A/24.3 V (230 V) @ 25% Duty Cycle</td><td><a href="https://econtent.adhq.com/dam/Original/10000/ESAB_558102240_Specification_Sheet.pdf" rel="noopener" target="_blank">Rebel EMP 215ic specification sheet</a></td></tr>
+<tr><td>ESAB Rebel EMP 215ic</td><td>STICK (SMAW)</td><td>120 VAC</td><td>5 – 150 A</td><td>90 A/23.6 V (120 V) @ 40% Duty Cycle</td><td><a href="https://econtent.adhq.com/dam/Original/10000/ESAB_558102240_Specification_Sheet.pdf" rel="noopener" target="_blank">Rebel EMP 215ic specification sheet</a></td></tr>
+<tr><td>ESAB Rebel EMP 215ic</td><td>STICK (SMAW)</td><td>208/230 VAC</td><td>5 – 240 A</td><td>180 A/27.2 V (230 V) @ 25% Duty Cycle</td><td><a href="https://econtent.adhq.com/dam/Original/10000/ESAB_558102240_Specification_Sheet.pdf" rel="noopener" target="_blank">Rebel EMP 215ic specification sheet</a></td></tr>
+<tr><td>ESAB Rebel EMP 215ic</td><td>TIG (GTAW)</td><td>120 VAC</td><td>5 – 150 A</td><td>130 A/15.2 V (120 V) @ 40% Duty Cycle</td><td><a href="https://econtent.adhq.com/dam/Original/10000/ESAB_558102240_Specification_Sheet.pdf" rel="noopener" target="_blank">Rebel EMP 215ic specification sheet</a></td></tr>
+<tr><td>ESAB Rebel EMP 215ic</td><td>TIG (GTAW)</td><td>208/230 VAC</td><td>5 – 240 A</td><td>180 A/17.2 V (230 V) @ 30% Duty Cycle</td><td><a href="https://econtent.adhq.com/dam/Original/10000/ESAB_558102240_Specification_Sheet.pdf" rel="noopener" target="_blank">Rebel EMP 215ic specification sheet</a></td></tr>
+</tbody>
+</table>
+</div>
+<p class="small">Click a column heading to sort. Sorting does not change the figures.</p>
+<figure>
+<img src="/assets/img/handler-140-nameplate.svg" alt="Four Handler 140 nameplate fields: wire feed, 115 volts, 25 to 140 amps, and 90 amps at 20 percent" width="720" height="280" loading="lazy">
+<figcaption>Handler 140 spec sheet, September 2022: 115 V wire-feed welder, welding amp range 25–140 A, rated output 90 A at 18.5 VDC, 20% duty cycle. The diagram shortens the rated line to 90 A at 20%. <a href="https://www.weldingsuppliesfromioc.com/cdn/shop/files/Hobart_Handler_140_spec.pdf" rel="noopener" target="_blank">Handler 140 spec sheet</a>.</figcaption>
+</figure>
+<h2>How a row was chosen</h2>
+<p>A row is one published process at one published input voltage. The Power MIG 210 MP brochure also names flux-cored, DC stick, and DC TIG. Its product-specifications table rates MIG only, so those other processes are not rows. The Square Wave TIG 200 sheet’s 120 V TIG line is marked with a note that 120 V AC TIG is 110A/25%. That note is in the cell.</p>
+<section class="faq"><h2>Frequently asked questions</h2>
+<details><summary>What does the duty tab print for the Handler 140 nameplate at 100 amps?</summary><p>Enter 125 mils on the MIG tab. The printed window starts at 100 A. On the duty tab, enter rated amps 90, rated duty 20, and actual amps 100. The duty tab prints 16 percent: 1.6 minutes on and 8.4 minutes off. That is 20 × (90 ÷ 100) squared, which is 16.2, rounded to 16. The Handler 140 sheet rates 90 A at 18.5 VDC, 20% duty cycle. The duty tab does not take the 18.5 V figure.</p></details>
+<details><summary>What if a sheet names a process and does not rate it?</summary><p>That process is not a row. This table does not estimate a duty cycle, and it does not fill a blank with a guess.</p></details>
+</section>
+<p>Compiled with AI assistance from the sources below. Spot an error? Email <a href="mailto:jpanasuk@gmail.com">jpanasuk@gmail.com</a>.</p>
+<h2>Sources</h2>
+<ul>
+<li>Hobart Handler 140 spec sheet, September 2022. <a href="https://www.weldingsuppliesfromioc.com/cdn/shop/files/Hobart_Handler_140_spec.pdf" rel="noopener" target="_blank">https://www.weldingsuppliesfromioc.com/cdn/shop/files/Hobart_Handler_140_spec.pdf</a>. Accessed October 6, 2026.</li>
+<li>Hobart Handler 190 owner’s manual, OM-260273F. <a href="https://contenthub.itwwelding.com/api/public/content/hobart-welding-products/owners-manual/561916-o260273f_hob.pdf" rel="noopener" target="_blank">https://contenthub.itwwelding.com/api/public/content/hobart-welding-products/owners-manual/561916-o260273f_hob.pdf</a>. Accessed October 6, 2026.</li>
+<li>Miller Electric, Millermatic 141 spec sheet, index DC/12.42. <a href="https://contenthub.itwwelding.com/api/public/content/miller-electric-mfg-llc/spec-sheet/PIM/d1d7b9-dc12-42.pdf" rel="noopener" target="_blank">https://contenthub.itwwelding.com/api/public/content/miller-electric-mfg-llc/spec-sheet/PIM/d1d7b9-dc12-42.pdf</a>. Accessed October 6, 2026.</li>
+<li>Miller Electric, Millermatic 142 spec sheet, index DC/12.41. <a href="https://contenthub.itwwelding.com/api/public/content/miller-electric-mfg-llc/spec-sheet/PIM/4877d6-dc12-41.pdf" rel="noopener" target="_blank">https://contenthub.itwwelding.com/api/public/content/miller-electric-mfg-llc/spec-sheet/PIM/4877d6-dc12-41.pdf</a>. Accessed October 6, 2026.</li>
+<li>Miller Electric, Millermatic 211 spec sheet, index DC/12.58. <a href="https://contenthub.itwwelding.com/api/public/content/miller-electric-mfg-llc/spec-sheet/PIM/ec445c-dc12-58.pdf" rel="noopener" target="_blank">https://contenthub.itwwelding.com/api/public/content/miller-electric-mfg-llc/spec-sheet/PIM/ec445c-dc12-58.pdf</a>. Accessed October 6, 2026.</li>
+<li>Miller Electric, Millermatic 252 spec sheet, index DC/12.49. <a href="https://contenthub.itwwelding.com/api/public/content/miller-electric-mfg-llc/spec-sheet/PIM/9022a4-dc12-49.pdf" rel="noopener" target="_blank">https://contenthub.itwwelding.com/api/public/content/miller-electric-mfg-llc/spec-sheet/PIM/9022a4-dc12-49.pdf</a>. Accessed October 6, 2026.</li>
+<li>Miller Electric, Multimatic 215 spec sheet, index DC/12.59. <a href="https://contenthub.itwwelding.com/api/public/content/miller-electric-mfg-llc/spec-sheet/PIM/5e3805-dc12-59.pdf" rel="noopener" target="_blank">https://contenthub.itwwelding.com/api/public/content/miller-electric-mfg-llc/spec-sheet/PIM/5e3805-dc12-59.pdf</a>. Accessed October 6, 2026.</li>
+<li>Miller Electric, Multimatic 215 PRO spec sheet, index DC/13.5. <a href="https://contenthub.itwwelding.com/api/public/content/miller-electric-mfg-llc/spec-sheet/PIM/4b92ec-dc13-5.pdf" rel="noopener" target="_blank">https://contenthub.itwwelding.com/api/public/content/miller-electric-mfg-llc/spec-sheet/PIM/4b92ec-dc13-5.pdf</a>. Accessed October 6, 2026.</li>
+<li>Lincoln Electric, Power MIG 210 MP product information, publication E7.50, issue date 05/16. <a href="https://www.weldersupply.com/Content/files/ProductPDFs/LincolnElectric/PowerMIG210MPProductInfo.pdf" rel="noopener" target="_blank">https://www.weldersupply.com/Content/files/ProductPDFs/LincolnElectric/PowerMIG210MPProductInfo.pdf</a>. Accessed October 6, 2026.</li>
+<li>Lincoln Electric, Square Wave TIG 200 literature, publication E3.38, issue date 07/16. <a href="https://www.weldershelper.com/weldershelper.com/powerware2/spec-sheets/K5126-1.pdf" rel="noopener" target="_blank">https://www.weldershelper.com/weldershelper.com/powerware2/spec-sheets/K5126-1.pdf</a>. Accessed October 6, 2026.</li>
+<li>ESAB Rebel EMP 215ic specification sheet, part 0558102240. <a href="https://econtent.adhq.com/dam/Original/10000/ESAB_558102240_Specification_Sheet.pdf" rel="noopener" target="_blank">https://econtent.adhq.com/dam/Original/10000/ESAB_558102240_Specification_Sheet.pdf</a>. Accessed October 6, 2026.</li>
+</ul>
+<p><a href="index.html">← Back to the welding thickness calculator</a></p>
+</main>
+<footer>Built by <a href="/about.html">Jeremy Panasuk</a> · <a href="/about.html">About &amp; how this was made</a> · <a href="/privacy.html">Privacy</a> · <a href="/contact.html">Contact</a> · pages may contain affiliate links</footer>
+<script defer>
+document.querySelectorAll("#spec-table th").forEach(function(th, idx){
+  th.style.cursor = "pointer";
+  th.addEventListener("click", function(){
+    var tbody = th.closest("table").tBodies[0];
+    var asc = th.getAttribute("aria-sort") !== "ascending";
+    var rows = Array.prototype.slice.call(tbody.rows);
+    rows.sort(function(a, b){
+      var x = a.cells[idx].innerText;
+      var y = b.cells[idx].innerText;
+      return asc ? x.localeCompare(y, undefined, {numeric:true}) : y.localeCompare(x, undefined, {numeric:true});
+    });
+    document.querySelectorAll("#spec-table th").forEach(function(h){ h.removeAttribute("aria-sort"); });
+    th.setAttribute("aria-sort", asc ? "ascending" : "descending");
+    rows.forEach(function(r){ tbody.appendChild(r); });
+  });
+});
+</script>
+</body>
+</html>

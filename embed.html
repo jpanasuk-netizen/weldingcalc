@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Welding Thickness Calculator</title>
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://welding-calculator.com/">
+<style>
+:root{--bg:#f4f5f7;--fg:#1c1c1c;--mut:#4a4a4a;--bd:#c8c8c8;--acc:#8f2f12;--okbg:#e7f2e7;--ok:#2f6b32}
+@media (prefers-color-scheme: dark){
+  :root{--bg:#1a1c1f;--fg:#e8e8e8;--mut:#b0b0b0;--bd:#3a3d42;--acc:#e7b8a8;--okbg:#1e2a1e;--ok:#8fbf8f}
+}
+*{box-sizing:border-box}
+body{margin:0;padding:.6rem .7rem 2.2rem;background:var(--bg);color:var(--fg);font:15px/1.4 Georgia,serif}
+.tabs{display:flex;flex-wrap:wrap;gap:.3rem;margin:0 0 .6rem}
+.tabs button{background:transparent;color:var(--fg);border:1px solid var(--bd);border-radius:6px;padding:.35rem .55rem;cursor:pointer;font:inherit}
+.tabs button[aria-selected="true"]{border-color:var(--acc);color:var(--acc);font-weight:700}
+.panel{display:none}
+.panel.active{display:block}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:.5rem}
+@media(max-width:560px){.row2{grid-template-columns:1fr}}
+label{display:block;font-weight:700;font-size:.85rem;margin-bottom:.15rem}
+input,select{width:100%;padding:.35rem;font:inherit;color:var(--fg);background:transparent;border:1px solid var(--bd);border-radius:6px}
+.small{color:var(--mut);font-size:.78rem;margin:.2rem 0 0}
+button.go{margin-top:.55rem;background:var(--acc);color:#fff;border:0;border-radius:6px;padding:.45rem .8rem;font:inherit;font-weight:700;cursor:pointer}
+@media (prefers-color-scheme: dark){button.go{color:#1a1c1f}}
+.ans{background:var(--okbg);border:1px solid var(--ok);border-radius:8px;padding:.7rem;margin-top:.6rem}
+.ans .big{font-size:1.35rem;font-weight:700;line-height:1.2}
+.ans .unit{font-size:.9rem;color:var(--mut);font-weight:400}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:.4rem;margin-top:.4rem}
+.stat{font-size:.85rem}
+.stat b{display:block}
+.note{font-size:.8rem;color:var(--mut);margin:.4rem 0 0}
+.credit{position:fixed;left:0;right:0;bottom:0;margin:0;padding:.25rem .7rem;background:var(--bg);border-top:1px solid var(--bd);font-size:.8rem}
+.credit a{color:var(--acc)}
+</style>
+</head>
+<body>
+<div class="tabs" role="tablist" aria-label="Calculators">
+  <button role="tab" aria-selected="true" onclick="showTab('tab-tig', this)">TIG amps</button>
+  <button role="tab" aria-selected="false" onclick="showTab('tab-mig', this)">MIG settings</button>
+  <button role="tab" aria-selected="false" onclick="showTab('tab-stk', this)">Stick rod</button>
+  <button role="tab" aria-selected="false" onclick="showTab('tab-dc', this)">Duty cycle</button>
+</div>
+<section id="tab-tig" class="panel active" role="tabpanel">
+  <div class="row2">
+    <div>
+      <label for="tigThou">Material thickness (mils)</label>
+      <input type="number" id="tigThou" value="125" min="1">
+      <p class="small">1/16" = 62 · 1/8" = 125 · 3/16" = 188 · 1/4" = 250</p>
+    </div>
+    <div>
+      <label for="tigMat">Material</label>
+      <select id="tigMat">
+        <option value="steel" selected>Mild steel (1 A per mil)</option>
+        <option value="aluminum">Aluminum (published AC chart rows)</option>
+        <option value="stainless">Stainless (×0.9)</option>
+      </select>
+    </div>
+  </div>
+  <button class="go" onclick="tigAmps()">Size my TIG</button>
+  <div id="tigResult" class="ans" hidden></div>
+</section>
+<section id="tab-mig" class="panel" role="tabpanel">
+  <div class="row2">
+    <div>
+      <label for="migThou">Steel thickness (mils)</label>
+      <input type="number" id="migThou" value="125" min="1">
+    </div>
+    <div>
+      <label for="migGas">Shielding</label>
+      <select id="migGas">
+        <option value="c25" selected>75/25 Argon/CO₂</option>
+        <option value="flux">Flux-core, no gas</option>
+      </select>
+    </div>
+  </div>
+  <button class="go" onclick="migSettings()">Size my MIG</button>
+  <div id="migResult" class="ans" hidden></div>
+</section>
+<section id="tab-stk" class="panel" role="tabpanel">
+  <div class="row2">
+    <div>
+      <label for="stkThou">Steel thickness (mils)</label>
+      <input type="number" id="stkThou" value="250" min="16">
+    </div>
+    <div>
+      <label for="stkCond">Metal condition</label>
+      <select id="stkCond">
+        <option value="clean" selected>Clean / mill scale</option>
+        <option value="rusty">Rusty, painted, or dirty</option>
+      </select>
+    </div>
+  </div>
+  <button class="go" onclick="stickRod()">Pick my rod</button>
+  <div id="stkResult" class="ans" hidden></div>
+</section>
+<section id="tab-dc" class="panel" role="tabpanel">
+  <div class="row2">
+    <div>
+      <label for="dcRated">Machine rated amps</label>
+      <input type="number" id="dcRated" value="90" min="1">
+    </div>
+    <div>
+      <label for="dcDuty">Rated duty cycle (%)</label>
+      <input type="number" id="dcDuty" value="20" min="1" max="100">
+    </div>
+    <div>
+      <label for="dcActual">Amps you actually weld at</label>
+      <input type="number" id="dcActual" value="100" min="1">
+    </div>
+  </div>
+  <button class="go" onclick="dutyCycle()">Calculate duty cycle</button>
+  <div id="dcResult" class="ans" hidden></div>
+</section>
+<p class="credit">Calculator by <a href="https://welding-calculator.com/" target="_blank" rel="noopener">Welding Calculator</a></p>
+<script src="/assets/app.js"></script>
+</body>
+</html>

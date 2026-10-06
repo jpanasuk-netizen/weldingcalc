@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://welding-calculator.com/</loc><lastmod>2026-10-06</lastmod>
+    <loc>https://welding-calculator.com/</loc>
+    <image:image>
+      <image:loc>https://welding-calculator.com/assets/img/calculator-flow.svg</image:loc>
+    </image:image>
+    <lastmod>2026-10-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -21,7 +25,11 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://welding-calculator.com/tig-amps-thickness.html</loc><lastmod>2026-10-06</lastmod>
+    <loc>https://welding-calculator.com/tig-amps-thickness.html</loc>
+    <image:image>
+      <image:loc>https://welding-calculator.com/assets/img/tig-aluminum-butt-band.svg</image:loc>
+    </image:image>
+    <lastmod>2026-10-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -36,7 +44,11 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://welding-calculator.com/duty-cycle-calculator.html</loc><lastmod>2026-10-06</lastmod>
+    <loc>https://welding-calculator.com/duty-cycle-calculator.html</loc>
+    <image:image>
+      <image:loc>https://welding-calculator.com/assets/img/duty-cycle-ten-minute.svg</image:loc>
+    </image:image>
+    <lastmod>2026-10-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -171,7 +183,11 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://welding-calculator.com/stick-welding-amperage-chart.html</loc><lastmod>2026-10-06</lastmod>
+    <loc>https://welding-calculator.com/stick-welding-amperage-chart.html</loc>
+    <image:image>
+      <image:loc>https://welding-calculator.com/assets/img/stick-rod-half-thickness.svg</image:loc>
+    </image:image>
+    <lastmod>2026-10-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -184,5 +200,18 @@
     <loc>https://welding-calculator.com/contact.html</loc><lastmod>2026-10-06</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://welding-calculator.com/welder-duty-cycle-amperage-chart.html</loc><lastmod>2026-10-06</lastmod>
+    <image:image>
+      <image:loc>https://welding-calculator.com/assets/img/handler-140-nameplate.svg</image:loc>
+    </image:image>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://welding-calculator.com/embed-calculator.html</loc><lastmod>2026-10-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 </urlset>

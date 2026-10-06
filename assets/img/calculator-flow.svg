@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="220" viewBox="0 0 720 220" role="img" aria-labelledby="calcFlowTitle">
+  <title id="calcFlowTitle">Flow from 125 mils of mild steel to the TIG tab band of 100 to 150 amps</title>
+  <rect width="720" height="220" fill="#f6f8fa"/>
+  <g font-family="Georgia, serif" fill="#1f2328">
+    <rect x="24" y="70" width="180" height="80" rx="8" fill="#ffffff" stroke="#1f2328"/>
+    <text x="114" y="104" text-anchor="middle" font-size="16">125 mils</text>
+    <text x="114" y="128" text-anchor="middle" font-size="14">mild steel</text>
+    <polygon points="214,110 246,110 246,100 270,110 246,120 246,110" fill="#1f2328"/>
+    <rect x="280" y="70" width="160" height="80" rx="8" fill="#ffffff" stroke="#1f2328"/>
+    <text x="360" y="116" text-anchor="middle" font-size="16">TIG tab</text>
+    <polygon points="450,110 482,110 482,100 506,110 482,120 482,110" fill="#1f2328"/>
+    <rect x="516" y="70" width="180" height="80" rx="8" fill="#ffffff" stroke="#8f2f12" stroke-width="2"/>
+    <text x="606" y="104" text-anchor="middle" font-size="16">100-150 A</text>
+    <text x="606" y="128" text-anchor="middle" font-size="14">printed band</text>
+  </g>
+</svg>

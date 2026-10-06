@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="220" viewBox="0 0 720 220" role="img" aria-labelledby="stickFlowTitle">
+  <title id="stickFlowTitle">Stick rod selection: 250 mils halved to 125 mils selects 1/8 inch</title>
+  <rect width="720" height="220" fill="#f6f8fa"/>
+  <g font-family="Georgia, serif" fill="#1f2328">
+    <rect x="20" y="70" width="150" height="80" rx="8" fill="#ffffff" stroke="#1f2328"/>
+    <text x="95" y="116" text-anchor="middle" font-size="16">250 mils</text>
+    <polygon points="180,110 208,110 208,100 228,110 208,120 208,110" fill="#1f2328"/>
+    <rect x="238" y="70" width="150" height="80" rx="8" fill="#ffffff" stroke="#1f2328"/>
+    <text x="313" y="104" text-anchor="middle" font-size="16">÷ 2</text>
+    <text x="313" y="128" text-anchor="middle" font-size="14">125 mils</text>
+    <polygon points="398,110 426,110 426,100 446,110 426,120 426,110" fill="#1f2328"/>
+    <rect x="456" y="70" width="240" height="80" rx="8" fill="#ffffff" stroke="#8f2f12" stroke-width="2"/>
+    <text x="576" y="104" text-anchor="middle" font-size="16">1/8 inch rod</text>
+    <text x="576" y="128" text-anchor="middle" font-size="14">at or under 128</text>
+  </g>
+</svg>

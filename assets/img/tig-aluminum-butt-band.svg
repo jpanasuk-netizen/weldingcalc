@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="200" viewBox="0 0 720 200" role="img" aria-labelledby="alBandTitle">
+  <title id="alBandTitle">1/8 inch 6061 butt start band from 90 to 120 amps</title>
+  <rect width="720" height="200" fill="#f6f8fa"/>
+  <g font-family="Georgia, serif" fill="#1f2328">
+    <text x="24" y="40" font-size="16">1/8 inch 6061 butt</text>
+    <line x1="80" y1="110" x2="640" y2="110" stroke="#1f2328" stroke-width="2"/>
+    <rect x="248" y="86" width="224" height="48" fill="#8f2f12"/>
+    <text x="80" y="150" text-anchor="middle" font-size="14">scale</text>
+    <text x="248" y="150" text-anchor="middle" font-size="14">90 A</text>
+    <text x="472" y="150" text-anchor="middle" font-size="14">120 A</text>
+    <text x="360" y="76" text-anchor="middle" font-size="14">90-120 A</text>
+  </g>
+</svg>

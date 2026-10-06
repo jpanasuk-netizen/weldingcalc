@@ -20,6 +20,8 @@ Free welding thickness and amperage calculator: TIG amps by material and thickne
 - /how-to-tig-weld-stainless-steel.html — TIG tab 0.9 factor beside Lincoln L16988 stainless column
 - /stick-welding-amperage-chart.html — windows stored in the stick tab, not a manufacturer diameter chart
 - /what-to-wear-when-welding.html — OSHA 1910.252 shade rows by electrode size
+- /welder-duty-cycle-amperage-chart.html — hobby and farm nameplates: process, input voltage, amp range, rated duty cycle
+- /embed-calculator.html — embed the thickness calculator; the embed frame itself is noindex
 
 ## Sister sites (calculator network)
 - https://generator-sizer.com/ — generator size calculator, for running a welder off a generator
@@ -28,7 +30,8 @@ Free welding thickness and amperage calculator: TIG amps by material and thickne
 - [WeldingCalc topic map](https://welding-calculator.com/topics.html): Welder settings calculator for hobbyists running MIG/TIG/stick.
 - **Thickness → amps:** [Thickness & amperage calculator](https://welding-calculator.com/), [Settings card](https://welding-calculator.com/magnet.html), [TIG amps by thickness](https://welding-calculator.com/tig-amps-thickness.html), [Welder for 1/4 inch steel](https://welding-calculator.com/quarter-inch-steel.html)
 - **Process choice:** [MIG or TIG for sheet](https://welding-calculator.com/mig-or-tig-sheet-metal.html), [MIG settings chart](https://welding-calculator.com/mig-wire-speed-chart.html), [TIG stainless](https://welding-calculator.com/how-to-tig-weld-stainless-steel.html), [Stick amperage chart](https://welding-calculator.com/stick-welding-amperage-chart.html), [What to wear](https://welding-calculator.com/what-to-wear-when-welding.html)
-- **Buying a machine:** [Beginner welder size](https://welding-calculator.com/best-beginner-welder.html)
+- **Buying a machine:** [Beginner welder size](https://welding-calculator.com/best-beginner-welder.html), [Welder duty cycle and amperage chart](https://welding-calculator.com/welder-duty-cycle-amperage-chart.html)
+- **Embed:** [Embed the calculator](https://welding-calculator.com/embed-calculator.html)
 - **Runtime & the shop:** [Duty cycle](https://welding-calculator.com/duty-cycle-calculator.html), [Weld cost](https://welding-calculator.com/weld-cost-calculator.html)
 
 ## Questions

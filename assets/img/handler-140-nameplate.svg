@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="280" viewBox="0 0 720 280" role="img" aria-labelledby="plateTitle">
+  <title id="plateTitle">Handler 140 nameplate fields: wire feed, 115 volts, 25 to 140 amps, 90 amps at 20 percent</title>
+  <rect width="720" height="280" fill="#f6f8fa"/>
+  <g font-family="Georgia, serif" fill="#1f2328">
+    <text x="24" y="36" font-size="16">Handler 140 nameplate fields</text>
+    <rect x="24" y="56" width="320" height="88" rx="8" fill="#ffffff" stroke="#1f2328"/>
+    <text x="40" y="88" font-size="13">Process</text>
+    <text x="40" y="116" font-size="16">Wire feed</text>
+    <rect x="376" y="56" width="320" height="88" rx="8" fill="#ffffff" stroke="#1f2328"/>
+    <text x="392" y="88" font-size="13">Input voltage</text>
+    <text x="392" y="116" font-size="16">115 V</text>
+    <rect x="24" y="164" width="320" height="88" rx="8" fill="#ffffff" stroke="#1f2328"/>
+    <text x="40" y="196" font-size="13">Output amperage range</text>
+    <text x="40" y="224" font-size="16">25-140 A</text>
+    <rect x="376" y="164" width="320" height="88" rx="8" fill="#ffffff" stroke="#8f2f12" stroke-width="2"/>
+    <text x="392" y="196" font-size="13">Rated duty cycle</text>
+    <text x="392" y="224" font-size="16">90 A at 20%</text>
+  </g>
+</svg>
