@@ -82,6 +82,7 @@
  "applicationCategory": "UtilitiesApplication",
  "operatingSystem": "Any",
  "url": "https://welding-calculator.com/",
+ "dateModified": "2026-10-06",
  "offers": {
   "@type": "Offer",
   "price": "0",
@@ -106,6 +107,8 @@
 
 <main>
 <h1>Welding Thickness Calculator</h1>
+<p class="small">Last updated: October 6, 2026</p>
+<div class="answer-box"><strong>Quick answer:</strong> Enter the thickness in mils. Mild-steel TIG starts at about 1 amp per mil, so 1/8 inch (125 mils) prints 100–150 A. At 125 mils, aluminum stays on Miller’s 90–120 A 6061 butt start, and stick picks a rod about half the thickness.</div>
 <p data-magnet-cta="1" style="margin:.6rem 0 1.1rem;padding:.7rem .9rem;border-left:4px solid #f59e0b;background:rgba(245,158,11,.08);font-size:1.02rem"><a href="magnet.html" style="font-weight:700">Free settings card — print it, 10 minutes.</a></p>
 <p class="sub">Welder settings calculator for hobbyists running MIG/TIG/stick.</p>
 <p class="sub">Enter the metal thickness. Get the TIG amps, the MIG wire and settings, or the stick rod and amperage range — the published rules of thumb, computed. Plus duty-cycle runtime math.</p>
@@ -136,7 +139,8 @@
   </div>
   <button onclick="tigAmps()" style="background:var(--acc);color:#fff;border:none;border-radius:8px;padding:.7rem 1.4rem;font-size:1.05rem;cursor:pointer;font-weight:600">Size my TIG</button>
   <div id="tigResult" class="ans" hidden></div>
-  <div id="matchedCta" hidden></div>
+  <p class="small affil-disclosure">As an Amazon Associate I earn from qualifying purchases. The Amazon links below are affiliate links; they don't change the math.</p>
+<div id="matchedCta" hidden></div>
 </section>
 
 <!-- ============ 2. MIG ============ -->
@@ -328,10 +332,11 @@
     <p class="small">Shop weld gear sized to your job: <a href="https://www.amazon.com/s?k=MIG+welder+beginner&tag=generatorsi0d-20" rel="sponsored nofollow noopener" target="_blank">beginner MIG welders on Amazon</a> · <a href="https://www.amazon.com/s?k=stick+welder+225+amp&tag=generatorsi0d-20" rel="sponsored nofollow noopener" target="_blank">stick welders on Amazon</a> · <a href="https://www.amazon.com/s?k=welding+cart&tag=generatorsi0d-20" rel="sponsored nofollow noopener" target="_blank">welding carts on Amazon</a></p>
   </section>
 
-<footer>Built by Jeremy Panasuk · <a href="/about.html">About &amp; how this was made</a> · <a href="/privacy.html">Privacy</a> · <a href="/contact.html">Contact</a> · <a href="/embed-calculator.html">Embed this calculator</a> · <a href="/welder-duty-cycle-amperage-chart.html">Duty cycle &amp; amperage chart</a> · pages may contain affiliate links · <a href="https://www.tiktok.com/@3jsa7" rel="noopener" target="_blank" data-tiktok-cta="1">TikTok @3jsa7</a></footer>
+<footer>Built by Jeremy Panasuk · <a href="/about.html">About &amp; how this was made</a> · <a href="/methodology.html">Methodology</a> · <a href="/privacy.html">Privacy</a> · <a href="/contact.html">Contact</a> · <a href="/embed-calculator.html">Embed this calculator</a> · <a href="/welder-duty-cycle-amperage-chart.html">Duty cycle &amp; amperage chart</a> · pages may contain affiliate links · <a href="https://www.tiktok.com/@3jsa7" rel="noopener" target="_blank" data-tiktok-cta="1">TikTok @3jsa7</a></footer>
 
 <script defer src="assets/app.js"></script>
 <script defer src="assets/monetization.js"></script>
+<script defer src="assets/share.js"></script>
 
 <div id="amzSticky" hidden aria-hidden="true">
   <a id="amzStickyLink" class="btn-amz btn-amz-primary" href="https://www.amazon.com/s?k=home+tools&tag=generatorsi0d-20" rel="sponsored nofollow noopener" target="_blank">Shop on Amazon</a>

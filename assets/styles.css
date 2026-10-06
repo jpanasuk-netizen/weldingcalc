@@ -35,6 +35,10 @@ p{margin:.6rem 0}
 .tabs button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible, button:focus-visible{
   outline:2px solid var(--acc); outline-offset:2px;
 }
+.share-row button{
+  background:var(--card);color:var(--fg);border:1px solid var(--bd);border-radius:8px;
+  padding:.35rem .6rem;font-size:.85rem;cursor:pointer;font-family:inherit;margin:.35rem .35rem 0 0;
+}
 .panel{display:none}
 .panel.active{display:block}
 .field{margin:.9rem 0}

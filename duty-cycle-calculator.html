@@ -73,6 +73,27 @@
 
 <div class="answer-box"><strong>Quick answer:</strong> 20% duty cycle at 140 A means 2.0 minutes of welding per 10-minute cycle, then 8.0 minutes of cooling. On this site’s duty tab, the same 140 A / 20% rating at 100 A prints 39%: 3.9 minutes on and 6.1 minutes off.</div>
 
+<div id="calc">
+  <div class="row2">
+    <div class="field">
+      <label for="dcRated">Machine rated amps</label>
+      <input type="number" id="dcRated" value="140" min="1">
+    </div>
+    <div class="field">
+      <label for="dcDuty">Rated duty cycle (%)</label>
+      <input type="number" id="dcDuty" value="20" min="1" max="100">
+    </div>
+    <div class="field">
+      <label for="dcActual">Amps you actually weld at</label>
+      <input type="number" id="dcActual" value="100" min="1">
+    </div>
+  </div>
+  <button type="button" onclick="dutyCycle()" style="background:var(--acc);color:#fff;border:none;border-radius:8px;padding:.7rem 1.4rem;font-size:1.05rem;cursor:pointer;font-weight:600">Calculate duty cycle</button>
+  <div id="dcResult" class="ans" hidden></div>
+</div>
+
+
+
 <h2>The definition</h2>
 <p>Duty cycle is the share of a <strong>10-minute window</strong> a machine can weld at a stated amperage without overheating. 20% at 140 A = 2 minutes of arc, 8 minutes of cooling, repeating. Manufacturers test at rated line voltage and 104°F (40°C) ambient — hot garages and long extension cords eat into real performance.</p>
 
@@ -112,6 +133,7 @@
 <p>Two machines with the same max amps can differ 3–4× at your working amperage. Match the duty-cycle-at-your-amps figure to the job: structural/production work wants ≥40% at your running current; hobby and repair work is fine at 20–25%. Check the settings your material actually needs with the <a href="index.html">thickness calculator</a> and the <a href="mig-wire-speed-chart.html">MIG wire speed chart</a>, and remember that a machine tripping mid-bead also wrecks your <a href="weld-cost-calculator.html">per-foot cost math</a> — restarts and scrap are labor you pay for twice.</p>
 <p>What those duty-cycle ratings look like on a household outlet is covered in <a href="what-size-welder-for-120v-outlet.html">what size welder a 120V outlet can run</a>. Choosing a stick machine for the 1/4 inch window this site’s stick tab prints, against the farm guide’s 175–250 A stick class, is on <a href="how-to-choose-a-stick-welder.html">how to choose a stick welder</a>.</p>
 
+<p class="small affil-disclosure">As an Amazon Associate I earn from qualifying purchases. The Amazon links below are affiliate links; they don't change the math.</p>
 <div class="affil">
   <span class="tag">Machines we'd shortlist</span>
   <p class="small">Matched welders and PPE for your duty-cycle class: <a href="https://www.amazon.com/s?k=MIG+welder+200+amp&tag=generatorsi0d-20" rel="sponsored nofollow noopener" target="_blank">200 A MIG welders on Amazon</a> · <a href="https://www.amazon.com/s?k=welding+helmet+auto+darkening&tag=generatorsi0d-20" rel="sponsored nofollow noopener" target="_blank">auto-darkening helmets on Amazon</a> · <a href="https://www.amazon.com/s?k=welding+gloves+leather&tag=generatorsi0d-20" rel="sponsored nofollow noopener" target="_blank">welding gloves on Amazon</a></p>
@@ -121,7 +143,7 @@
 <details><summary>What does 20% duty cycle at 140 amps mean?</summary><p>20% duty cycle at 140 A means 2.0 minutes of welding per 10-minute cycle, then 8.0 minutes of cooling.</p></details>
 <details><summary>What does the duty tab print for a 140 A, 20% machine at 100 A?</summary><p>39 percent: 3.9 minutes on and 6.1 minutes off. That is 20 × (140 ÷ 100) squared, which is 39.2, rounded to 39.</p></details>
 </section>
-<footer>Built by Jeremy Panasuk · <a href="/about.html">About &amp; how this was made</a> · <a href="/privacy.html">Privacy</a> · <a href="/contact.html">Contact</a> · pages may contain affiliate links</footer>
+<footer>Built by Jeremy Panasuk · <a href="/about.html">About &amp; how this was made</a> · <a href="/methodology.html">Methodology</a> · <a href="/privacy.html">Privacy</a> · <a href="/contact.html">Contact</a> · pages may contain affiliate links</footer>
 
 <section class="sources-section" aria-labelledby="sources-heading">
 <h2 id="sources-heading">Sources & Standards</h2>
@@ -155,5 +177,7 @@
   <a href="/weld-cost-calculator.html">Welding Cost Per Foot Calculator</a>
 </nav>
 
+<script defer src="assets/app.js"></script>
+<script defer src="assets/share.js"></script>
 </body>
 </html>

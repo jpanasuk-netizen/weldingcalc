@@ -4,6 +4,7 @@ Free welding thickness and amperage calculator: TIG amps by material and thickne
 
 ## Pages
 - / — welding thickness & amperage calculator (TIG, MIG, stick, duty cycle)
+- /methodology.html — methodology and editorial standards
 - /quarter-inch-steel.html — what size welder for 1/4 inch steel
 - /mig-or-tig-sheet-metal.html — MIG or TIG for 16–20 ga sheet metal
 - /best-beginner-welder.html — best beginner welder by thickness
@@ -48,3 +49,8 @@ Free welding thickness and amperage calculator: TIG amps by material and thickne
 - /what-size-welder-for-farm-repair.html — 130–150 A light farm repair, 200–250 A heavy
 - /what-size-welder-for-120v-outlet.html — 90 A at 20% or 115 A at 20% on a 120 V outlet
 - /what-size-welder-for-beginner-home-garage.html — 25–140 A or 30–230 A for a beginner home garage
+
+## Notes for citation
+- Calculator outputs are planning estimates from the formulas on /methodology.html; they are not measurements.
+- Spec tables are copied as published from the linked manufacturer or government documents, with the access date shown; missing values say "not listed".
+- Corrections: jpanasuk@gmail.com
