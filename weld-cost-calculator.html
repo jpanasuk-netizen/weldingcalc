@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Welding Cost Per Foot Calculator</title>
-<meta name="description" content="Welding cost per foot: filler, gas, power, and labor math with deposit rates, plus a cost table by material thickness for MIG, TIG, and flux-core.">
+<meta name="description" content="Weld cost per foot is filler, gas, power, and labor. This page does not publish prices. Check current local wire, gas, power, and shop rates.">
 <link rel="canonical" href="https://welding-calculator.com/weld-cost-calculator.html">
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="shortcut icon" href="assets/favicon.ico">
 <meta name="robots" content="index,follow">
 <meta property="og:title" content="Welding Cost Per Foot Calculator">
-<meta property="og:description" content="Filler, gas, power, and labor cost per foot of weld — deposit-rate math and a thickness table for MIG, TIG, and flux-core.">
+<meta property="og:description" content="Weld cost per foot is filler, gas, power, and labor. This page does not publish prices. Check current local wire, gas, power, and shop rates.">
 <meta property="og:url" content="https://welding-calculator.com/weld-cost-calculator.html">
 <meta property="og:type" content="article">
 <meta property="og:image" content="https://welding-calculator.com/assets/og-image.png">
@@ -18,7 +18,7 @@
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Welding Cost Per Foot Calculator">
-<meta name="twitter:description" content="Filler, gas, power, and labor cost per foot of weld — deposit-rate math and a thickness table for MIG, TIG, and flux-core.">
+<meta name="twitter:description" content="Weld cost per foot is filler, gas, power, and labor. This page does not publish prices. Check current local wire, gas, power, and shop rates.">
 <meta name="twitter:image" content="https://welding-calculator.com/assets/og-image.png">
 <link rel="stylesheet" href="assets/styles.css">
 <script type="application/ld+json">
@@ -28,13 +28,13 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "What does the 3/16 inch MIG row list?",
-      "acceptedAnswer": { "@type": "Answer", "text": "The table lists MIG 0.035 inch wire at $4 per pound, a 3/16 inch fillet, 14 ipm, $0.25 filler, $0.09 gas, $0.01 power, $0.69 labor, and about $1.04 total per foot." }
+      "name": "Does this page publish a price per foot?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. Wire, gas, power, and shop rate change by supplier and town. Check current local prices and multiply them by the amounts the formulas describe." }
     },
     {
       "@type": "Question",
-      "name": "What does the note under the table say about TIG versus MIG?",
-      "acceptedAnswer": { "@type": "Answer", "text": "The note says TIG costs 2–3× MIG per foot on steel mostly because travel speed is half, and that the filler itself is cheap." }
+      "name": "What goes into a per-foot weld cost?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Filler, gas, power, and labor. Each piece follows from the weld’s cross-section and your travel speed." }
     }
   ]
 }
@@ -69,44 +69,30 @@
 </header>
 <main>
 <h1>Welding cost per foot calculator</h1>
-<p class="sub">Filler, gas, power, and labor math for MIG, TIG, and flux-core — with a cost table by material thickness.</p>
+<p class="sub">Filler, gas, power, and labor. This page does not print prices.</p>
 
-<div class="answer-box"><strong>Quick answer:</strong> A foot of 3/16&quot; mild-steel MIG weld costs about $1.05 at a $30/hr shop rate — labor is 80–90% of it, which is why travel speed matters more than filler price. Run the calculator below for your parameters.</div>
+<div class="answer-box"><strong>Quick answer:</strong> No. Wire, gas, power, and shop rate change by supplier and town. Check current local prices and multiply them by the amounts the formulas describe.</div>
 
 <h2>The per-foot math</h2>
-<p>Weld cost per foot = filler + gas + power + labor. Each piece follows from the weld's cross-section and your travel speed:</p>
+<p>Filler, gas, power, and labor. Each piece follows from the weld’s cross-section and your travel speed.</p>
 <ul>
-  <li><strong>Filler:</strong> steel weighs 0.283 lb/in³. Fillet weld metal per foot ≈ leg² × 1.7 lb (a 1/4" fillet ≈ 0.11 lb/ft; aluminum at 0.096 lb/in³: leg² × 1.15). At ~95% deposition efficiency for solid wire, divide by 0.95, then multiply by your wire price per pound.</li>
-  <li><strong>Gas:</strong> flow rate (cfh) × arc time. Arc time per foot = 12 ÷ travel speed (ipm). A 1/4" fillet at 20 ipm needs 0.6 minutes of arc per foot; at 25 cfh of 75/25 that's ~0.25 ft³, so ~$0.06 at $0.25/ft³ bulk mix.</li>
-  <li><strong>Power:</strong> amps × volts × arc time ÷ 1,000 = kWh. A 130 A × 19 V weld uses ~2.5 kWh per hour of arc — at $0.15/kWh that's under $0.04/arc-hour. Power is almost always negligible.</li>
-  <li><strong>Labor:</strong> shop rate × arc time ÷ operator factor. Real shops weld maybe 30–50% of the clock (fit-up, tacking, repositioning); multiply arc time by 2–3 for true labor minutes.</li>
+  <li><strong>Filler:</strong> steel weighs 0.283 lb/in³. Fillet weld metal per foot ≈ leg² × 1.7 lb (a 1/4" fillet ≈ 0.11 lb/ft; aluminum at 0.096 lb/in³: leg² × 1.15). At ~95% deposition efficiency for solid wire, divide by 0.95, then multiply by the wire price you actually pay per pound.</li>
+  <li><strong>Gas:</strong> flow rate (cfh) × arc time. Arc time per foot = 12 ÷ travel speed (ipm). Multiply the gas used by the price on your current invoice.</li>
+  <li><strong>Power:</strong> amps × volts × arc time ÷ 1,000 = kWh. Multiply that by your local rate. On most jobs this piece is small next to labor.</li>
+  <li><strong>Labor:</strong> shop rate × arc time, then allow for fit-up. Real shops weld maybe 30–50% of the clock (fit-up, tacking, repositioning); multiply arc time by 2–3 for true labor minutes. Use the rate you pay, not a rate printed here.</li>
 </ul>
-<p><strong>Per foot ≈ (wire lb/ft × price) + (cfh × 12/travel-ipm × gas $/ft³) + (A×V×arc-time × $/kWh) + (shop rate × arc-minutes/60 × operator factor)</strong></p>
+<p><strong>Per foot ≈ (wire lb/ft × price) + (cfh × 12/travel-ipm × gas price per ft³) + (A×V×arc-time × price per kWh) + (shop rate × arc-minutes/60 × operator factor)</strong></p>
+<p>Check current local prices for wire, gas, power, and the shop rate before you multiply. This page does not supply those prices.</p>
 
-<h2>Cost table — 1/4" steel fillets, $30/hr shop rate, 75/25 gas at $0.25/ft³, $0.15/kWh</h2>
-<div class="tbl-wrap">
-<table>
-  <thead><tr><th>Process</th><th>Wire/filler</th><th class="num">Travel (ipm)</th><th class="num">Filler $/ft</th><th class="num">Gas $/ft</th><th class="num">Power $/ft</th><th class="num">Labor $/ft</th><th class="num">Total $/ft</th></tr></thead>
-  <tbody>
-    <tr><td>MIG 0.035" ($4/lb)</td><td>ER70S-6, 3/16" fillet</td><td class="num">14</td><td class="num">$0.25</td><td class="num">$0.09</td><td class="num">$0.01</td><td class="num">$0.69</td><td class="num">~$1.04</td></tr>
-    <tr><td>MIG 0.035" ($4/lb)</td><td>ER70S-6, 1/4" fillet</td><td class="num">10</td><td class="num">$0.45</td><td class="num">$0.13</td><td class="num">$0.01</td><td class="num">$0.96</td><td class="num">~$1.55</td></tr>
-    <tr><td>Flux-core 0.045" ($5/lb)</td><td>E71T-1, 1/4" fillet, no gas</td><td class="num">14</td><td class="num">$0.55</td><td class="num">$0</td><td class="num">$0.01</td><td class="num">$0.69</td><td class="num">~$1.25</td></tr>
-    <tr><td>TIG 3/32" filler ($8/lb)</td><td>ER70S-2, 1/8" fillet, argon</td><td class="num">6</td><td class="num">$0.25</td><td class="num">$0.12</td><td class="num">$0.01</td><td class="num">$1.60</td><td class="num">~$1.98</td></tr>
-    <tr><td>TIG aluminum 4043 ($10/lb)</td><td>3/16" fillet on 1/4" plate</td><td class="num">5</td><td class="num">$0.40</td><td class="num">$0.16</td><td class="num">$0.01</td><td class="num">$1.92</td><td class="num">~$2.49</td></tr>
-  </tbody>
-</table>
-</div>
-<p class="note">Table values assume a 40% operator factor is already baked into labor (arc minutes × ~1.6 for fit-up and positioning) and a 100% duty-cycle machine. TIG costs 2–3× MIG per foot on steel mostly because travel speed is half — the filler itself is cheap.</p>
+<h2>Why thickness dominates</h2>
+<p>Fillet metal volume scales with leg², so a 1/4" fillet needs 4× the filler of a 1/8" fillet, at roughly half the travel speed — about 8× the arc time per foot. Thicker sections also demand multi-pass work with inter-pass cleaning. Labor time climbs faster than the metal volume as thickness climbs.</p>
 
-<h2>Why thickness dominates the table</h2>
-<p>Fillet metal volume scales with leg², so a 1/4" fillet needs 4× the filler of a 1/8" fillet, at roughly half the travel speed — about 8× the arc time per foot. Thicker sections also demand multi-pass work with inter-pass cleaning. That compounding is why the labor column swells faster than the material columns as thickness climbs.</p>
-
-<h2>Where the savings actually are</h2>
+<h2>Where the time actually goes</h2>
 <ul>
-  <li><strong>Travel speed:</strong> moving from 10 to 14 ipm on a 1/4" fillet cuts labor ~30%. Bigger wire at higher amps is the lever.</li>
-  <li><strong>Wire diameter:</strong> 0.045" wire deposits ~50% more metal per amp than 0.035" at the same settings range — fewer passes on 3/16"+ steel.</li>
-  <li><strong>Flux-core over gas MIG for thick outdoor work:</strong> no gas cost, higher deposition, wind-tolerant.</li>
-  <li><strong>Don't overweld:</strong> a fillet with legs 1.5× material thickness is nearly always over-designed. Each extra 1/16" of leg adds ~15% to the metal volume.</li>
+  <li><strong>Travel speed:</strong> a faster travel speed cuts labor time per foot. Bigger wire at higher amps is the lever. Set that speed with the <a href="mig-wire-speed-chart.html">MIG wire speed chart</a> and the <a href="index.html">thickness calculator</a>, then price the wire yourself.</li>
+  <li><strong>Wire diameter:</strong> a larger wire deposits more metal per amp in the same settings range, which can mean fewer passes on thicker steel.</li>
+  <li><strong>Flux-core over gas MIG for thick outdoor work:</strong> no shielding gas to buy, higher deposition, wind-tolerant. The wire price is still a local invoice.</li>
+  <li><strong>Don't overweld:</strong> a fillet with legs 1.5× material thickness is nearly always over-designed. Each extra 1/16" of leg adds metal volume, and that volume is filler you pay for.</li>
 </ul>
 
 <p class="note">Dial in your settings first with the <a href="index.html">thickness calculator</a>, the <a href="mig-wire-speed-chart.html">MIG wire speed chart</a>, and the <a href="duty-cycle-calculator.html">duty cycle calculator</a> — a machine that trips on thermal overload turns every cost estimate upside down.</p>
@@ -117,8 +103,8 @@
 </div>
 
 <section class="faq"><h2>Frequently asked questions</h2>
-<details><summary>What does the 3/16 inch MIG row list?</summary><p>The table lists MIG 0.035 inch wire at $4 per pound, a 3/16 inch fillet, 14 ipm, $0.25 filler, $0.09 gas, $0.01 power, $0.69 labor, and about $1.04 total per foot.</p></details>
-<details><summary>What does the note under the table say about TIG versus MIG?</summary><p>The note says TIG costs 2–3× MIG per foot on steel mostly because travel speed is half, and that the filler itself is cheap.</p></details>
+<details><summary>Does this page publish a price per foot?</summary><p>No. Wire, gas, power, and shop rate change by supplier and town. Check current local prices and multiply them by the amounts the formulas describe.</p></details>
+<details><summary>What goes into a per-foot weld cost?</summary><p>Filler, gas, power, and labor. Each piece follows from the weld’s cross-section and your travel speed.</p></details>
 </section>
 <footer>Built by Jeremy Panasuk · <a href="/about.html">About &amp; how this was made</a> · <a href="/privacy.html">Privacy</a> · <a href="/contact.html">Contact</a> · pages may contain affiliate links</footer>
 
