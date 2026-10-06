@@ -3,20 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MIG Wire Speed Chart by Thickness & Amperage</title>
-<meta name="description" content="MIG wire speed chart: inches-per-minute settings for 0.023, 0.030, 0.035, and 0.045 wire by material thickness and target amperage, with paired voltage ranges.">
+<title>MIG Settings Chart: Wire Speed &amp; Amps by Thickness</title>
+<meta name="description" content="MIG wire speed and amps by thickness for 0.023 to 0.045 wire, plus the windows this site’s MIG tab prints at 1/16, 1/8, 3/16, and 1/4 inch.">
 <link rel="canonical" href="https://welding-calculator.com/mig-wire-speed-chart.html">
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="shortcut icon" href="assets/favicon.ico">
 <meta name="robots" content="index,follow">
-<meta property="og:title" content="MIG Wire Speed Chart — ipm by Thickness and Amps">
+<meta property="og:title" content="MIG Settings Chart: Wire Speed &amp; Amps by Thickness">
 <meta property="og:description" content="Stop guessing dial settings: wire speed in ipm for every common wire diameter and material thickness, with the voltage to pair with it.">
 <meta property="og:url" content="https://welding-calculator.com/mig-wire-speed-chart.html">
 <meta property="og:image" content="https://welding-calculator.com/assets/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="MIG Wire Speed Chart — ipm by Thickness and Amps">
+<meta name="twitter:title" content="MIG Settings Chart: Wire Speed &amp; Amps by Thickness">
 <meta name="twitter:description" content="Stop guessing dial settings: wire speed in ipm for every common wire diameter and material thickness, with the voltage to pair with it.">
 <meta name="twitter:image" content="https://welding-calculator.com/assets/og-image.png">
 <link rel="stylesheet" href="assets/styles.css">
@@ -54,21 +54,26 @@
 }
 </script>
 
-<script id="sources-data" type="application/json">
+<script type="application/ld+json">
 {
-  "sources": [
-    {
-      "title": "Miller Electric, MIG Welding: Setting the Correct Parameters",
-      "url": "https://www.millerwelds.com/en-US/resources/knowledge-hub/mig-welding/how-to/mig-welding-setting-the-correct-parameters",
-      "date": "2026-10-02"
-    }
-  ]
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Welding Calculator",
+   "item": "https://welding-calculator.com/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "MIG wire speed chart (ipm)",
+   "item": "https://welding-calculator.com/mig-wire-speed-chart.html"
+  }
+ ]
 }
 </script>
-<script>
-document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getElementById('sources-data').textContent);var s=document.createElement('div');s.className='sources-section';s.innerHTML='<h2 id="sources-heading">Sources & Standards</h2><p>Solid-wire MIG starting points on this site follow the Miller page below: 1 amp per .001 inch of steel, and the wire-speed multipliers.</p><ul>'+d.sources.map(x=>'<li><a href="'+x.url+'" target="_blank">'+x.title+'</a></li>').join('')+'</ul><p><button id="cite-toggle">Show Copyable Citations</button></p><div id="cite-output" style="display:none"></div>';var t=document.querySelector('nav')||document.querySelector('footer')||document.body;t.parentNode.insertBefore(s,t);var o=s.querySelector('#cite-toggle'),c=s.querySelector('#cite-output');o.onclick=()=>{c.textContent=d.sources.map(x=>x.title+'. '+x.url+'. Accessed '+x.date).join('\n\n');c.style.display='block';o.style.display='none'};});
-</script>
-<meta name="llms.txt" content="https://welding-calculator.com/sources.json">
 </head>
 <body>
 <header class="site-head">
@@ -100,6 +105,21 @@ document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getE
 </div>
 
 <p>The wire-diameter choice comes first, because the same thickness can be welded with more than one wire size. A common machine-maker rule: 0.023" wire for material under 3/32", 0.030" through 3/16", and 0.035" above that. 0.045" wire is really a spray-transfer and heavy-fabrication size — it needs the amps that 1/4" and thicker plate demand, and it will not run a stable short-circuit arc on thin sheet no matter where you set the feeder. Our <a href="index.html">MIG calculator</a> applies exactly these wire-size rules when it picks a diameter for your thickness.</p>
+
+<h2>What the MIG tab prints</h2>
+<p>The chart above is this page’s starting table. The MIG tab is a separate function. These are the windows it prints for mild steel with 75/25 gas. They are not interpolated from the chart rows.</p>
+<div class="tbl-wrap">
+<table>
+<thead><tr><th>Enter</th><th>Wire</th><th>Amps</th><th>Wire speed</th><th>Power line</th></tr></thead>
+<tbody>
+<tr><td>62 mils (the helper’s 1/16")</td><td>0.023"</td><td>55–63 A</td><td>193–212 ipm</td><td>120 V machine OK</td></tr>
+<tr><td>125 mils (1/8")</td><td>0.030"</td><td>100–115 A</td><td>200–220 ipm</td><td>120 V machine OK</td></tr>
+<tr><td>188 mils (3/16")</td><td>0.035"</td><td>170–196 A</td><td>272–299 ipm</td><td>220 V machine</td></tr>
+<tr><td>250 mils (1/4")</td><td>0.045"</td><td>200–230 A</td><td>240–264 ipm</td><td>220 V machine</td></tr>
+</tbody>
+</table>
+</div>
+<p>At 125 mils the function picks 0.030 inch wire because 125 is under 188. Amps are round(125 × 0.8 / 5) × 5 = 100, and the window is 100 through round(100 × 1.15) = 115. Wire speed is round(100 × 2.0) = 200, through round(200 × 1.1) = 220. Gas flow prints 20–25 CFH. Open the <a href="index.html#calc">MIG tab</a> and enter those mils if you want the card, not this paragraph, to be the source of the number.</p>
 
 <h2>The ipm formula behind the chart</h2>
 <p>Every row above can be reproduced with a simple published approximation: <strong>wire speed (ipm) ≈ amperage × k</strong>, where k depends on wire diameter — about <strong>3.5 for 0.023" wire, 2.0 for 0.030", and 1.6 for 0.035"</strong>. Those are the same coefficients our calculator uses. For 0.045" wire, published manufacturer charts put the factor closer to 1.2–1.4 in the spray range, which is why we show 0.045 settings as a chart row rather than a calculator output. Check the arithmetic against the table: 0.035" wire at 110 A gives 110 × 1.6 ≈ 176 ipm, and the tuned window of 190–230 ipm sits just above — the formula lands you in the neighborhood, the test bead lands you on the number.</p>
@@ -141,6 +161,12 @@ document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getE
 <p>Modestly. For the same amperage, C25 (75/25 argon/CO2) short-circuit settings hold for straight CO2 with a 1–2 V bump and slightly slower wire feed to keep the arc from getting too fluid. Flux-core (E71T-11) runs about 10–15% slower ipm at the same amperage and needs no gas at all.</p>
 
 <footer>Built by Jeremy Panasuk · <a href="/about.html">About &amp; how this was made</a> · <a href="/privacy.html">Privacy</a> · <a href="/contact.html">Contact</a> · pages may contain affiliate links</footer>
+
+<section class="sources-section" aria-labelledby="sources-heading">
+<h2 id="sources-heading">Sources & Standards</h2>
+<p>Solid-wire MIG starting points on this site follow the Miller page below: 1 amp per .001 inch of steel, and the wire-speed multipliers.</p>
+<ul><li><a href="https://www.millerwelds.com/en-US/resources/knowledge-hub/mig-welding/how-to/mig-welding-setting-the-correct-parameters" rel="noopener" target="_blank">Miller Electric, MIG Welding: Setting the Correct Parameters</a></li></ul>
+</section>
 </main>
 
 

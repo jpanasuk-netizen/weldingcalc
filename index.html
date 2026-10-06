@@ -3,22 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Welding Thickness Calculator [Free] | WeldingCalc</title>
-<meta name="description" content="Use this free welding thickness calculator to get TIG amps, MIG wire size and speed, and stick-rod amp ranges for your material.">
+<title>Welding Calculator: TIG Amps, MIG Settings &amp; Stick Rod</title>
+<meta name="description" content="Free welding amperage calculator: pick metal and thickness to get TIG amps, MIG wire size and speed, and stick-rod amp ranges from published charts.">
 <link rel="canonical" href="https://welding-calculator.com/">
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="shortcut icon" href="assets/favicon.ico">
 <meta name="robots" content="index,follow">
-<meta property="og:title" content="Welding Thickness Calculator — What Amps for This Steel?">
-<meta property="og:description" content="Enter thickness, get TIG amps, MIG wire and settings, or the stick rod and amperage range — plus a duty-cycle calculator.">
+<meta property="og:title" content="Welding Calculator: TIG Amps, MIG Settings &amp; Stick Rod">
+<meta property="og:description" content="Free welding amperage calculator: pick metal and thickness to get TIG amps, MIG wire size and speed, and stick-rod amp ranges from published charts.">
 <meta property="og:url" content="https://welding-calculator.com/">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://welding-calculator.com/assets/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Welding Thickness Calculator — What Amps for This Steel?">
-<meta name="twitter:description" content="Enter thickness, get TIG amps, MIG wire and settings, or the stick rod and amperage range — plus a duty-cycle calculator.">
+<meta name="twitter:title" content="Welding Calculator: TIG Amps, MIG Settings &amp; Stick Rod">
+<meta name="twitter:description" content="Free welding amperage calculator: pick metal and thickness to get TIG amps, MIG wire size and speed, and stick-rod amp ranges from published charts.">
 <meta name="twitter:image" content="https://welding-calculator.com/assets/og-image.png">
 <link rel="stylesheet" href="assets/styles.css">
 <script type="application/ld+json">
@@ -65,21 +65,30 @@
 {"@context":"https://schema.org","@type":"Organization","name":"Welding Calculator","url":"https://welding-calculator.com","description":"Welding amperage, cost, and settings calculators.","sameAs":[]}
 </script>
 
-<script id="sources-data" type="application/json">
+<script type="application/ld+json">
 {
-  "sources": [
-    {
-      "title": "Miller Electric, MIG Welding: Setting the Correct Parameters",
-      "url": "https://www.millerwelds.com/en-US/resources/knowledge-hub/mig-welding/how-to/mig-welding-setting-the-correct-parameters",
-      "date": "2026-10-02"
-    }
-  ]
+ "@context": "https://schema.org",
+ "@type": "WebSite",
+ "name": "Welding Calculator",
+ "url": "https://welding-calculator.com/"
 }
 </script>
-<script>
-document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getElementById('sources-data').textContent);var s=document.createElement('div');s.className='sources-section';s.innerHTML='<h2 id="sources-heading">Sources & Standards</h2><p>Solid-wire MIG starting points on this site follow the Miller page below: 1 amp per .001 inch of steel, and the wire-speed multipliers.</p><ul>'+d.sources.map(x=>'<li><a href="'+x.url+'" target="_blank">'+x.title+'</a></li>').join('')+'</ul><p><button id="cite-toggle">Show Copyable Citations</button></p><div id="cite-output" style="display:none"></div>';var t=document.querySelector('nav')||document.querySelector('footer')||document.body;t.parentNode.insertBefore(s,t);var o=s.querySelector('#cite-toggle'),c=s.querySelector('#cite-output');o.onclick=()=>{c.textContent=d.sources.map(x=>x.title+'. '+x.url+'. Accessed '+x.date).join('\n\n');c.style.display='block';o.style.display='none'};});
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "WebApplication",
+ "name": "Welding Thickness Calculator",
+ "description": "Enter the metal thickness. Get the TIG amps, the MIG wire and settings, or the stick rod and amperage range — the published rules of thumb, computed. Plus duty-cycle runtime math.",
+ "applicationCategory": "UtilitiesApplication",
+ "operatingSystem": "Any",
+ "url": "https://welding-calculator.com/",
+ "offers": {
+  "@type": "Offer",
+  "price": "0",
+  "priceCurrency": "USD"
+ }
+}
 </script>
-<meta name="llms.txt" content="https://welding-calculator.com/sources.json">
 </head>
 <body>
 
@@ -97,6 +106,7 @@ document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getE
 
 <main>
 <h1>Welding Thickness Calculator</h1>
+<p data-magnet-cta="1" style="margin:.6rem 0 1.1rem;padding:.7rem .9rem;border-left:4px solid #f59e0b;background:rgba(245,158,11,.08);font-size:1.02rem"><a href="magnet.html" style="font-weight:700">Free settings card — print it, 10 minutes.</a></p>
 <p class="sub">Welder settings calculator for hobbyists running MIG/TIG/stick.</p>
 <p class="sub">Enter the metal thickness. Get the TIG amps, the MIG wire and settings, or the stick rod and amperage range — the published rules of thumb, computed. Plus duty-cycle runtime math.</p>
 
@@ -270,7 +280,16 @@ document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getE
 <li><a href="how-to-weld-carbon-steel.html">How to weld carbon steel</a> — Miller’s 125 A example beside this MIG tab.</li>
 <li><a href="how-to-choose-a-stick-welder.html">How to choose a stick welder</a> — 90–140 A is not the 175–250 A class.</li>
 <li><a href="how-to-weld-galvanized-steel-safely.html">How to weld galvanized steel safely</a> — Zinc fume controls before any amp.</li>
+<li><a href="how-to-tig-weld-stainless-steel.html">How to TIG weld stainless steel</a> — The 0.9 factor beside Lincoln’s stainless column.</li>
+<li><a href="stick-welding-amperage-chart.html">Stick welding amperage chart</a> — The windows the stick tab prints.</li>
+<li><a href="what-to-wear-when-welding.html">What to wear when welding</a> — OSHA’s shade table by electrode size.</li>
 </ul>
+
+<section class="sources-section" aria-labelledby="sources-heading">
+<h2 id="sources-heading">Sources & Standards</h2>
+<p>Solid-wire MIG starting points on this site follow the Miller page below: 1 amp per .001 inch of steel, and the wire-speed multipliers.</p>
+<ul><li><a href="https://www.millerwelds.com/en-US/resources/knowledge-hub/mig-welding/how-to/mig-welding-setting-the-correct-parameters" rel="noopener" target="_blank">Miller Electric, MIG Welding: Setting the Correct Parameters</a></li></ul>
+</section>
 </main>
 
 <section id="soft-rail" class="panel" aria-label="Related guides and offers" style="margin-top:1.5rem">
@@ -305,9 +324,8 @@ document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getE
 
 <footer>Built by Jeremy Panasuk · <a href="/about.html">About &amp; how this was made</a> · <a href="/privacy.html">Privacy</a> · <a href="/contact.html">Contact</a> · pages may contain affiliate links</footer>
 
-<script src="assets/app.js"></script>
-<script src="assets/monetization.js"></script>
-<script src="assets/magnet-cta.js"></script>
+<script defer src="assets/app.js"></script>
+<script defer src="assets/monetization.js"></script>
 
 <div id="amzSticky" hidden aria-hidden="true">
   <a id="amzStickyLink" class="btn-amz btn-amz-primary" href="https://www.amazon.com/s?k=home+tools&tag=generatorsi0d-20" rel="sponsored nofollow noopener" target="_blank">Shop on Amazon</a>

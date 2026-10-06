@@ -107,6 +107,40 @@
   "mainEntityOfPage": "https://welding-calculator.com/what-size-welder-for-16-gauge-steel.html"
 }
 </script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "HowTo",
+ "name": "What Size Welder Do I Need for 16 Gauge Steel?",
+ "step": [
+  {
+   "@type": "HowToStep",
+   "position": 1,
+   "text": "Take thickness from the settings table: 16 gauge = .060 in (Handler 140 spec sheet). The farm chart’s fractional column labeled 1/16 in is a different thickness label than this .060 in row (Welding on the Farm)."
+  },
+  {
+   "@type": "HowToStep",
+   "position": 2,
+   "text": "Convert with the solid-wire rule: .060 ÷ .001 = 60 A (Miller parameters)."
+  },
+  {
+   "@type": "HowToStep",
+   "position": 3,
+   "text": "Select wire that actually lists 60 A. .023 in is 30–130 A and .030 in is 40–145 A. .035 in begins at 50 A, so 60 A is inside it too. .045 in begins at 75 A, so 60 A is below that window (Miller parameters). The Handler 140 sheet itself lists .023–.035 solid wire (Handler 140 spec sheet)."
+  },
+  {
+   "@type": "HowToStep",
+   "position": 4,
+   "text": "Compute a starting wire speed only for the two diameters this thickness is usually paired with. .023 in at 3.5 in per amp is 60 × 3.5 = 210 ipm. .030 in at 2 in per amp is 60 × 2 = 120 ipm (Miller parameters). The 120 ipm figure is wire speed, not the 120 V machine range. The MIG wire speed chart uses those same multipliers."
+  },
+  {
+   "@type": "HowToStep",
+   "position": 5,
+   "text": "Check process minimums before reaching for stick. The farm chart starts stick and flux-cored at 1/8 in and up, and Miller’s 1/8 in example is .125 in, which is thicker than .060 in (Welding on the Farm, Miller parameters). MIG is listed from 24 gauge up and TIG from 22 gauge up, so 16 gauge is on the MIG and TIG side of those minimums. Duty cycle still uses a 10-minute period (Welding on the Farm). A Handler 140 is rated 90 A at 20 percent, and 60 A is below that 90 A duty point; 20 percent of 10 minutes is 2 minutes on and 8 minutes off at 90 A (Handler 140 spec sheet). Both Millermatic 211 ranges contain 60 A: 30–130 A on 120 V and 30–230 A on 240 V (Millermatic 211 spec sheet). Use the duty cycle calculator for the plate on the machine you have. The .060 in figure is the Handler table, and the amps are the Miller rule applied to it."
+  }
+ ]
+}
+</script>
 </head>
 <body>
 <header class="site-head">
@@ -153,7 +187,7 @@
 <li><a href="what-size-welder-for-auto-body-panels.html">What size welder for auto body panels</a></li>
 </ul></nav>
 
-<section class="faq"><h2>Frequently asked questions</h2><details><summary>How thick is 16 gauge in the Handler 140 table?</summary><p>16 gauge is listed as .060 in (<a href="https://www.weldingsuppliesfromioc.com/cdn/shop/files/Hobart_Handler_140_spec.pdf" rel="noopener" target="_blank">Handler 140 spec sheet</a>).</p></details><details><summary>What amperage is .060 inch on the MIG rule?</summary><p>.060 ÷ .001 = 60 A (<a href="https://www.millerwelds.com/en-US/resources/knowledge-hub/mig-welding/how-to/mig-welding-setting-the-correct-parameters" rel="noopener" target="_blank">Miller parameters</a>).</p></details><details><summary>Which wires include 60 amps?</summary><p>.023 in (30–130 A) and .030 in (40–145 A) both include 60 A. .035 in starts at 50 A, so it also includes 60 A. .045 in starts at 75 A, so it does not (<a href="https://www.millerwelds.com/en-US/resources/knowledge-hub/mig-welding/how-to/mig-welding-setting-the-correct-parameters" rel="noopener" target="_blank">Miller parameters</a>).</p></details><details><summary>Is stick listed for metal this thin?</summary><p>The farm chart’s stick and flux-cored minimum is 1/8 in, and 1/8 in is the .125 in example, which is thicker than .060 in. MIG’s published minimum is 24 gauge and up (<a href="https://marion.osu.edu/sites/marion/files/imce/Welding%20on%20the%20Farm.pdf" rel="noopener" target="_blank">Welding on the Farm</a>, <a href="https://www.millerwelds.com/en-US/resources/knowledge-hub/mig-welding/how-to/mig-welding-setting-the-correct-parameters" rel="noopener" target="_blank">Miller parameters</a>).</p></details></section>
+<section class="faq"><h2>Frequently asked questions</h2><details><summary>How thick is 16 gauge in the Handler 140 table?</summary><p>16 gauge is listed as .060 in (Handler 140 spec sheet).</p></details><details><summary>What amperage is .060 inch on the MIG rule?</summary><p>.060 ÷ .001 = 60 A (Miller parameters).</p></details><details><summary>Which wires include 60 amps?</summary><p>.023 in (30–130 A) and .030 in (40–145 A) both include 60 A. .035 in starts at 50 A, so it also includes 60 A. .045 in starts at 75 A, so it does not (Miller parameters).</p></details><details><summary>Is stick listed for metal this thin?</summary><p>The farm chart’s stick and flux-cored minimum is 1/8 in, and 1/8 in is the .125 in example, which is thicker than .060 in. MIG’s published minimum is 24 gauge and up (Welding on the Farm, Miller parameters).</p></details></section>
 <div class="affil">
   <span class="tag">Affiliate</span>
   <p class="small">Affiliate disclosure: as an Amazon Associate, we earn from qualifying purchases — at no cost to you.</p>
@@ -166,6 +200,6 @@
 </ul>
 </main>
 <footer>Built by Jeremy Panasuk · <a href="/about.html">About &amp; how this was made</a> · <a href="/privacy.html">Privacy</a> · <a href="/contact.html">Contact</a> · pages may contain affiliate links</footer>
-<script src="assets/app.js"></script>
+<script defer src="assets/app.js"></script>
 </body>
 </html>

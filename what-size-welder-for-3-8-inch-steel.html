@@ -107,6 +107,35 @@
   "mainEntityOfPage": "https://welding-calculator.com/what-size-welder-for-3-8-inch-steel.html"
 }
 </script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "HowTo",
+ "name": "What Size Welder Do I Need for 3/8 Inch Steel?",
+ "step": [
+  {
+   "@type": "HowToStep",
+   "position": 1,
+   "text": "Multiply the published 1/8 in example by 3. Miller’s .125 in is 125 A (Miller parameters). .125 × 3 = .375 in, and .375 ÷ .001 = 375 A. That is the single-pass reading of the rule, not a machine rating."
+  },
+  {
+   "@type": "HowToStep",
+   "position": 2,
+   "text": "Check the wire chart before treating 375 A as a setting. .023 in is 30–130 A, .030 in is 40–145 A, .035 in is 50–180 A, and .045 in is 75–250 A (Miller parameters). 375 A is above every one of those tops. The MIG wire speed chart is where those windows are plotted; this page only needs the ceiling."
+  },
+  {
+   "@type": "HowToStep",
+   "position": 3,
+   "text": "Set the machine claim next to the rule, without blending them. On 240 V the Millermatic 211 lists steel up to 3/8 in in a single pass, with a range of 30–230 A and a rated output of 150 A at 21.5 VDC and 40 percent duty (Millermatic 211 spec sheet). 230 A is not 375 A. Both statements are published; this page does not test either one."
+  },
+  {
+   "@type": "HowToStep",
+   "position": 4,
+   "text": "Use the farm guide when the question is which machine class handles heavier work: 200–250 A MIG at 40 to 60 percent duty, or 175–250 A stick (Welding on the Farm). Forty percent of a 10-minute cycle is 4 minutes of welding and 6 minutes of cooling; 60 percent is 6 minutes of welding and 4 minutes of cooling. The same guide says thicker material can be welded with multiple passes, which takes more time and may exceed duty cycle. Run the plate values through the duty cycle calculator."
+  }
+ ]
+}
+</script>
 </head>
 <body>
 <header class="site-head">
@@ -149,7 +178,7 @@
 <li><a href="what-size-welder-for-120v-outlet.html">What size welder a 120V outlet can run</a></li>
 </ul></nav>
 
-<section class="faq"><h2>Frequently asked questions</h2><details><summary>Why does the single-pass rule say 375 amps?</summary><p>3/8 in is 3 times the .125 in example: .125 × 3 = .375 in, and .375 ÷ .001 = 375 A (<a href="https://www.millerwelds.com/en-US/resources/knowledge-hub/mig-welding/how-to/mig-welding-setting-the-correct-parameters" rel="noopener" target="_blank">Miller parameters</a>).</p></details><details><summary>Can the published wire sizes run 375 amps?</summary><p>No. The largest listed window is .045 in at 75–250 A. .023 in is only 30–130 A (<a href="https://www.millerwelds.com/en-US/resources/knowledge-hub/mig-welding/how-to/mig-welding-setting-the-correct-parameters" rel="noopener" target="_blank">Miller parameters</a>).</p></details><details><summary>What does a 240 V Millermatic 211 claim for 3/8 inch?</summary><p>On 240 V it lists steel from 24 gauge to 3/8 in, an amp range of 30–230 A, and a rated output of 150 A at 21.5 VDC and 40 percent duty cycle (<a href="https://contenthub.itwwelding.com/api/public/content/miller-electric-mfg-llc/spec-sheet/PIM/ec445c-dc12-58.pdf" rel="noopener" target="_blank">Millermatic 211 spec sheet</a>).</p></details><details><summary>What machine class does the farm guide publish for heavier work?</summary><p>A 200–250 A MIG at 40–60 percent duty cycle, or a 175–250 A stick machine. Thicker metal can be welded in multiple passes (<a href="https://marion.osu.edu/sites/marion/files/imce/Welding%20on%20the%20Farm.pdf" rel="noopener" target="_blank">Welding on the Farm</a>).</p></details></section>
+<section class="faq"><h2>Frequently asked questions</h2><details><summary>Why does the single-pass rule say 375 amps?</summary><p>3/8 in is 3 times the .125 in example: .125 × 3 = .375 in, and .375 ÷ .001 = 375 A (Miller parameters).</p></details><details><summary>Can the published wire sizes run 375 amps?</summary><p>No. The largest listed window is .045 in at 75–250 A. .023 in is only 30–130 A (Miller parameters).</p></details><details><summary>What does a 240 V Millermatic 211 claim for 3/8 inch?</summary><p>On 240 V it lists steel from 24 gauge to 3/8 in, an amp range of 30–230 A, and a rated output of 150 A at 21.5 VDC and 40 percent duty cycle (Millermatic 211 spec sheet).</p></details><details><summary>What machine class does the farm guide publish for heavier work?</summary><p>A 200–250 A MIG at 40–60 percent duty cycle, or a 175–250 A stick machine. Thicker metal can be welded in multiple passes (Welding on the Farm).</p></details></section>
 <div class="affil">
   <span class="tag">Affiliate</span>
   <p class="small">Affiliate disclosure: as an Amazon Associate, we earn from qualifying purchases — at no cost to you.</p>
@@ -162,6 +191,6 @@
 </ul>
 </main>
 <footer>Built by Jeremy Panasuk · <a href="/about.html">About &amp; how this was made</a> · <a href="/privacy.html">Privacy</a> · <a href="/contact.html">Contact</a> · pages may contain affiliate links</footer>
-<script src="assets/app.js"></script>
+<script defer src="assets/app.js"></script>
 </body>
 </html>

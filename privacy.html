@@ -39,21 +39,6 @@
 }
 </script>
 
-<script id="sources-data" type="application/json">
-{
-  "sources": [
-    {
-      "title": "Miller Electric, MIG Welding: Setting the Correct Parameters",
-      "url": "https://www.millerwelds.com/en-US/resources/knowledge-hub/mig-welding/how-to/mig-welding-setting-the-correct-parameters",
-      "date": "2026-10-02"
-    }
-  ]
-}
-</script>
-<script>
-document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getElementById('sources-data').textContent);var s=document.createElement('div');s.className='sources-section';s.innerHTML='<h2 id="sources-heading">Sources & Standards</h2><p>Solid-wire MIG starting points on this site follow the Miller page below: 1 amp per .001 inch of steel, and the wire-speed multipliers.</p><ul>'+d.sources.map(x=>'<li><a href="'+x.url+'" target="_blank">'+x.title+'</a></li>').join('')+'</ul><p><button id="cite-toggle">Show Copyable Citations</button></p><div id="cite-output" style="display:none"></div>';var t=document.querySelector('nav')||document.querySelector('footer')||document.body;t.parentNode.insertBefore(s,t);var o=s.querySelector('#cite-toggle'),c=s.querySelector('#cite-output');o.onclick=()=>{c.textContent=d.sources.map(x=>x.title+'. '+x.url+'. Accessed '+x.date).join('\n\n');c.style.display='block';o.style.display='none'};});
-</script>
-<meta name="llms.txt" content="https://welding-calculator.com/sources.json">
 </head>
 <body>
 
@@ -70,22 +55,26 @@ document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getE
 
 <main>
 <h1>Privacy Policy</h1>
-<p class="sub">Last updated: October 3, 2026</p>
+<p class="sub">Last updated: October 6, 2026</p>
 <p>WeldingCalc (welding-calculator.com) is a free welding calculator site owned by Jeremy Panasuk, New Auburn, Wisconsin. Contact: <a href="mailto:jpanasuk@gmail.com">jpanasuk@gmail.com</a>.</p>
 <h2>Information we collect</h2>
 <p>The calculators run entirely in your browser. The values you enter (thickness, amperage, wire diameter, and similar inputs) are not transmitted to or stored on our servers. They exist only in your browser session. We do not require accounts and do not collect names, emails, or personal profiles through the calculators.</p>
 <h2>Scripts this site loads</h2>
-<p>Pages load first-party files from this domain: <code>assets/styles.css</code>, and on some pages <code>assets/app.js</code>, <code>assets/monetization.js</code>, and <code>assets/magnet-cta.js</code>. Those scripts do not send calculator inputs to a server. On the homepage, <code>assets/monetization.js</code> stores one value in your browser&rsquo;s session storage so it can remember whether you dismissed the Amazon link bar. That value stays on your device.</p>
+<p>Pages load first-party files from this domain: <code>assets/styles.css</code>, and on some pages <code>assets/app.js</code> and <code>assets/monetization.js</code>. Those scripts do not send calculator inputs to a server. On the homepage, <code>assets/monetization.js</code> stores one value in your browser&rsquo;s session storage so it can remember whether you dismissed the Amazon link bar. That value stays on your device.</p>
 <h2>Advertising</h2>
 <p>This site does not load Google AdSense or any other advertising script.</p>
 <h2>Affiliate links</h2>
 <p>Some pages contain affiliate links to Amazon.com (Amazon Associates), using the tag <code>generatorsi0d-20</code>. If you follow an affiliate link and buy something, the site may earn a commission. Amazon can set its own cookies after you leave this site. Affiliate links do not change the calculator math.</p>
-<h2>Other outbound links</h2>
-<p>The homepage and topic map add a link to <a href="https://www.tiktok.com/@3jsa7" rel="noopener">tiktok.com/@3jsa7</a>. That is an ordinary link. This site does not embed TikTok or load a TikTok script.</p>
 <h2>Analytics and cookies</h2>
 <p>We do not run our own analytics and we do not set our own tracking cookies.</p>
 <h2>Contact</h2>
 <p>Questions about this policy? Email <a href="mailto:jpanasuk@gmail.com">jpanasuk@gmail.com</a>.</p>
+
+<section class="sources-section" aria-labelledby="sources-heading">
+<h2 id="sources-heading">Sources & Standards</h2>
+<p>Solid-wire MIG starting points on this site follow the Miller page below: 1 amp per .001 inch of steel, and the wire-speed multipliers.</p>
+<ul><li><a href="https://www.millerwelds.com/en-US/resources/knowledge-hub/mig-welding/how-to/mig-welding-setting-the-correct-parameters" rel="noopener" target="_blank">Miller Electric, MIG Welding: Setting the Correct Parameters</a></li></ul>
+</section>
 </main>
 
 <footer>Built by Jeremy Panasuk · <a href="/about.html">About &amp; how this was made</a> · <a href="/privacy.html">Privacy</a> · <a href="/contact.html">Contact</a> · pages may contain affiliate links</footer>

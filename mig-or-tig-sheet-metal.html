@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MIG or TIG for 16–20 Gauge Sheet Metal? (2026)</title>
-<meta name="description" content="Which process for thin sheet metal? Why 16–20 gauge warps, how heat input controls it, the settings that keep panels flat, and when TIG is worth the learning...">
+<title>MIG or TIG for 18 Gauge Sheet Metal? 16–20 ga Guide</title>
+<meta name="description" content="MIG or TIG for 18 gauge and 16–20 gauge sheet: where each process holds a panel flat, plus the calculator’s 16-gauge MIG and TIG windows.">
 <link rel="canonical" href="https://welding-calculator.com/mig-or-tig-sheet-metal.html">
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="shortcut icon" href="assets/favicon.ico">
@@ -18,31 +18,36 @@
 <meta name="twitter:image" content="https://welding-calculator.com/assets/og-image.png">
 <link rel="stylesheet" href="assets/styles.css">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is MIG or TIG better for sheet metal?","acceptedAnswer":{"@type":"Answer","text":"For automotive body panels and anything visible, TIG — its precise low heat input controls distortion. For structural thin steel like ductwork, boxes, and brackets, short-circuit MIG with .023 wire is faster, cheaper, and easier, and 16–18 ga is well within its comfort zone."}},{"@type":"Question","name":"How do I keep sheet metal from warping when welding?","acceptedAnswer":{"@type":"Answer","text":"Lower amps, faster travel, stitch welding in short segments, backing bars or copper to pull heat out, and clamping the panel flat until cool. Every thin-metal technique is a heat-management technique."}}]}
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the calculator print for 60 mils of steel?","acceptedAnswer":{"@type":"Answer","text":"60 mils is the Handler 140’s 16 gauge thickness of .060 inch. The TIG tab prints 48–72 amps, DCEN, with 1/16 inch tungsten and 1/16 inch filler. The MIG tab prints 0.023 inch wire, 55–63 amps, 193–212 inches per minute, 20–25 CFH, and a 120 V machine OK."}},{"@type":"Question","name":"What published figure does this page use for 18 gauge?","acceptedAnswer":{"@type":"Answer","text":"The Handler 140 settings table lists 18 gauge as .048 inch. Miller’s solid-wire rule is 1 amp per .001 inch, so that thickness is 48 A. The farm guide states a different single-pass MIG figure for 18 gauge steel: roughly 70 A. Both are published, and they are not the same sentence."}}]}
 </script>
 
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://welding-calculator.com/mig-or-tig-sheet-metal.html">
-<meta property="og:title" content="MIG or TIG for 16–20 Gauge Sheet Metal? (2026) — Warping, Settings, Verdict">
-<meta property="og:description" content="Which process for thin sheet metal? Why 16–20 gauge warps, how heat input controls it, the settings that keep panels flat, and when TIG is worth the learning curve.">
+<meta property="og:title" content="MIG or TIG for 18 Gauge Sheet Metal? 16–20 ga Guide">
+<meta property="og:description" content="MIG or TIG for 18 gauge and 16–20 gauge sheet: where each process holds a panel flat, plus the calculator’s 16-gauge MIG and TIG windows.">
 <meta name="twitter:card" content="summary_large_image">
 
 
-<script id="sources-data" type="application/json">
+<script type="application/ld+json">
 {
-  "sources": [
-    {
-      "title": "Miller Electric, MIG Welding: Setting the Correct Parameters",
-      "url": "https://www.millerwelds.com/en-US/resources/knowledge-hub/mig-welding/how-to/mig-welding-setting-the-correct-parameters",
-      "date": "2026-10-02"
-    }
-  ]
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Welding Calculator",
+   "item": "https://welding-calculator.com/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "MIG or TIG for 16–20 gauge sheet metal?",
+   "item": "https://welding-calculator.com/mig-or-tig-sheet-metal.html"
+  }
+ ]
 }
 </script>
-<script>
-document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getElementById('sources-data').textContent);var s=document.createElement('div');s.className='sources-section';s.innerHTML='<h2 id="sources-heading">Sources & Standards</h2><p>Solid-wire MIG starting points on this site follow the Miller page below: 1 amp per .001 inch of steel, and the wire-speed multipliers.</p><ul>'+d.sources.map(x=>'<li><a href="'+x.url+'" target="_blank">'+x.title+'</a></li>').join('')+'</ul><p><button id="cite-toggle">Show Copyable Citations</button></p><div id="cite-output" style="display:none"></div>';var t=document.querySelector('nav')||document.querySelector('footer')||document.body;t.parentNode.insertBefore(s,t);var o=s.querySelector('#cite-toggle'),c=s.querySelector('#cite-output');o.onclick=()=>{c.textContent=d.sources.map(x=>x.title+'. '+x.url+'. Accessed '+x.date).join('\n\n');c.style.display='block';o.style.display='none'};});
-</script>
-<meta name="llms.txt" content="https://welding-calculator.com/sources.json">
 </head>
 <body>
 <header class="site-head">
@@ -61,14 +66,13 @@ document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getE
 <div class="answer-box"><strong>Quick answer:</strong> For visible automotive body panels, TIG — its low heat input controls distortion; for structural thin steel like ductwork and brackets, short-circuit MIG with .023 wire is faster, cheaper, and easier.</div>
 
 <h2>The numbers first</h2>
-<p>16 ga steel is about 62 mils (0.062") — call it 1/16". By the <a href="index.html#calc">TIG rule of thumb</a>, that's 50–75 amps. 20 ga is half that again, 37 mils, down around 30–40 A. At these amperages the margin between "welded" and "blown-through" is a few amps and a couple of tenths of travel speed — which is why thin metal punishes sloppy settings so hard.</p>
+<p>Keep the gauge decimals on the spec sheet, not a rounded nickname. The Handler 140 settings table lists 16 gauge as .060 inch and 18 gauge as .048 inch. Miller’s solid-wire rule is 1 amp per .001 inch of steel, so 18 gauge is 48 A on that rule. The farm guide states a different single-pass MIG figure for 18 gauge steel: roughly 70 A, and it says stick is hard or impossible on 18 gauge sheet. Those two 18-gauge sentences are both published. They are not averaged on this page. The full comparison is on <a href="what-size-welder-for-18-gauge-sheet-metal.html">what size welder for 18 gauge sheet metal</a>.</p>
 
 <h2>Where MIG wins</h2>
-<p><strong>16–18 ga structural:</strong> ductwork, brackets, furniture frames, boxes. Short-circuit MIG with <strong>.023" wire</strong> at roughly 60–110 A is fast, forgiving, and cheap. The trade: visible spatter and a less pretty bead, and on 20 ga it becomes a race against blow-through.</p>
-<p>For the 18 gauge amperage question, see <a href="what-size-welder-for-18-gauge-sheet-metal.html">what size welder for 18 gauge sheet metal</a>.</p>
+<p><strong>16–18 gauge structural:</strong> ductwork, brackets, furniture frames, boxes. On this site’s MIG tab, 60 mils of steel — the Handler’s .060 inch — selects 0.023 inch wire, because 60 is under the function’s 78-mil cutoff. The tab prints 55–63 A and 193–212 inches per minute. That is a short-circuit start, not a promise that the bead will be pretty. Visible panels are the other section.</p>
 
 <h2>Where TIG wins</h2>
-<p><strong>20 ga and anything visible:</strong> auto body panels, stainless sinks, motorcycle tanks. TIG's foot-controlled amperage lets you feather heat exactly, fill with a bare rod, and make beads that need no cleanup. The trade: it's 3–5× slower and takes weeks of practice before your beads look like the YouTube ones.</p>
+<p><strong>Visible work:</strong> auto body panels, stainless sinks, motorcycle tanks. The TIG tab at the same 60 mils of mild steel prints 48–72 A, DCEN, 1/16 inch tungsten, and 1/16 inch filler. A foot pedal is what lets you move inside that window after the puddle starts. TIG is the slower process. This page does not assign a multiplier to that slowness.</p>
 
 <h2>Anti-warping playbook (either process)</h2>
 <div class="tbl-wrap">
@@ -82,11 +86,36 @@ document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getE
 </table>
 </div>
 
-<h2>Settings starting points</h2>
-<p>16 ga with .023 MIG: about 70–90 A, 220–260 ipm wire speed, 75/25 gas. 20 ga with TIG: 30–45 A, 1/16" tungsten, ER70S-2 filler. Confirm both on scrap — the calculator gives you the window, the scrap gives you the number. And if your shop power comes from a generator instead of the wall, match the machine's draw at <a href="https://generator-sizer.com/" rel="noopener">GeneratorSizer</a>.</p>
+<h2>Worked example: 60 mils on the calculator</h2>
+<p>Open the <a href="index.html#calc">TIG tab</a>. Enter 60 and leave the material on mild steel. The function uses 1 amp per mil. The midpoint is 60. The low end is 80 percent of 60, rounded, which is 48. The high end is 120 percent of 60, rounded, which is 72. Tungsten and filler both print as 1/16 inch, and polarity prints DCEN.</p>
+<p>Switch to the MIG tab with the same 60 and 75/25 gas. Wire is 0.023 inch. Amps are round(60 × 0.9 / 5) × 5, which is 55, and the printed window is 55–63 A. Wire speed is round(55 × 3.5), which is 193, through round(193 × 1.1), which is 212 ipm. Gas flow prints 20–25 CFH. Power prints “120 V machine OK,” because 60 mils is under the function’s 188-mil line for a 220 V machine.</p>
+<p>The calculator’s own helper text calls 1/16 inch 62 mils, not 60. At 62 mils the TIG tab prints 50–74 A, and the MIG tab still prints 0.023 inch wire at 55–63 A and 193–212 ipm, because 62 × 0.9 still rounds to the same 55 A step. If you measured .060 inch, enter 60. If you are using the helper’s 1/16 inch marker, enter 62. Do not type 62 and call it the Handler’s 16-gauge row.</p>
 
-<p>OSHA’s split of fusion welding into electric arc, gas, and thermit, and which of those this calculator can size, is on <a href="what-is-arc-welding.html">what is arc welding</a>.</p>
+<h2>A common mistake</h2>
+<p>The mistake is one amp number for “sheet metal.” Eighteen gauge on the Handler table is .048 inch and 48 A on Miller’s rule, while the farm guide’s single-pass MIG sentence for that same gauge is roughly 70 A. Sixteen gauge on the Handler table is .060 inch, and the TIG tab at 60 mils is 48–72 A. Using the 1/8 inch example of 125 A on any of those gauges blows a hole. Using the farm guide’s 70 A sentence as if it were the Handler’s 16-gauge thickness mixes two documents.</p>
+
+<h2>Limits, and when to call a pro</h2>
+<p>These windows are starting points for scrap of the same thickness. They are not a welding procedure, a distortion warranty, or a reason to weld a coated or structural panel. If the panel carries a load, is a pressure part, or is an alloy you cannot identify, stop. If the shop power is a generator, size that side at <a href="https://generator-sizer.com/" rel="noopener">GeneratorSizer</a> before the first arc.</p>
+<p>OSHA’s split of fusion welding into electric arc, gas, and thermit is on <a href="what-is-arc-welding.html">what is arc welding</a>. What to put on for the arc is on <a href="what-to-wear-when-welding.html">what to wear when welding</a>.</p>
+
+<section class="faq"><h2>Frequently asked questions</h2>
+<details><summary>What does the calculator print for 60 mils of steel?</summary><p>60 mils is the Handler 140’s 16 gauge thickness of .060 inch. The TIG tab prints 48–72 amps, DCEN, with 1/16 inch tungsten and 1/16 inch filler. The MIG tab prints 0.023 inch wire, 55–63 amps, 193–212 inches per minute, 20–25 CFH, and a 120 V machine OK.</p></details>
+<details><summary>What published figure does this page use for 18 gauge?</summary><p>The Handler 140 settings table lists 18 gauge as .048 inch. Miller’s solid-wire rule is 1 amp per .001 inch, so that thickness is 48 A. The farm guide states a different single-pass MIG figure for 18 gauge steel: roughly 70 A. Both are published, and they are not the same sentence.</p></details>
+</section>
+<p>Compiled with AI assistance from the sources below. Spot an error? Email <a href="mailto:jpanasuk@gmail.com">jpanasuk@gmail.com</a>.</p>
+<h2>Sources</h2>
+<ul>
+<li>Hobart Handler 140 spec sheet. <a href="https://www.weldingsuppliesfromioc.com/cdn/shop/files/Hobart_Handler_140_spec.pdf" rel="noopener" target="_blank">https://www.weldingsuppliesfromioc.com/cdn/shop/files/Hobart_Handler_140_spec.pdf</a>. Accessed October 6, 2026.</li>
+<li>Miller Electric, “MIG Welding: Setting the Correct Parameters.” <a href="https://www.millerwelds.com/en-US/resources/knowledge-hub/mig-welding/how-to/mig-welding-setting-the-correct-parameters" rel="noopener" target="_blank">https://www.millerwelds.com/en-US/resources/knowledge-hub/mig-welding/how-to/mig-welding-setting-the-correct-parameters</a>. Accessed October 6, 2026.</li>
+<li>Miller Electric, “Welding on the Farm,” hosted by Ohio State University Marion. <a href="https://marion.osu.edu/sites/marion/files/imce/Welding%20on%20the%20Farm.pdf" rel="noopener" target="_blank">https://marion.osu.edu/sites/marion/files/imce/Welding%20on%20the%20Farm.pdf</a>. Accessed October 6, 2026.</li>
+</ul>
 <p><a href="index.html">← Back to the welding thickness calculator</a></p>
+
+<section class="sources-section" aria-labelledby="sources-heading">
+<h2 id="sources-heading">Sources & Standards</h2>
+<p>Solid-wire MIG starting points on this site follow the Miller page below: 1 amp per .001 inch of steel, and the wire-speed multipliers.</p>
+<ul><li><a href="https://www.millerwelds.com/en-US/resources/knowledge-hub/mig-welding/how-to/mig-welding-setting-the-correct-parameters" rel="noopener" target="_blank">Miller Electric, MIG Welding: Setting the Correct Parameters</a></li></ul>
+</section>
 </main>
 
   <div class="affil" style="border-left:3px solid var(--warn,#f5a623);padding:.85rem 1rem;margin:1.2rem 0">
@@ -94,7 +123,7 @@ document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getE
     <p class="small" style="margin:.4rem 0 0">Shop gear matched to this page: <a class="btn-amz btn-amz-primary" href="https://www.amazon.com/s?k=MIG+welder+.023+wire+sheet+metal&tag=generatorsi0d-20" rel="sponsored nofollow noopener" target="_blank">sheet-metal MIG on Amazon</a> · <a class="btn-amz" href="https://www.amazon.com/s?k=TIG+welder+200+amp&tag=generatorsi0d-20" rel="sponsored nofollow noopener" target="_blank">TIG machines on Amazon</a> · <a class="btn-amz" href="https://www.amazon.com/s?k=ER70S-6+MIG+wire+.023&tag=generatorsi0d-20" rel="sponsored nofollow noopener" target="_blank">.023 MIG wire on Amazon</a></p>
   </div>
 <footer>Built by Jeremy Panasuk · <a href="/about.html">About &amp; how this was made</a> · <a href="/privacy.html">Privacy</a> · <a href="/contact.html">Contact</a> · pages may contain affiliate links</footer>
-<script src="assets/app.js"></script>
+<script defer src="assets/app.js"></script>
 
 
 <section class="faq" style="max-width:760px;margin:3rem auto;padding:0 1rem">

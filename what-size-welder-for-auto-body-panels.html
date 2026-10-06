@@ -107,6 +107,40 @@
   "mainEntityOfPage": "https://welding-calculator.com/what-size-welder-for-auto-body-panels.html"
 }
 </script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "HowTo",
+ "name": "What Size Welder Do I Need for Auto Body Panels?",
+ "step": [
+  {
+   "@type": "HowToStep",
+   "position": 1,
+   "text": "Do not assign one gauge to every panel. These sources do not. What they do publish is a floor: MIG from 24 gauge up, TIG from 22 gauge up, and TIG down to .010 in (Welding on the Farm). Auto body is named as a Handler 140 application, and that spec sheet’s single-pass steel span is 24 gauge to 1/4 in (Handler 140 product page, Handler 140 spec sheet)."
+  },
+  {
+   "@type": "HowToStep",
+   "position": 2,
+   "text": "Convert the thin end of the Handler table if you want the thickness rule in amps. 24 gauge is .024 in on that sheet (Handler 140 spec sheet). .024 ÷ .001 = 24 A (Miller parameters)."
+  },
+  {
+   "@type": "HowToStep",
+   "position": 3,
+   "text": "Then look at the wire window, because 24 A and the wire chart disagree. .023 in wire starts at 30 A and runs to 130 A, with a multiplier of 3.5 in per amp (Miller parameters). 24 A is below that 30 A floor, so the rule at .024 in is under the bottom of the .023 in window. The practical thin-wire band these sources actually print is 30–130 A. At the bottom of that window, 30 × 3.5 = 105 ipm. The MIG wire speed chart is the longer speed page."
+  },
+  {
+   "@type": "HowToStep",
+   "position": 4,
+   "text": "Keep flux-cored and stick on the thick side of the farm chart: both minimums are 1/8 in and up (Welding on the Farm). The Handler 140 still lists .030–.035 flux-cored wire as a wire it can feed (Handler 140 spec sheet). That is a wire specification, not a statement that flux-cored belongs on a .010 in edge."
+  },
+  {
+   "@type": "HowToStep",
+   "position": 5,
+   "text": "If you have measured 18 gauge, use that page’s pair of figures rather than a body-panel average: .048 in and 48 A on the rule, and roughly 70 A in the farm guide. Duty cycle for the example machine is 90 A at 20 percent. On a 10-minute cycle, 20 percent is 2 minutes of welding and 8 minutes of cooling at 90 A (Handler 140 spec sheet, Welding on the Farm). A step up in supply is the Millermatic 211’s published split: 30–130 A on 120 V and 30–230 A on 240 V (Millermatic 211 spec sheet). The duty cycle calculator handles other plates. Auto body on this page is the listed application, not a panel we welded."
+  }
+ ]
+}
+</script>
 </head>
 <body>
 <header class="site-head">
@@ -155,7 +189,7 @@
 <li><a href="what-size-welder-for-aluminum.html">What size welder for aluminum</a></li>
 </ul></nav>
 
-<section class="faq"><h2>Frequently asked questions</h2><details><summary>Does a Handler 140 list auto body as an application?</summary><p>Yes. The product page lists auto body along with maintenance and repair, DIY, farm and ranch, and metal art (<a href="https://www.hobartwelders.com/equipment/welders/mig-gmaw/handler-140-mig-welder-m00169" rel="noopener" target="_blank">Handler 140 product page</a>).</p></details><details><summary>How thin do MIG and TIG go in the farm chart?</summary><p>MIG is 24 gauge and up. TIG is 22 gauge and up, and TIG can weld thin material at .010 in (<a href="https://marion.osu.edu/sites/marion/files/imce/Welding%20on%20the%20Farm.pdf" rel="noopener" target="_blank">Welding on the Farm</a>).</p></details><details><summary>What amp window is published for .023 wire?</summary><p>.023 in wire is 30–130 A, with a wire-speed multiplier of 3.5 in per amp (<a href="https://www.millerwelds.com/en-US/resources/knowledge-hub/mig-welding/how-to/mig-welding-setting-the-correct-parameters" rel="noopener" target="_blank">Miller parameters</a>).</p></details><details><summary>Is flux-cored the thin-panel process?</summary><p>The farm chart starts flux-cored at 1/8 in and up. The Handler 140 still lists .030–.035 flux-cored wire among the wires it feeds (<a href="https://marion.osu.edu/sites/marion/files/imce/Welding%20on%20the%20Farm.pdf" rel="noopener" target="_blank">Welding on the Farm</a>, <a href="https://www.weldingsuppliesfromioc.com/cdn/shop/files/Hobart_Handler_140_spec.pdf" rel="noopener" target="_blank">Handler 140 spec sheet</a>).</p></details></section>
+<section class="faq"><h2>Frequently asked questions</h2><details><summary>Does a Handler 140 list auto body as an application?</summary><p>Yes. The product page lists auto body along with maintenance and repair, DIY, farm and ranch, and metal art (Handler 140 product page).</p></details><details><summary>How thin do MIG and TIG go in the farm chart?</summary><p>MIG is 24 gauge and up. TIG is 22 gauge and up, and TIG can weld thin material at .010 in (Welding on the Farm).</p></details><details><summary>What amp window is published for .023 wire?</summary><p>.023 in wire is 30–130 A, with a wire-speed multiplier of 3.5 in per amp (Miller parameters).</p></details><details><summary>Is flux-cored the thin-panel process?</summary><p>The farm chart starts flux-cored at 1/8 in and up. The Handler 140 still lists .030–.035 flux-cored wire among the wires it feeds (Welding on the Farm, Handler 140 spec sheet).</p></details></section>
 <div class="affil">
   <span class="tag">Affiliate</span>
   <p class="small">Affiliate disclosure: as an Amazon Associate, we earn from qualifying purchases — at no cost to you.</p>
@@ -168,6 +202,6 @@
 </ul>
 </main>
 <footer>Built by Jeremy Panasuk · <a href="/about.html">About &amp; how this was made</a> · <a href="/privacy.html">Privacy</a> · <a href="/contact.html">Contact</a> · pages may contain affiliate links</footer>
-<script src="assets/app.js"></script>
+<script defer src="assets/app.js"></script>
 </body>
 </html>

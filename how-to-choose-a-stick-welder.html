@@ -65,6 +65,26 @@
   "mainEntityOfPage": "https://welding-calculator.com/how-to-choose-a-stick-welder.html"
 }
 </script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Welding Calculator",
+   "item": "https://welding-calculator.com/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "How to Choose a Stick Welder",
+   "item": "https://welding-calculator.com/how-to-choose-a-stick-welder.html"
+  }
+ ]
+}
+</script>
 </head>
 <body>
 <header class="site-head">
@@ -105,7 +125,7 @@
 <h2>Duty cycle at the top of the rod window</h2>
 <p>The farm guide treats duty cycle as minutes out of 10. At the Handler’s printed point, 90 amps and 20 percent, that is 2.0 minutes of welding and 8.0 minutes of cooling. You do not need the square rule for the nameplate itself.</p>
 <p>The duty tab uses the square rule when the amps you type are not the rated amps. Take the published pair, 90 amps at 20 percent, and set actual amps to 140, the top of the 1/8 inch E7018 window. The function does 20 × (90 ÷ 140) squared. Ninety divided by 140 is about 0.643. Squared, that is about 0.413. Times 20 is about 8.27, which the display rounds to 8 percent. Weld time from the unrounded result prints as 0.8 minutes. Cool-down prints as 9.2 minutes. Inputs: rated amps 90, rated duty 20, actual amps 140.</p>
-<p>That 8 percent is not a second line on the Hobart sheet, and it is not a stick-welder rating. It is what this site’s duty function does to a MIG nameplate if you plan to hold 140 amps. A stick machine you are about to buy has its own plate. Read that plate at the amps in the rod window, on the <a href="duty-cycle-calculator.html">duty cycle calculator</a>, instead of borrowing a wire-feed rating because the range numbers look alike. The first-bead walk at a thinner stick setting, 125 mils, is on <a href="how-to-weld.html">how to weld</a>.</p>
+<p>That 8 percent is not a second line on the Hobart sheet, and it is not a stick-welder rating. It is what this site’s duty function does to a MIG nameplate if you plan to hold 140 amps. A stick machine you are about to buy has its own plate. Read that plate at the amps in the rod window, on the <a href="duty-cycle-calculator.html">duty cycle calculator</a>, instead of borrowing a wire-feed rating because the range numbers look alike. The first-bead walk at a thinner stick setting, 125 mils, is on <a href="how-to-weld.html">how to weld</a>. Every rod window the stick tab stores is on <a href="stick-welding-amperage-chart.html">the stick welding amperage chart</a>. The shade that OSHA lists for those electrode diameters is on <a href="what-to-wear-when-welding.html">what to wear when welding</a>.</p>
 
 <h2>A common mistake</h2>
 <p>The mistake is one shopping sentence: “I need a 140 amp welder for 1/4 inch.” The calculator’s clean answer is a 1/8 inch E7018 rod at 90–140 amps, and it labels a 120 volt machine OK because 140 amps is the top of the Handler 140’s 115 volt range. The farm answer for heavier repair starts at 175 amp stick, which that range does not include. The Handler sheet is still a MIG machine, rated 90 amps at 20 percent, which the duty tab turns into about 8 percent if you type 140. Buying the MIG because the stick window ends where the MIG range ends skips the process and the duty collapse.</p>
@@ -138,6 +158,6 @@
 </ul>
 </main>
 <footer>Built by Jeremy Panasuk · <a href="/about.html">About &amp; how this was made</a> · <a href="/privacy.html">Privacy</a> · <a href="/contact.html">Contact</a> · pages may contain affiliate links</footer>
-<script src="assets/app.js"></script>
+<script defer src="assets/app.js"></script>
 </body>
 </html>

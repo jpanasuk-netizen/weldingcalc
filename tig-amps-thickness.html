@@ -3,20 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TIG Amps by Material Thickness</title>
-<meta name="description" content="TIG amperage by material thickness for steel, stainless, and aluminum — the 1 amp per 0.001 inch rule, when it breaks, tungsten sizes, and filler selection.">
+<title>TIG Amp Chart by Metal Thickness: Steel, Stainless, Al</title>
+<meta name="description" content="TIG amp chart by thickness for steel, stainless, and aluminum. The 1 amp per 0.001 inch rule, where it breaks, and the published aluminum rows.">
 <link rel="canonical" href="https://welding-calculator.com/tig-amps-thickness.html">
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="shortcut icon" href="assets/favicon.ico">
 <meta name="robots" content="index,follow">
-<meta property="og:title" content="TIG Amps by Thickness — Rule of Thumb and Real Settings">
+<meta property="og:title" content="TIG Amp Chart by Metal Thickness: Steel, Stainless, Al">
 <meta property="og:description" content="The 1-amp-per-0.001-inch rule works until it doesn't. Amp ranges by thickness and material, tungsten and filler sizing, AC settings for aluminum.">
 <meta property="og:url" content="https://welding-calculator.com/tig-amps-thickness.html">
 <meta property="og:image" content="https://welding-calculator.com/assets/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="TIG Amps by Thickness — Rule of Thumb and Real Settings">
+<meta name="twitter:title" content="TIG Amp Chart by Metal Thickness: Steel, Stainless, Al">
 <meta name="twitter:description" content="The 1-amp-per-0.001-inch rule works until it doesn't. Amp ranges by thickness and material, tungsten and filler sizing, AC settings for aluminum.">
 <meta name="twitter:image" content="https://welding-calculator.com/assets/og-image.png">
 <link rel="stylesheet" href="assets/styles.css">
@@ -48,7 +48,7 @@
     {
       "@type": "Question",
       "name": "How many amps for 1/8 inch aluminum TIG?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Miller's GTAW guidelines, section 8-3, list 90–120 A for a 1/8 inch 6061 butt joint, with 1/8 inch 5356 filler, 3/32 inch 2% ceriated tungsten, and argon at 15–20 CFH. The same table lists a T-joint at 100–125 A, a lap at 90–110 A, and a corner at 80–90 A. The calculator returns that butt row at 125 mils. Lincoln's Square Wave chart lists 120–135 A for 1/8 inch aluminum; this cell keeps the Miller butt row." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Miller's GTAW guidelines, section 8-3, list 90–120 A for a 1/8 inch 6061 butt joint, with 1/8 inch 5356 filler, 3/32 inch 2% ceriated tungsten, and argon at 15–20 CFH. The same table lists a T-joint at 100–125 A, a lap at 90–110 A, and a corner at 80–90 A. The calculator returns that butt row at 125 mils. Lincoln's Square Wave chart lists 120–135 A for 1/8 inch aluminum; this page keeps the Miller butt row." }
     },
     {
       "@type": "Question",
@@ -59,36 +59,26 @@
 }
 </script>
 
-<script id="sources-data" type="application/json">
+<script type="application/ld+json">
 {
-  "sources": [
-    {
-      "title": "Miller Electric, Guidelines for Gas Tungsten Arc Welding (GTAW), section 8-3",
-      "url": "https://www.millerwelds.com/-/media/miller-electric/import/guides/file/guidelines-for-gas-tunsten-arc-welding-gtaw.pdf",
-      "date": "2026-10-03"
-    },
-    {
-      "title": "Lincoln Electric, Square Wave TIG 200 Quick Reference Guide L16988, TIG Amperage Values, Aluminum (AC)",
-      "url": "https://ch-delivery.lincolnelectric.com/api/public/content/582e9857a7324db29d14ceb7d16a8609?v=dfb50bd9",
-      "date": "2026-10-03"
-    },
-    {
-      "title": "The Harris Products Group (a Lincoln Electric Company), Technical Information Sheet, 4043 Aluminum Welding Wire and Rod, GTAW (AC)",
-      "url": "https://ch-delivery.lincolnelectric.com/api/public/content/a1a7b2fb551c4e55b5bf58575aa21f58?v=e2ecf232",
-      "date": "2026-10-03"
-    },
-    {
-      "title": "Miller Electric, MIG Welding: Setting the Correct Parameters",
-      "url": "https://www.millerwelds.com/en-US/resources/knowledge-hub/mig-welding/how-to/mig-welding-setting-the-correct-parameters",
-      "date": "2026-10-02"
-    }
-  ]
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Welding Calculator",
+   "item": "https://welding-calculator.com/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "TIG amps by material thickness",
+   "item": "https://welding-calculator.com/tig-amps-thickness.html"
+  }
+ ]
 }
 </script>
-<script>
-document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getElementById('sources-data').textContent);var s=document.createElement('div');s.className='sources-section';s.innerHTML='<h2 id="sources-heading">Sources & Standards</h2><p>Aluminum windows on this page are published chart rows: Miller section 8-3 at 1/8 inch, Lincoln L16988 for the other Square Wave thicknesses, and the Harris/Lincoln 4043 GTAW sheet at 1/4 inch. Steel and stainless stay on the 1-amp-per-mil discussion. The Miller MIG page is the solid-wire steel reference used elsewhere on the site.</p><ul>'+d.sources.map(x=>'<li><a href="'+x.url+'" target="_blank">'+x.title+'</a></li>').join('')+'</ul><p><button id="cite-toggle">Show Copyable Citations</button></p><div id="cite-output" style="display:none"></div>';var t=document.querySelector('nav')||document.querySelector('footer')||document.body;t.parentNode.insertBefore(s,t);var o=s.querySelector('#cite-toggle'),c=s.querySelector('#cite-output');o.onclick=()=>{c.textContent=d.sources.map(x=>x.title+'. '+x.url+'. Accessed '+x.date).join('\n\n');c.style.display='block';o.style.display='none'};});
-</script>
-<meta name="llms.txt" content="https://welding-calculator.com/sources.json">
 </head>
 <body>
 <header class="site-head">
@@ -122,7 +112,7 @@ document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getE
 
 <h2>The 1-amp-per-0.001-inch rule</h2>
 <p>The most durable rule of thumb in TIG: <strong>1 amp for every 0.001" of mild steel thickness</strong>. 0.062" steel wants about 60 A; 1/8" (0.125") wants about 125 A. It holds reasonably well for steel and stainless from roughly 0.030" to 0.125" — beyond that range, joint design, heat sinking, and travel speed start to dominate. It is a starting point, not a setting: the real technique is to pedal up to the high end of the range to establish the puddle quickly, then back off 20–30% to travel. Riding a constant 125 A the whole bead is how thin corners get blown out.</p>
-<p>Where it breaks, deliberately: <strong>aluminum</strong> is not 1.5 amps per mil. Miller’s GTAW guidelines, section 8-3, start a 1/8" 6061 butt joint at <strong>90–120 A</strong> on AC, and the calculator prints that row at 125 mils. Other aluminum thicknesses come from Lincoln’s published cells: L16988 for 24 ga through 3/16", and the 4043 GTAW sheet for 1/4", 3/8", and 1/2". A thickness between those cells shows the nearest published row and says so. It does not interpolate. <strong>Thin stainless</strong> is the opposite of a hotter rule: it holds heat, discolors, and warps fast, so stay at the bottom of the range or below and let the pedal do the restraint. And past <strong>1/4"</strong> no simple rule survives — preheat to 200–300°F or the puddle freezes at the edges before fusion happens.</p>
+<p>Where it breaks, deliberately: <strong>aluminum</strong> is not 1.5 amps per mil. Miller’s GTAW guidelines, section 8-3, start a 1/8" 6061 butt joint at <strong>90–120 A</strong> on AC, and the calculator prints that row at 125 mils. Other aluminum thicknesses come from Lincoln’s published cells: L16988 for 24 ga through 3/16", and the 4043 GTAW sheet for 1/4", 3/8", and 1/2". A thickness between those cells shows the nearest published row and says so. It does not interpolate. <strong>Thin stainless</strong> is the opposite of a hotter rule: it holds heat, discolors, and warps fast, so stay at the bottom of the range or below and let the pedal do the restraint. The TIG tab’s stainless factor is 0.9, which is not Lincoln L16988’s stainless column. Both are written out on <a href="how-to-tig-weld-stainless-steel.html">how to TIG weld stainless steel</a>. And past <strong>1/4"</strong> no simple rule survives — preheat to 200–300°F or the puddle freezes at the edges before fusion happens.</p>
 <p>Published aluminum thickness limits by voltage are on <a href="what-size-welder-for-aluminum.html">what size welder for aluminum</a>. The joint-by-joint 6061 starts, plus the Lincoln rows the calculator uses, are on <a href="how-to-weld-aluminum.html">how to weld aluminum</a>. Sources: <a href="https://www.millerwelds.com/-/media/miller-electric/import/guides/file/guidelines-for-gas-tunsten-arc-welding-gtaw.pdf" rel="noopener" target="_blank">Miller GTAW guidelines</a>, <a href="https://ch-delivery.lincolnelectric.com/api/public/content/582e9857a7324db29d14ceb7d16a8609?v=dfb50bd9" rel="noopener" target="_blank">Lincoln Square Wave TIG 200 quick reference L16988</a>, and the <a href="https://ch-delivery.lincolnelectric.com/api/public/content/a1a7b2fb551c4e55b5bf58575aa21f58?v=e2ecf232" rel="noopener" target="_blank">Harris/Lincoln 4043 GTAW sheet</a>.</p>
 
 <h2>AC vs DC: which for which metal</h2>
@@ -158,6 +148,12 @@ document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getE
 <p>Exact published rows: 1/16 inch (62 mils) is 75–85 A on Lincoln's Square Wave TIG 200 chart L16988; 3/16 inch (188 mils) is 165–195 A on that same chart; 1/4 inch (250 mils) is 220–275 A on the Harris/Lincoln 4043 GTAW sheet. 3/32 inch entered as 94 mils is not a published row. The nearest published thickness is 0.090 inch, and that Lincoln cell is 85–110 A. The calculator labels that result as the nearest published row and does not interpolate.</p>
 
 <footer>Built by Jeremy Panasuk · <a href="/about.html">About &amp; how this was made</a> · <a href="/privacy.html">Privacy</a> · <a href="/contact.html">Contact</a> · pages may contain affiliate links</footer>
+
+<section class="sources-section" aria-labelledby="sources-heading">
+<h2 id="sources-heading">Sources & Standards</h2>
+<p>Aluminum windows on this page are published chart rows: Miller section 8-3 at 1/8 inch, Lincoln L16988 for the other Square Wave thicknesses, and the Harris/Lincoln 4043 GTAW sheet at 1/4 inch. Steel and stainless stay on the 1-amp-per-mil discussion. The Miller MIG page is the solid-wire steel reference used elsewhere on the site.</p>
+<ul><li><a href="https://www.millerwelds.com/en-US/resources/knowledge-hub/mig-welding/how-to/mig-welding-setting-the-correct-parameters" rel="noopener" target="_blank">Miller Electric, MIG Welding: Setting the Correct Parameters</a></li></ul>
+</section>
 </main>
 
 

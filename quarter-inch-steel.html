@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>What Size Welder for 1/4 Inch Steel? (2026)</title>
-<meta name="description" content="Can a 140 amp welder handle 1/4 inch steel? Yes, single-pass with caveats — here's the honest math, the machine classes that actually work, and the joints that change the answer.">
+<meta name="description" content="At 250 mils the stick tab prints 1/8 inch E7018 at 90–140 A and 120 V machine OK. The MIG tab prints 0.045 inch wire at 200–230 A.">
 <link rel="canonical" href="https://welding-calculator.com/quarter-inch-steel.html">
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="shortcut icon" href="assets/favicon.ico">
@@ -18,31 +18,36 @@
 <meta name="twitter:image" content="https://welding-calculator.com/assets/og-image.png">
 <link rel="stylesheet" href="assets/styles.css">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can a 140 amp welder weld 1/4 inch steel?","acceptedAnswer":{"@type":"Answer","text":"Single-pass, yes — 1/8\" E6011/E7018 rod at 90–140 A burns into 1/4\" plate fine for non-structural work. But the deposited bead is undersized relative to the joint, so full-strength welds on 1/4\" want 180–220 A and multiple passes with a 240 V machine."}},{"@type":"Question","name":"What welder is best for 1/4 inch steel?","acceptedAnswer":{"@type":"Answer","text":"A 200–220 A stick or MIG machine on 240 V. At that class you run 1/8\"–5/32\" rod in the middle of its amperage window without pegging duty cycle, and 1/4\" fillets become single-or-double-pass routine work."}}]}
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the stick tab print for 250 mils?","acceptedAnswer":{"@type":"Answer","text":"250 mils is this site’s 1/4 inch marker. Clean metal prints 1/8 inch E7018 at 90–140 A. Rusty metal prints 1/8 inch E6011 at 75–125 A. Both windows sit inside the Handler 140’s 25–140 A range, so the power line prints 120 V machine OK."}},{"@type":"Question","name":"What does the MIG tab print for 250 mils?","acceptedAnswer":{"@type":"Answer","text":"0.045 inch wire, 200–230 A, 240–264 inches per minute, and a 220 V machine. 200 A is above the Handler 140’s 140 A top, so that MIG window is not a 115 V Handler job."}}]}
 </script>
 
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://welding-calculator.com/quarter-inch-steel.html">
 <meta property="og:title" content="What Size Welder for 1/4 Inch Steel? (2026) — 140A vs 200A, Honestly">
-<meta property="og:description" content="Can a 140 amp welder handle 1/4 inch steel? Yes, single-pass with caveats — here">
+<meta property="og:description" content="At 250 mils the stick tab prints 1/8 inch E7018 at 90–140 A and 120 V machine OK. The MIG tab prints 0.045 inch wire at 200–230 A.">
 <meta name="twitter:card" content="summary_large_image">
 
 
-<script id="sources-data" type="application/json">
+<script type="application/ld+json">
 {
-  "sources": [
-    {
-      "title": "Miller Electric, MIG Welding: Setting the Correct Parameters",
-      "url": "https://www.millerwelds.com/en-US/resources/knowledge-hub/mig-welding/how-to/mig-welding-setting-the-correct-parameters",
-      "date": "2026-10-02"
-    }
-  ]
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Welding Calculator",
+   "item": "https://welding-calculator.com/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "What size welder for 1/4 inch steel?",
+   "item": "https://welding-calculator.com/quarter-inch-steel.html"
+  }
+ ]
 }
 </script>
-<script>
-document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getElementById('sources-data').textContent);var s=document.createElement('div');s.className='sources-section';s.innerHTML='<h2 id="sources-heading">Sources & Standards</h2><p>Solid-wire MIG starting points on this site follow the Miller page below: 1 amp per .001 inch of steel, and the wire-speed multipliers.</p><ul>'+d.sources.map(x=>'<li><a href="'+x.url+'" target="_blank">'+x.title+'</a></li>').join('')+'</ul><p><button id="cite-toggle">Show Copyable Citations</button></p><div id="cite-output" style="display:none"></div>';var t=document.querySelector('nav')||document.querySelector('footer')||document.body;t.parentNode.insertBefore(s,t);var o=s.querySelector('#cite-toggle'),c=s.querySelector('#cite-output');o.onclick=()=>{c.textContent=d.sources.map(x=>x.title+'. '+x.url+'. Accessed '+x.date).join('\n\n');c.style.display='block';o.style.display='none'};});
-</script>
-<meta name="llms.txt" content="https://welding-calculator.com/sources.json">
 </head>
 <body>
 <header class="site-head">
@@ -56,37 +61,63 @@ document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getE
 </header>
 <main>
 <h1>What size welder for 1/4 inch steel?</h1>
-<p class="sub">The honest answer: 140 amps does it once, 200 amps does it all day. Here's the difference.</p>
+<p class="sub">At 250 mils the stick tab stays inside a 140 A range. The MIG tab does not.</p>
 
-<div class="answer-box"><strong>Quick answer:</strong> A 140 A welder can single-pass 1/4&quot; steel with 1/8&quot; rod for non-structural work, but full-strength welds on 1/4&quot; want 180–220 A and multiple passes on a 240 V machine.</div>
+<div class="answer-box"><strong>Quick answer:</strong> At 250 mils the stick tab prints 1/8&quot; E7018 at 90–140 A and “120 V machine OK,” because that window sits inside the Handler 140’s 25–140 A range. The MIG tab prints 0.045&quot; wire at 200–230 A and a 220 V machine.</div>
 
 <h2>Short answer</h2>
-<p>For non-structural 1/4" steel — brackets, trailer tie-downs, gate hardware — a <strong>140 A machine with 1/8" stick rod (90–140 A) or .035 flux-core</strong> will make a weld that holds, if you bevel the joint and don't rush. For structural 1/4" — hitch receivers, engine mounts, load-bearing tabs — you want a <strong>200–220 A machine on 240 V</strong>, because a proper 1/4" fillet needs a bead profile that a 140 A machine can only build in multiple slow passes.</p>
+<p>This site’s marker for 1/4 inch is 250 mils. On the stick tab, half of 250 is 125, and 125 is still the 1/8 inch rod (the 5/32 inch band starts above 128). Clean metal prints E7018 at 90–140 A. Rusty metal prints E6011 at 75–125 A. Both windows sit inside the Handler 140’s published 25–140 A range on 115 V, so the power line prints “120 V machine OK.” That is the stick answer. It is not the MIG answer.</p>
+<p>On the MIG tab, 250 mils selects 0.045 inch wire. Amps are round(250 × 0.8 / 5) × 5 = 200, and the printed window is 200–230 A. Wire speed is round(200 × 1.2) = 240, through round(240 × 1.1) = 264 ipm. Power prints “220 V machine.” 200 A is above the Handler 140’s 140 A top.</p>
 
 <h2>The math behind it</h2>
-<p>Rule of thumb: stick rod diameter ≈ half the base-metal thickness, so 1/4" (250 mils) takes a 1/8" rod. E6011 in 1/8" runs at 75–125 A; E7018 at 90–140 A. Both fit inside a 140 A machine's output — which is exactly why "can my 140 A welder do 1/4 inch?" is technically yes. The catch is duty cycle: 1/8" 7018 at 125–140 A pegs most 140 A machines at 100% output, so they thermal-cycle and cut out every few minutes. Check what that actually means with the <a href="index.html#calc">duty cycle calculator</a>.</p>
+<p>The rod rule in the function is diameter about half the thickness, and never under 1/16 inch. For 250 mils that half is 125 mils, which selects 1/8 inch. The 1/8 inch E7018 window stored in the function is 90–140 A. The 1/8 inch E6011 window is 75–125 A. The voltage line does not look at the 250-mil thickness. It looks at whether both ends of the selected window are inside 25–140 A. They are, so a 115 V Handler-class range covers the rod. The thermal limit is separate. The Handler sheet rates 90 A at 20 percent, not 140 A at 20 percent.</p>
+<p>On the duty tab, enter 90 A at 20 percent and set actual amps to 140, the top of the E7018 window. Duty is 20 × (90 / 140)² = 8.265, which the tab rounds to 8 percent. Weld time is 0.8 minutes of the 10-minute cycle. Cool-down is 9.2 minutes. The stick window fits the amp range. It does not fit a long bead at the top of that window on this rating.</p>
 
-<h2>Machine classes, compared</h2>
+<h2>What each tab prints at 250 mils</h2>
 <div class="tbl-wrap">
 <table>
-<tr><th>Class</th><th>Example output</th><th>1/4" steel verdict</th></tr>
-<tr><td>120 V flux-core, 90–140 A</td><td>.030–.035 FC wire, 60% duty at 90 A</td><td>Single-pass non-structural, slow. Preheat helps.</td></tr>
-<tr><td>140 A MIG/stick, 120 V</td><td>1/8" 7018 at the ceiling of its range</td><td>Works, thermally limited. Bevel + multi-pass for structure.</td></tr>
-<tr><td>200–220 A, 240 V</td><td>5/32" 7018 at 140–180 A mid-window</td><td>Correct tool. Single- or double-pass fillets, comfortable duty cycle.</td></tr>
-<tr><td>250 A+ shop machine</td><td>1/4" + heavier plate, preheat routines</td><td>Overkill unless 3/8"+ shows up regularly.</td></tr>
+<tr><th>Tab</th><th>Input</th><th>What it prints</th></tr>
+<tr><td>Stick, clean</td><td>250 mils</td><td>1/8" E7018, 90–140 A, 120 V machine OK</td></tr>
+<tr><td>Stick, rusty</td><td>250 mils</td><td>1/8" E6011, 75–125 A, 120 V machine OK</td></tr>
+<tr><td>MIG, 75/25</td><td>250 mils</td><td>0.045" wire, 200–230 A, 240–264 ipm, 220 V machine</td></tr>
+<tr><td>TIG, mild steel</td><td>250 mils</td><td>200–300 A, midpoint 250, 3/32" tungsten, 3/32" filler, DCEN</td></tr>
+<tr><td>Duty</td><td>90 A at 20%, welding at 140 A</td><td>8%, 0.8 min on, 9.2 min off</td></tr>
 </table>
 </div>
+<p>The TIG band is 80 to 120 percent of 250, rounded: 200 and 300. That is the steel factor of 1.0. It is not an aluminum row. The stick chart that lists every rod window the function stores is on <a href="stick-welding-amperage-chart.html">the stick welding amperage chart</a>.</p>
 
 <p>When the plate is <a href="what-size-welder-for-3-8-inch-steel.html">3/8 inch steel</a>, the single-pass question changes.</p>
 
 <h2>Joints change the answer</h2>
-<p>A 1/4" <em>outside corner</em> needs less penetration than a 1/4" <em>butt joint</em>. Beveling a butt joint to a knife edge turns one impossible-penetration weld into two easy-penetration passes. If you own a 140 A machine, grinding the bevel is the cheapest 40 amps you'll ever buy.</p>
+<p>A 1/4 inch outside corner is not the same joint as a 1/4 inch butt. The calculator does not change its window for joint type. If the only machine in the shop is the Handler class above, a beveled joint is still the same 90–140 A stick window. It is not a second, higher amp number.</p>
 
 <h2>The generator footnote</h2>
 <p>Running that 200 A machine on a job site without shore power? A stick welder is one of the nastiest loads a portable generator sees — constant surge cycling. Size the generator properly at <a href="https://generator-sizer.com/" rel="noopener">GeneratorSizer</a> before you buy, not after the breaker trips.</p>
 
 <p>If the 1/4 inch plate is rusty or still has paint, the stick tab’s clean-versus-rusty switch is on <a href="how-to-clean-metal-before-welding.html">how to clean metal before welding</a>. Miller’s 125 A solid-wire example for 1/8 inch steel, set beside this site’s MIG tab, is on <a href="how-to-weld-carbon-steel.html">how to weld carbon steel</a>. If the plate is galvanized, thickness math does not replace the fume controls on <a href="how-to-weld-galvanized-steel-safely.html">how to weld galvanized steel safely</a>.</p>
+
+<h2>A common mistake</h2>
+<p>Treating the stick tab’s “120 V machine OK” as permission to run the MIG tab’s 200–230 A window on the same outlet. The voltage line follows the rod window. The MIG line follows thickness. At 250 mils they disagree, and both are doing what the function says.</p>
+
+<h2>Limits, and when to call a pro</h2>
+<p>Nothing here is a weld procedure or a structural sign-off. Hitch receivers, engine mounts, and any joint that carries a load need a qualified procedure. The calculator tells you which of its windows the thickness lands in.</p>
+
+<section class="faq"><h2>Frequently asked questions</h2>
+<details><summary>What does the stick tab print for 250 mils?</summary><p>250 mils is this site’s 1/4 inch marker. Clean metal prints 1/8 inch E7018 at 90–140 A. Rusty metal prints 1/8 inch E6011 at 75–125 A. Both windows sit inside the Handler 140’s 25–140 A range, so the power line prints 120 V machine OK.</p></details>
+<details><summary>What does the MIG tab print for 250 mils?</summary><p>0.045 inch wire, 200–230 A, 240–264 inches per minute, and a 220 V machine. 200 A is above the Handler 140’s 140 A top, so that MIG window is not a 115 V Handler job.</p></details>
+</section>
+<p>Compiled with AI assistance from the sources below. Spot an error? Email <a href="mailto:jpanasuk@gmail.com">jpanasuk@gmail.com</a>.</p>
+<h2>Sources</h2>
+<ul>
+<li>Hobart Handler 140 spec sheet. <a href="https://www.weldingsuppliesfromioc.com/cdn/shop/files/Hobart_Handler_140_spec.pdf" rel="noopener" target="_blank">https://www.weldingsuppliesfromioc.com/cdn/shop/files/Hobart_Handler_140_spec.pdf</a>. Accessed October 6, 2026.</li>
+</ul>
 <p><a href="index.html">← Back to the welding thickness calculator</a></p>
+
+<section class="sources-section" aria-labelledby="sources-heading">
+<h2 id="sources-heading">Sources & Standards</h2>
+<p>Solid-wire MIG starting points on this site follow the Miller page below: 1 amp per .001 inch of steel, and the wire-speed multipliers.</p>
+<ul><li><a href="https://www.millerwelds.com/en-US/resources/knowledge-hub/mig-welding/how-to/mig-welding-setting-the-correct-parameters" rel="noopener" target="_blank">Miller Electric, MIG Welding: Setting the Correct Parameters</a></li></ul>
+</section>
 </main>
 
   <div class="affil" style="border-left:3px solid var(--warn,#f5a623);padding:.85rem 1rem;margin:1.2rem 0">
@@ -94,7 +125,7 @@ document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getE
     <p class="small" style="margin:.4rem 0 0">Shop gear matched to this page: <a class="btn-amz btn-amz-primary" href="https://www.amazon.com/s?k=200+amp+MIG+welder&tag=generatorsi0d-20" rel="sponsored nofollow noopener" target="_blank">200 A MIG for 1/4" on Amazon</a> · <a class="btn-amz" href="https://www.amazon.com/s?k=stick+welder+225+amp&tag=generatorsi0d-20" rel="sponsored nofollow noopener" target="_blank">stick welders on Amazon</a> · <a class="btn-amz" href="https://www.amazon.com/s?k=7018+welding+rods&tag=generatorsi0d-20" rel="sponsored nofollow noopener" target="_blank">7018 rods on Amazon</a></p>
   </div>
 <footer>Built by Jeremy Panasuk · <a href="/about.html">About &amp; how this was made</a> · <a href="/privacy.html">Privacy</a> · <a href="/contact.html">Contact</a> · pages may contain affiliate links</footer>
-<script src="assets/app.js"></script>
+<script defer src="assets/app.js"></script>
 
 
 <section class="faq" style="max-width:760px;margin:3rem auto;padding:0 1rem">

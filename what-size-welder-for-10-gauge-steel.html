@@ -107,6 +107,40 @@
   "mainEntityOfPage": "https://welding-calculator.com/what-size-welder-for-10-gauge-steel.html"
 }
 </script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "HowTo",
+ "name": "What Size Welder Do I Need for 10 Gauge Steel?",
+ "step": [
+  {
+   "@type": "HowToStep",
+   "position": 1,
+   "text": "Look up the gauge instead of guessing a decimal. The Handler 140 settings table gives 10 gauge as .135 in (Handler 140 spec sheet)."
+  },
+  {
+   "@type": "HowToStep",
+   "position": 2,
+   "text": "Divide by the rule’s .001 in step. .135 ÷ .001 = 135 A (Miller parameters). The famous example next to it is .125 in at 125 A. Ten gauge is the .135 in row, so the amps are 135 A, not 125 A."
+  },
+  {
+   "@type": "HowToStep",
+   "position": 3,
+   "text": "Match wire to 135 A. .030 in (40–145 A) and .035 in (50–180 A) both contain it. .023 in ends at 130 A, so 135 A is outside that window. .045 in (75–250 A) also contains 135 A, but the .030 and .035 windows are the ones centered on it (Miller parameters)."
+  },
+  {
+   "@type": "HowToStep",
+   "position": 4,
+   "text": "Turn amps into wire speed with the published multipliers. For .030 in, 2 in per amp × 135 A = 270 ipm. For .035 in, 1.6 in per amp × 135 A = 216 ipm (Miller parameters). The MIG wire speed chart carries the same multipliers."
+  },
+  {
+   "@type": "HowToStep",
+   "position": 5,
+   "text": "Place 135 A on a machine range. The Handler 140 lists 25–140 A and single-pass steel from 24 gauge to 1/4 in, so 135 A and 10 gauge are both inside that sheet (Handler 140 spec sheet). Duty cycle on that sheet is 90 A at 20 percent. Using the farm guide’s 10-minute cycle, 20 percent is 2 minutes of welding and 8 minutes of cooling at 90 A, not at 135 A (Welding on the Farm). A Millermatic 211’s 120 V range stops at 130 A, so 135 A is just above it, while the 240 V range of 30–230 A contains 135 A (Millermatic 211 spec sheet). The duty cycle calculator is where a nameplate gets converted. Gauge decimals here are the Handler table, not a measured coupon."
+  }
+ ]
+}
+</script>
 </head>
 <body>
 <header class="site-head">
@@ -153,7 +187,7 @@
 <li><a href="what-size-welder-for-18-gauge-sheet-metal.html">What size welder for 18 gauge sheet metal</a></li>
 </ul></nav>
 
-<section class="faq"><h2>Frequently asked questions</h2><details><summary>How thick is 10 gauge on the Handler 140 table?</summary><p>The spec-sheet settings table lists 10 gauge as .135 in (<a href="https://www.weldingsuppliesfromioc.com/cdn/shop/files/Hobart_Handler_140_spec.pdf" rel="noopener" target="_blank">Handler 140 spec sheet</a>).</p></details><details><summary>What MIG amperage follows from .135 inch?</summary><p>Miller’s rule is 1 amp per .001 in, so .135 ÷ .001 = 135 A (<a href="https://www.millerwelds.com/en-US/resources/knowledge-hub/mig-welding/how-to/mig-welding-setting-the-correct-parameters" rel="noopener" target="_blank">Miller parameters</a>). That is not the .125 in / 125 A example; 10 gauge is the thicker decimal.</p></details><details><summary>Which wires include 135 amps?</summary><p>.030 in is 40–145 A and .035 in is 50–180 A, so both contain 135 A. .023 in stops at 130 A (<a href="https://www.millerwelds.com/en-US/resources/knowledge-hub/mig-welding/how-to/mig-welding-setting-the-correct-parameters" rel="noopener" target="_blank">Miller parameters</a>). At 135 A the .030 multiplier of 2 in/amp is 270 ipm, and the .035 multiplier of 1.6 in/amp is 216 ipm.</p></details><details><summary>Is 135 amps inside a 25–140 amp range?</summary><p>Yes. The Handler 140 range is 25–140 A, and 135 A is below that 140 A top (<a href="https://www.weldingsuppliesfromioc.com/cdn/shop/files/Hobart_Handler_140_spec.pdf" rel="noopener" target="_blank">Handler 140 spec sheet</a>). Its duty-cycle rating is still published at 90 A and 20 percent, which is 2 minutes of a 10-minute cycle (<a href="https://marion.osu.edu/sites/marion/files/imce/Welding%20on%20the%20Farm.pdf" rel="noopener" target="_blank">Welding on the Farm</a>).</p></details></section>
+<section class="faq"><h2>Frequently asked questions</h2><details><summary>How thick is 10 gauge on the Handler 140 table?</summary><p>The spec-sheet settings table lists 10 gauge as .135 in (Handler 140 spec sheet).</p></details><details><summary>What MIG amperage follows from .135 inch?</summary><p>Miller’s rule is 1 amp per .001 in, so .135 ÷ .001 = 135 A (Miller parameters). That is not the .125 in / 125 A example; 10 gauge is the thicker decimal.</p></details><details><summary>Which wires include 135 amps?</summary><p>.030 in is 40–145 A and .035 in is 50–180 A, so both contain 135 A. .023 in stops at 130 A (Miller parameters). At 135 A the .030 multiplier of 2 in/amp is 270 ipm, and the .035 multiplier of 1.6 in/amp is 216 ipm.</p></details><details><summary>Is 135 amps inside a 25–140 amp range?</summary><p>Yes. The Handler 140 range is 25–140 A, and 135 A is below that 140 A top (Handler 140 spec sheet). Its duty-cycle rating is still published at 90 A and 20 percent, which is 2 minutes of a 10-minute cycle (Welding on the Farm).</p></details></section>
 <div class="affil">
   <span class="tag">Affiliate</span>
   <p class="small">Affiliate disclosure: as an Amazon Associate, we earn from qualifying purchases — at no cost to you.</p>
@@ -166,6 +200,6 @@
 </ul>
 </main>
 <footer>Built by Jeremy Panasuk · <a href="/about.html">About &amp; how this was made</a> · <a href="/privacy.html">Privacy</a> · <a href="/contact.html">Contact</a> · pages may contain affiliate links</footer>
-<script src="assets/app.js"></script>
+<script defer src="assets/app.js"></script>
 </body>
 </html>
