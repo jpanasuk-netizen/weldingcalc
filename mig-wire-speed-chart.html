@@ -77,8 +77,8 @@
 </head>
 <body>
 <header class="site-head">
-  <a class="brand" href="index.html">WeldingCalc</a>
-  <nav aria-label="Site"><a href="index.html">Calculator</a></nav>
+  <a class="brand" href="/">WeldingCalc</a>
+  <nav aria-label="Site"><a href="/">Calculator</a></nav>
 </header>
 <main>
 <h1>MIG wire speed chart (ipm)</h1>
@@ -104,7 +104,7 @@
 </table>
 </div>
 
-<p>The wire-diameter choice comes first, because the same thickness can be welded with more than one wire size. A common machine-maker rule: 0.023" wire for material under 3/32", 0.030" through 3/16", and 0.035" above that. 0.045" wire is really a spray-transfer and heavy-fabrication size — it needs the amps that 1/4" and thicker plate demand, and it will not run a stable short-circuit arc on thin sheet no matter where you set the feeder. Our <a href="index.html">MIG calculator</a> applies exactly these wire-size rules when it picks a diameter for your thickness.</p>
+<p>The wire-diameter choice comes first, because the same thickness can be welded with more than one wire size. A common machine-maker rule: 0.023" wire for material under 3/32", 0.030" through 3/16", and 0.035" above that. 0.045" wire is really a spray-transfer and heavy-fabrication size — it needs the amps that 1/4" and thicker plate demand, and it will not run a stable short-circuit arc on thin sheet no matter where you set the feeder. Our <a href="/">MIG calculator</a> applies exactly these wire-size rules when it picks a diameter for your thickness.</p>
 
 <h2>What the MIG tab prints</h2>
 <p>The chart above is this page’s starting table. The MIG tab is a separate function. These are the windows it prints for mild steel with 75/25 gas. They are not interpolated from the chart rows.</p>
@@ -119,7 +119,7 @@
 </tbody>
 </table>
 </div>
-<p>At 125 mils the function picks 0.030 inch wire because 125 is under 188. Amps are round(125 × 0.8 / 5) × 5 = 100, and the window is 100 through round(100 × 1.15) = 115. Wire speed is round(100 × 2.0) = 200, through round(200 × 1.1) = 220. Gas flow prints 20–25 CFH. Open the <a href="index.html#calc">MIG tab</a> and enter those mils if you want the card, not this paragraph, to be the source of the number.</p>
+<p>At 125 mils the function picks 0.030 inch wire because 125 is under 188. Amps are round(125 × 0.8 / 5) × 5 = 100, and the window is 100 through round(100 × 1.15) = 115. Wire speed is round(100 × 2.0) = 200, through round(200 × 1.1) = 220. Gas flow prints 20–25 CFH. Open the <a href="/#calc">MIG tab</a> and enter those mils if you want the card, not this paragraph, to be the source of the number.</p>
 
 <h2>The ipm formula behind the chart</h2>
 <p>Every row above can be reproduced with a simple published approximation: <strong>wire speed (ipm) ≈ amperage × k</strong>, where k depends on wire diameter — about <strong>3.5 for 0.023" wire, 2.0 for 0.030", and 1.6 for 0.035"</strong>. Those are the same coefficients our calculator uses. For 0.045" wire, published manufacturer charts put the factor closer to 1.2–1.4 in the spray range, which is why we show 0.045 settings as a chart row rather than a calculator output. Check the arithmetic against the table: 0.035" wire at 110 A gives 110 × 1.6 ≈ 176 ipm, and the tuned window of 190–230 ipm sits just above — the formula lands you in the neighborhood, the test bead lands you on the number.</p>
@@ -184,7 +184,7 @@
   <a href="/best-beginner-welder.html">Best Beginner Welder by the Thickness You'll Actually Weld (2026)</a>
   <a href="/contact.html">Contact WeldingCalc</a>
   <a href="/duty-cycle-calculator.html">Welding Duty Cycle Calculator</a>
-  <a href="/index.html">Welding Thickness Calculator [Free] | WeldingCalc</a>
+  <a href="/">Welding Thickness Calculator [Free] | WeldingCalc</a>
   <a href="/magnet.html">Free MIG/TIG/Stick Settings Card</a>
   <a href="/mig-or-tig-sheet-metal.html">MIG or TIG for 16–20 Gauge Sheet Metal? (2026)</a>
   <a href="/mig-wire-speed-chart.html">MIG Wire Speed Chart by Thickness & Amperage</a>
