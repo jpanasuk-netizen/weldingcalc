@@ -15,12 +15,12 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://welding-calculator.com/mig-or-tig-sheet-metal.html</loc><lastmod>2026-10-06</lastmod>
+    <loc>https://welding-calculator.com/mig-or-tig-sheet-metal.html</loc><lastmod>2026-11-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://welding-calculator.com/best-beginner-welder.html</loc><lastmod>2026-10-06</lastmod>
+    <loc>https://welding-calculator.com/best-beginner-welder.html</loc><lastmod>2026-11-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -58,7 +58,7 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://welding-calculator.com/topics.html</loc><lastmod>2026-10-06</lastmod>
+    <loc>https://welding-calculator.com/topics.html</loc><lastmod>2026-11-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -113,12 +113,12 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://welding-calculator.com/what-size-welder-for-farm-repair.html</loc><lastmod>2026-10-06</lastmod>
+    <loc>https://welding-calculator.com/what-size-welder-for-farm-repair.html</loc><lastmod>2026-11-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://welding-calculator.com/what-size-welder-for-120v-outlet.html</loc><lastmod>2026-10-06</lastmod>
+    <loc>https://welding-calculator.com/what-size-welder-for-120v-outlet.html</loc><lastmod>2026-11-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -239,7 +239,13 @@
   </url>
   <url>
     <loc>https://welding-calculator.com/mig-vs-tig-vs-stick-welding.html</loc>
-    <lastmod>2026-10-27</lastmod>
+    <lastmod>2026-11-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://welding-calculator.com/mig-vs-tig-vs-flux-core.html</loc>
+    <lastmod>2026-11-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
