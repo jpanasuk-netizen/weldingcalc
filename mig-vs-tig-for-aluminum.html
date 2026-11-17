@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MIG vs TIG for Aluminum: Amps by Thickness</title>
+<meta name="description" content="MIG vs TIG for aluminum: Lincoln&#x27;s 4043 sheet lists 1/8 in. at 120 to 150 A on MIG and 125 to 175 A on AC TIG. Miller says avoid short-circuit MIG on aluminum.">
+<link rel="canonical" href="https://welding-calculator.com/mig-vs-tig-for-aluminum.html">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="shortcut icon" href="assets/favicon.ico">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://welding-calculator.com/mig-vs-tig-for-aluminum.html">
+<meta property="og:title" content="MIG vs TIG for Aluminum: Amps by Thickness">
+<meta property="og:description" content="MIG vs TIG for aluminum: Lincoln&#x27;s 4043 sheet lists 1/8 in. at 120 to 150 A on MIG and 125 to 175 A on AC TIG. Miller says avoid short-circuit MIG on aluminum.">
+<meta property="og:image" content="https://welding-calculator.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="MIG vs TIG for Aluminum: Amps by Thickness">
+<meta name="twitter:description" content="MIG vs TIG for aluminum: Lincoln&#x27;s 4043 sheet lists 1/8 in. at 120 to 150 A on MIG and 125 to 175 A on AC TIG. Miller says avoid short-circuit MIG on aluminum.">
+<meta name="twitter:image" content="https://welding-calculator.com/assets/og-image.png">
+<link rel="stylesheet" href="assets/styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "MIG vs TIG for Aluminum",
+  "description": "MIG vs TIG for aluminum: Lincoln's 4043 sheet lists 1/8 in. at 120 to 150 A on MIG and 125 to 175 A on AC TIG. Miller says avoid short-circuit MIG on aluminum.",
+  "url": "https://welding-calculator.com/mig-vs-tig-for-aluminum.html",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://welding-calculator.com/mig-vs-tig-for-aluminum.html"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "WeldingCalc"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "WeldingCalc"
+  },
+  "datePublished": "2026-11-17",
+  "dateModified": "2026-11-17"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://welding-calculator.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "MIG vs TIG for aluminum",
+      "item": "https://welding-calculator.com/mig-vs-tig-for-aluminum.html"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header class="site-head">
+  <a class="brand" href="/">WeldingCalc</a>
+  <nav aria-label="Site">
+    <a href="/#calc">Calculator</a>
+    <a href="quarter-inch-steel.html">1/4&quot; steel welder</a>
+    <a href="mig-or-tig-sheet-metal.html">Sheet metal: MIG vs TIG</a>
+    <a href="best-beginner-welder.html">Beginner welder size</a>
+  </nav>
+</header>
+<main>
+<p class="small"><a href="/">Home</a> · <a href="topics.html#questions">Questions</a> · MIG vs TIG for aluminum</p>
+<h1>MIG vs TIG for Aluminum</h1>
+<p>This page is the process decision for aluminum: MIG or AC TIG, at four common thicknesses. Machine size for aluminum is on <a href="what-size-welder-for-aluminum.html">what size welder for aluminum</a>; oxide, cleaning and a full TIG walk-through are on <a href="how-to-weld-aluminum.html">how to weld aluminum</a>.</p>
+<div class="answer-box"><strong>Quick answer:</strong> <a href="https://ch-delivery.lincolnelectric.com/api/public/content/a1a7b2fb551c4e55b5bf58575aa21f58?v=e2ecf232" rel="noopener" target="_blank">Lincoln Electric's 4043 aluminum data sheet</a> lists 1/8 in. aluminum at 120 to 150 amps on MIG, with .030 to 3/64 wire, and 125 to 175 amps on AC TIG. <a href="https://www.millerwelds.com/en-US/resources/knowledge-hub/aluminum-welding/guide-to-industrial-aluminum-welding" rel="noopener" target="_blank">Miller</a> says short-circuit transfer should be avoided on industrial aluminum, and that pulsed MIG helps on thin gauge, where there is little room for error.</div>
+
+<h2>Pick a thickness</h2>
+<p>The picker prints the 4043 sheet's MIG row (DC reverse polarity, spray transfer) and its AC TIG row side by side for the same thickness. The sheet marks every row as a basic guideline that varies with joint design and number of passes.</p>
+<div class="card">
+<label for="atT">Aluminum thickness</label> <select id="atT"><option value="0">1/16 in.</option><option value="1" selected>1/8 in.</option><option value="2">3/16 in.</option><option value="3">1/4 in.</option></select>
+<div id="atO" aria-live="polite"></div>
+</div>
+<script>
+(function(){
+var R=[
+ {t:'1/16 in.',mw:'.030',ma:'70–110',mv:'15–20',ta:'70–100',tw:'1/16–3/32 in.',tf:'1/16–3/32 in.'},
+ {t:'1/8 in.',mw:'.030–3/64',ma:'120–150',mv:'20–24',ta:'125–175',tw:'1/8–5/32 in.',tf:'1/8–5/32 in.'},
+ {t:'3/16 in.',mw:'.030–3/64',ma:'130–210',mv:'22–26',ta:'170–225',tw:'5/32–3/16 in.',tf:'5/32–3/16 in.'},
+ {t:'1/4 in.',mw:'3/64–1/16',ma:'170–225',mv:'24–28',ta:'220–275',tw:'3/16–1/4 in.',tf:'3/16 in.'}
+];
+var s=document.getElementById('atT'),o=document.getElementById('atO');
+function u(){
+ var r=R[+s.value];
+ var note=(+s.value===0)?' At 1/16 in. you are on thin gauge, where Miller says pulsed MIG helps and there is little room for error.':' Miller says thicker aluminum is often welded with conventional MIG spray transfer.';
+ o.innerHTML='<p><strong>'+r.t+' aluminum, 4043 filler</strong></p>'+
+ '<div class="tbl-wrap"><table><tr><th>Process</th><th>Amps</th><th>Other settings on the sheet</th></tr>'+
+ '<tr><td>MIG (GMAW, spray)</td><td>'+r.ma+' A</td><td>'+r.mw+' wire, '+r.mv+' V</td></tr>'+
+ '<tr><td>TIG (GTAW, AC)</td><td>'+r.ta+' A</td><td>'+r.tw+' tungsten, '+r.tf+' filler, 15 V</td></tr></table></div>'+
+ '<p>'+note+' Then set amps on the <a href="/#calc">welding calculator</a>.</p>';
+}
+s.onchange=u;u();
+})();
+</script>
+
+<h2>The four rows</h2>
+<div class="tbl-wrap"><table>
+<thead><tr><th>Thickness</th><th>MIG wire</th><th>MIG amps</th><th>MIG volts</th><th>AC TIG amps</th></tr></thead>
+<tbody>
+<tr><td>1/16 in.</td><td>.030</td><td>70–110</td><td>15–20</td><td>70–100</td></tr>
+<tr><td>1/8 in.</td><td>.030–3/64</td><td>120–150</td><td>20–24</td><td>125–175</td></tr>
+<tr><td>3/16 in.</td><td>.030–3/64</td><td>130–210</td><td>22–26</td><td>170–225</td></tr>
+<tr><td>1/4 in.</td><td>3/64–1/16</td><td>170–225</td><td>24–28</td><td>220–275</td></tr>
+</tbody></table></div>
+<p class="small">Source: <a href="https://ch-delivery.lincolnelectric.com/api/public/content/a1a7b2fb551c4e55b5bf58575aa21f58?v=e2ecf232" rel="noopener" target="_blank">4043 Aluminum Welding Wire &amp; Rod technical information sheet</a> (Harris Products Group, a Lincoln Electric company), recommended welding parameters, GMAW spray transfer DC reverse polarity and GTAW AC. Read November 17, 2026.</p>
+
+<h2>How to decide</h2>
+<ul>
+<li><strong>Thin gauge.</strong> <a href="https://www.millerwelds.com/en-US/resources/knowledge-hub/aluminum-welding/guide-to-industrial-aluminum-welding" rel="noopener" target="_blank">Miller</a> says thin-gauge aluminum offers little room for error and that pulsed MIG can be especially beneficial there. Its guide also says a legacy 60 hertz AC TIG transformer can make small welds on thin material harder without over-welding and distortion, and that inverter-based, AC-capable TIG sources reduce prep time. Either way, thin aluminum rewards the newer machine.</li>
+<li><strong>Thicker sections.</strong> Miller says thicker aluminum is often welded successfully with conventional MIG spray transfer. On the 4043 sheet, every MIG row from 1/8 in. up is a spray-transfer row.</li>
+<li><strong>Short-circuit MIG.</strong> Miller says short-circuit transfer should be avoided on industrial aluminum. Unlike on steel, it says conventional short circuit is much more problematic on aluminum.</li>
+<li><strong>Wire feeding.</strong> Miller says push-only feeding of aluminum wire can be done only on a limited basis, and that a push-pull gun keeps tension on the wire and helps stop bird-nesting.</li>
+</ul>
+<p>For the same choice on steel sheet, see <a href="mig-or-tig-sheet-metal.html">MIG or TIG for sheet metal</a>. Stick sits in a third column on <a href="mig-vs-tig-vs-stick-welding.html">MIG vs TIG vs stick welding</a>, and flux-core wire on <a href="mig-vs-tig-vs-flux-core.html">MIG vs TIG vs flux core</a>.</p>
+
+<h2>Sources</h2>
+<p>Compiled with AI assistance from the sources below. Spot an error? Email <a href="mailto:jpanasuk@gmail.com">jpanasuk@gmail.com</a>.</p>
+<ul>
+<li>Harris Products Group (Lincoln Electric), 4043 Aluminum Welding Wire &amp; Rod technical information sheet. <a href="https://ch-delivery.lincolnelectric.com/api/public/content/a1a7b2fb551c4e55b5bf58575aa21f58?v=e2ecf232" rel="noopener" target="_blank">https://ch-delivery.lincolnelectric.com/api/public/content/a1a7b2fb551c4e55b5bf58575aa21f58?v=e2ecf232</a>. Read November 17, 2026.</li>
+<li>Miller Electric, Guide to Industrial Aluminum Welding. <a href="https://www.millerwelds.com/en-US/resources/knowledge-hub/aluminum-welding/guide-to-industrial-aluminum-welding" rel="noopener" target="_blank">https://www.millerwelds.com/en-US/resources/knowledge-hub/aluminum-welding/guide-to-industrial-aluminum-welding</a>. Read November 17, 2026.</li>
+</ul>
+</main>
+<footer>Built by Jeremy Panasuk · <a href="/about.html">About &amp; how this was made</a> · <a href="/methodology.html">Methodology</a> · <a href="/privacy.html">Privacy</a> · <a href="/contact.html">Contact</a> · pages may contain affiliate links</footer>
+<script defer src="assets/app.js"></script>
+</body>
+</html>
