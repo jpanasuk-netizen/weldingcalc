@@ -5,7 +5,7 @@
     <image:image>
       <image:loc>https://welding-calculator.com/assets/img/calculator-flow.svg</image:loc>
     </image:image>
-    <lastmod>2026-10-06</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -15,7 +15,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://welding-calculator.com/mig-or-tig-sheet-metal.html</loc><lastmod>2026-11-17</lastmod>
+    <loc>https://welding-calculator.com/mig-or-tig-sheet-metal.html</loc><lastmod>2026-11-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -29,12 +29,12 @@
     <image:image>
       <image:loc>https://welding-calculator.com/assets/img/tig-aluminum-butt-band.svg</image:loc>
     </image:image>
-    <lastmod>2026-10-06</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://welding-calculator.com/mig-wire-speed-chart.html</loc><lastmod>2026-10-06</lastmod>
+    <loc>https://welding-calculator.com/mig-wire-speed-chart.html</loc><lastmod>2026-11-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -239,19 +239,25 @@
   </url>
   <url>
     <loc>https://welding-calculator.com/mig-vs-tig-vs-stick-welding.html</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://welding-calculator.com/mig-vs-tig-vs-flux-core.html</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://welding-calculator.com/mig-vs-tig-for-aluminum.html</loc>
     <lastmod>2026-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://welding-calculator.com/mig-vs-tig-for-roll-cage.html</loc>
+    <lastmod>2026-11-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>

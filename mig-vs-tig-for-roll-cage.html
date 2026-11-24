@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MIG vs TIG for a Roll Cage: Mild Steel vs 4130 Chromoly</title>
+<meta name="description" content="MIG or TIG for a roll cage? Miller&#x27;s filler picks for mild steel and 4130, Lincoln&#x27;s chromoly preheat rule, and a check for your tube wall.">
+<link rel="canonical" href="https://welding-calculator.com/mig-vs-tig-for-roll-cage.html">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="shortcut icon" href="assets/favicon.ico">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://welding-calculator.com/mig-vs-tig-for-roll-cage.html">
+<meta property="og:title" content="MIG vs TIG for a Roll Cage: Mild Steel vs 4130 Chromoly">
+<meta property="og:description" content="MIG or TIG for a roll cage? Miller&#x27;s filler picks for mild steel and 4130, Lincoln&#x27;s chromoly preheat rule, and a check for your tube wall.">
+<meta property="og:image" content="https://welding-calculator.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="MIG vs TIG for a Roll Cage: Mild Steel vs 4130 Chromoly">
+<meta name="twitter:description" content="MIG or TIG for a roll cage? Miller&#x27;s filler picks for mild steel and 4130, Lincoln&#x27;s chromoly preheat rule, and a check for your tube wall.">
+<meta name="twitter:image" content="https://welding-calculator.com/assets/og-image.png">
+<link rel="stylesheet" href="assets/styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "MIG vs TIG for a Roll Cage",
+  "description": "MIG or TIG for a roll cage? Miller's filler picks for mild steel and 4130, Lincoln's chromoly preheat rule, and a check for your tube wall.",
+  "url": "https://welding-calculator.com/mig-vs-tig-for-roll-cage.html",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://welding-calculator.com/mig-vs-tig-for-roll-cage.html"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "WeldingCalc"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "WeldingCalc"
+  },
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://welding-calculator.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "MIG vs TIG for a roll cage",
+      "item": "https://welding-calculator.com/mig-vs-tig-for-roll-cage.html"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header class="site-head">
+  <a class="brand" href="/">WeldingCalc</a>
+  <nav aria-label="Site">
+    <a href="/#calc">Calculator</a>
+    <a href="quarter-inch-steel.html">1/4&quot; steel welder</a>
+    <a href="mig-or-tig-sheet-metal.html">Sheet metal: MIG vs TIG</a>
+    <a href="best-beginner-welder.html">Beginner welder size</a>
+  </nav>
+</header>
+<main>
+<p class="small"><a href="/">Home</a> · <a href="topics.html#questions">Questions</a> · MIG vs TIG for a roll cage</p>
+<h1>MIG vs TIG for a Roll Cage</h1>
+<p>This page is the process call for cage tube only: mild steel or 4130 chromoly. Sheet metal and aluminum are on their own pages.</p>
+<div class="answer-box"><strong>Quick answer:</strong> MIG vs TIG for a roll cage often comes down to the tube and the rulebook. <a href="https://www.millerwelds.com/en-US/resources/knowledge-hub/automotive-welding/motorsports-welding-and-racing-repair-guide" rel="noopener" target="_blank">Miller</a> lists MIG or TIG for mild steel or 4130 chromoly cages, with sanctioning body rules possibly deciding: .030 to .035 in. ER70S-6 wire for mild steel MIG, ER80S-D2 for 4130 TIG. <a href="https://www.lincolnelectric.com/en/Welding-and-Cutting-Resource-Center/Welding-How-Tos/TIG-Welding-Chrome-Moly-Tubing" rel="noopener" target="_blank">Lincoln's</a> 4130 sample for .035 in. wall tube runs 20–40 amps.</div>
+
+<h2>Cage tube checker</h2>
+<p>Pick the tube material and enter the wall thickness. The checker prints Miller's process and filler row, Lincoln's preheat and stress-relief rule for 4130, and Lincoln's sample schedule. It does not quote any sanctioning body; check your own rulebook before you weld.</p>
+<div class="card">
+<div class="field"><label for="rcM">Tube material</label> <select id="rcM"><option value="ms">Mild steel</option><option value="cm" selected>4130 chromoly</option></select></div>
+<div class="field"><label for="rcT">Wall thickness (inches)</label> <input id="rcT" type="number" value="0.095" min="0.01" step="0.005"></div>
+<div id="rcO" aria-live="polite"></div>
+</div>
+<script>
+(function(){
+var m=document.getElementById('rcM'),t=document.getElementById('rcT'),o=document.getElementById('rcO');
+function u(){
+ var w=parseFloat(t.value), h='';
+ if(!(w>0)){o.innerHTML='<p>Enter the wall thickness in inches.</p>';return;}
+ if(m.value==='ms'){
+  h+='<p><strong>Miller, mild steel cage:</strong> MIG or TIG. MIG filler .030 to .035 in. ER70S-6; TIG filler ER70S-2 (ER80S-D2 is also listed for mild steel/4130 TIG).</p>';
+  h+='<p>Lincoln\u2019s preheat and stress-relief notes on this page are written for 4130, not mild steel.</p>';
+ } else {
+  h+='<p><strong>Miller, 4130 chromoly cage:</strong> TIG with ER80S-D2 filler. Miller\u2019s guide lists no MIG wire for 4130.</p>';
+  if(w<0.120) h+='<p><strong>Lincoln, '+w+' in. wall (under 0.120 in.):</strong> thin wall tubing does not typically need the normal 300\u2013400\u00b0F preheat, but the tube should be at 70\u00b0F or above. Thin wall normally needs no stress relief. Never quench.</p>';
+  else h+='<p><strong>Lincoln, '+w+' in. wall (0.120 in. or thicker):</strong> Lincoln\u2019s no-preheat note covers thin wall under 0.120 in. only. For parts thicker than .120 in., Lincoln recommends stress relieving at 1,100\u00b0F. Never quench.</p>';
+  h+='<p><strong>Lincoln sample schedule</strong> (.035 in. wall, 90\u00b0 tube to tube): ER80S-D2 .035 in. filler, DCEN, 20\u201340 amps, 9\u201312 V, argon 15\u201325 CFH.'+(Math.abs(w-0.035)>0.001?' Your wall is not .035 in., so treat this row as a reference point, not your setting.':'')+'</p>';
+ }
+ h+='<p><strong>Check your sanctioning body rulebook.</strong> Miller says the process choice may depend on its rules. Then set amps with the <a href="tig-amps-thickness.html">TIG amps by thickness chart</a>.</p>';
+ o.innerHTML=h;
+}
+m.addEventListener('change',u); t.addEventListener('input',u); u();
+})();
+</script>
+
+<h2>What Miller and Lincoln say</h2>
+<div class="tbl-wrap"><table>
+<tr><th>Line</th><th>Source</th></tr>
+<tr><td>Full chassis and roll cage: typical materials mild steel or 4130 chromoly; “MIG or TIG is often recommended, and the choice may depend on sanctioning body rules”</td><td><a href="https://www.millerwelds.com/en-US/resources/knowledge-hub/automotive-welding/motorsports-welding-and-racing-repair-guide" rel="noopener" target="_blank">Miller</a></td></tr>
+<tr><td>.030 to .035 in. ER70S-6 for mild steel with MIG; ER70S-2 for mild steel with TIG; ER80S-D2 for mild steel/4130 with TIG</td><td><a href="https://www.millerwelds.com/en-US/resources/knowledge-hub/automotive-welding/motorsports-welding-and-racing-repair-guide" rel="noopener" target="_blank">Miller</a></td></tr>
+<tr><td>Roll cages are among the applications for its 4130 TIG procedures</td><td><a href="https://www.lincolnelectric.com/en/Welding-and-Cutting-Resource-Center/Welding-How-Tos/TIG-Welding-Chrome-Moly-Tubing" rel="noopener" target="_blank">Lincoln</a></td></tr>
+<tr><td>Thin wall tubing (under 0.120 in.) does not typically require the normal 300–400°F preheat; tube at 70°F or above</td><td><a href="https://www.lincolnelectric.com/en/Welding-and-Cutting-Resource-Center/Welding-How-Tos/TIG-Welding-Chrome-Moly-Tubing" rel="noopener" target="_blank">Lincoln</a></td></tr>
+<tr><td>Parts thicker than .120 in.: stress relieving recommended, 1,100°F optimum for tubing</td><td><a href="https://www.lincolnelectric.com/en/Welding-and-Cutting-Resource-Center/Welding-How-Tos/TIG-Welding-Chrome-Moly-Tubing" rel="noopener" target="_blank">Lincoln</a></td></tr>
+<tr><td>Filler: ER80S-D2; ER70S-2 or ER70S-6 acceptable, with slightly lower weld strength</td><td><a href="https://www.lincolnelectric.com/en/Welding-and-Cutting-Resource-Center/Welding-How-Tos/TIG-Welding-Chrome-Moly-Tubing" rel="noopener" target="_blank">Lincoln</a></td></tr>
+<tr><td>Sample: .035 in. wall, ER80S-D2 .035 in., DCEN, 20–40 amps, 9–12 V</td><td><a href="https://www.lincolnelectric.com/en/Welding-and-Cutting-Resource-Center/Welding-How-Tos/TIG-Welding-Chrome-Moly-Tubing" rel="noopener" target="_blank">Lincoln</a></td></tr>
+<tr><td>Do not quench; let the weld cool slowly</td><td><a href="https://www.lincolnelectric.com/en/Welding-and-Cutting-Resource-Center/Welding-How-Tos/TIG-Welding-Chrome-Moly-Tubing" rel="noopener" target="_blank">Lincoln</a></td></tr>
+</table></div>
+<p class="small">Miller's guide was posted April 12, 2025. Both pages read November 24, 2026.</p>
+
+<h2>How to use it</h2>
+<p>For a mild steel cage, either process is on Miller's list, so the rulebook and your machine decide. For a mild steel cage on MIG, start from the <a href="mig-wire-speed-chart.html">MIG wire speed chart</a>. For 4130, Miller's filler row is TIG only, and Lincoln's procedure is TIG. Set amps for your wall thickness with the <a href="tig-amps-thickness.html">TIG amps by thickness chart</a>.</p>
+<p>Long cage welds can run a small machine hard, so check your <a href="duty-cycle-calculator.html">welder's duty cycle</a>. Lincoln's prep steps (remove oxides and burrs within 3 in. of the weld, acetone wipe) match our guide on <a href="how-to-clean-metal-before-welding.html">how to clean metal before welding</a>. Sheet metal tabs and panels are a different call; see <a href="mig-or-tig-sheet-metal.html">MIG or TIG for sheet metal</a>.</p>
+
+<h2>Limits</h2>
+<p>Neither source is a racing rulebook. This page does not quote any sanctioning body's process or tube rules because none was read for it. Lincoln says the suitability of its procedures must be evaluated for your specific application.</p>
+
+<h2>Sources</h2>
+<p>Compiled with AI assistance from the sources below. Spot an error? Email <a href="mailto:jpanasuk@gmail.com">jpanasuk@gmail.com</a>.</p>
+<ul>
+<li>Miller Electric, “Motorsports Welding and Racing Repair Guide.” <a href="https://www.millerwelds.com/en-US/resources/knowledge-hub/automotive-welding/motorsports-welding-and-racing-repair-guide" rel="noopener" target="_blank">https://www.millerwelds.com/en-US/resources/knowledge-hub/automotive-welding/motorsports-welding-and-racing-repair-guide</a>. Posted April 12, 2025. Read November 24, 2026.</li>
+<li>Lincoln Electric, “TIG Welding Chrome-Moly Tubing.” <a href="https://www.lincolnelectric.com/en/Welding-and-Cutting-Resource-Center/Welding-How-Tos/TIG-Welding-Chrome-Moly-Tubing" rel="noopener" target="_blank">https://www.lincolnelectric.com/en/Welding-and-Cutting-Resource-Center/Welding-How-Tos/TIG-Welding-Chrome-Moly-Tubing</a>. Read November 24, 2026.</li>
+</ul>
+</main>
+<footer>Built by Jeremy Panasuk · <a href="/about.html">About &amp; how this was made</a> · <a href="/methodology.html">Methodology</a> · <a href="/privacy.html">Privacy</a> · <a href="/contact.html">Contact</a> · pages may contain affiliate links</footer>
+<script defer src="assets/app.js"></script>
+</body>
+</html>
