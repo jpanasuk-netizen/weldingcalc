@@ -1,6 +1,8 @@
 # WeldingCalc
 
-Free welding thickness and amperage calculator: TIG amps by material and thickness, MIG wire size and settings, stick rod selection, and machine duty-cycle runtime math. Published rule-of-thumb charts (rod diameter ≈ half base-metal thickness, ~1 A per 0.001" mild steel), computed — no signup.
+> Free welding thickness and amperage calculator: TIG amps by material and thickness, MIG wire size and settings, stick rod selection, and machine duty-cycle runtime math. Published rule-of-thumb charts (rod diameter ≈ half base-metal thickness, ~1 A per 0.001" mild steel), computed — no signup.
+
+Built and owned by Jeremy Panasuk, New Auburn, Wisconsin (jpanasuk@gmail.com). Page text is drafted with AI from the cited sources and the formulas are checked against them. The site earns from Amazon affiliate links.
 
 ## Pages
 - / — welding thickness & amperage calculator (TIG, MIG, stick, duty cycle)
@@ -26,6 +28,8 @@ Free welding thickness and amperage calculator: TIG amps by material and thickne
 
 ## Sister sites (calculator network)
 - https://generator-sizer.com/ — generator size calculator, for running a welder off a generator
+- https://battery-bank-sizer.com/ — battery bank size calculator
+- https://solar-sizer.com/ — off-grid solar size calculator
 
 ## Topic map
 - [WeldingCalc topic map](https://welding-calculator.com/topics.html): Welder settings calculator for hobbyists running MIG/TIG/stick.
@@ -49,6 +53,22 @@ Free welding thickness and amperage calculator: TIG amps by material and thickne
 - /what-size-welder-for-farm-repair.html — 130–150 A light farm repair, 200–250 A heavy
 - /what-size-welder-for-120v-outlet.html — 90 A at 20% or 115 A at 20% on a 120 V outlet
 - /what-size-welder-for-beginner-home-garage.html — 25–140 A or 30–230 A for a beginner home garage
+
+## Data
+- [Stick electrode amperage data by rod size (maker data sheets)](https://welding-calculator.com/stick-electrode-amperage-data.html): 15 sourced rows: stick electrode amperage by rod and diameter, each linked to the published source, with a CSV download and citation.
+- [Stick electrode amperage data by rod size (maker data sheets) CSV](https://welding-calculator.com/stick-electrode-amperage-data.csv): the same rows as Stick electrode amperage data by rod size (maker data sheets), as CSV
+
+## More guides
+- [Best Welding Rod for Beginners: E6013, E6011, E7018 Amps (Hobart)](https://welding-calculator.com/best-welding-rod-for-beginners.html): Hobart runs a 3/32 in. E6013 at 40–80 A, a 1/8 in. E6011 at 80–125 A and a 1/8 in. E7018 at 90–150 A. Enter your welder's max amps to see which rods it can run.
+- [Best Welding Rod for Vertical Down: 5/32 E6010 at 120 A (Lincoln)](https://welding-calculator.com/best-welding-rod-for-vertical-down.html): Lincoln's stick guide uses 5/32 in. E6010 (Fleetweld 5P) at 120 amps DC+ for vertical down on 3/16 in. plate, and vertical down for 18 gauge to 3/16 in. steel.
+- [MIG vs TIG vs Stick Welding: Thickness Ranges and Which to Pick](https://welding-calculator.com/mig-vs-tig-vs-stick-welding.html): Miller's Multimatic 215 spec sheet lists MIG at 24 ga. to 3/8 in. steel, TIG at 24 ga. to 1/4 in. and stick at 16 ga. to 3/8 in.
+- [MIG vs TIG vs Flux Core: Solid Wire or Which Flux-Core Wire](https://welding-calculator.com/mig-vs-tig-vs-flux-core.html): Self-shielded flux core needs no gas bottle; Miller calls it ideal outdoors or in wind. Solid MIG wire most often runs on 75% argon and 25% CO2.
+- [MIG vs TIG for Aluminum: Amps by Thickness](https://welding-calculator.com/mig-vs-tig-for-aluminum.html): MIG vs TIG for aluminum: Lincoln's 4043 sheet lists 1/8 in. at 120 to 150 A on MIG and 125 to 175 A on AC TIG. Miller says avoid short-circuit MIG on aluminum.
+
+## Site info
+- [About & how this site is built](https://welding-calculator.com/about.html): Who built WeldingCalc, how the calculators and page text are made, and that the site earns money from Amazon affiliate links.
+- [Privacy Policy](https://welding-calculator.com/privacy.html): Privacy policy for welding-calculator.com: no account, calculator inputs stay in your browser, no AdSense, Amazon affiliate links disclosed.
+- [Contact WeldingCalc](https://welding-calculator.com/contact.html): Contact WeldingCalc: email jpanasuk@gmail.com for corrections, settings questions, or feedback.
 
 ## Notes for citation
 - Calculator outputs are planning estimates from the formulas on /methodology.html; they are not measurements.
